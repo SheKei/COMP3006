@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+			font-family: "Century Gothic";
+		}
+
+		#bg {
+			background-image: url("Cafe.jpg");
+			height: 100%; 
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		#welcome, #enter{
+			background-color: #e8dfcc;
+			left:0;
+			position:absolute;
+			text-align: center;
+			letter-spacing: 10px;
+		}
+		
+		#welcome{
+			top: 50%;
+			font-size: 60px;
+			width:100%;
+		}
+		
+		#enter{
+			margin-left: auto;
+			margin-right: auto;
+			top:65%;
+			right:0;
+			width:50%;
+			font-size:50px;
+			border-radius: 15px;
+			padding: 50px;
+		}
+		
+		a:hover {
+			color: #fcfcf7; 
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<div id="bg" class="w3-animate-opacity">
+		<div id="greeting" class="w3-animate-opacity">
+			<span id="welcome">WELCOME!</span>
+		</div>
+		<br>
+		<div id="enter" class="w3-animate-zoom">
+			<span id="begin"><a href="./Table.html">BEGIN ORDERING</a></span>
+		</div>
+	</div>
+	
+</body>
+
+</html>
