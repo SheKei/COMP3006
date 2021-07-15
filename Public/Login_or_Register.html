@@ -36,25 +36,45 @@
 			background-size: cover;
 		}
 
-		div.optionRow{
-			top:40%;
+		div.optionRow, #exit{
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
 			position: absolute;
 			right: 0;
 			left:0;
 		}
 
-		.optionBox{
+		div.optionRow{
+			top:40%;
+		}
+
+		.optionBox, #exit{
 			background-color: #e8dfcc;
+		}
+
+		.optionBox{
 			margin-left: auto;
 			margin-right: auto;
 			width:100px;
 			height:200px;
 			border-radius: 15px;
-			top: 50%;
-			text-align: center;
 		}
 
+		#exit{
+			width:10%;
+			height:10%;
+			border-radius: 15px;
+			top: 85%;
+			font-size: 20px;
+			letter-spacing: 3px;
+			padding:20px;
 
+		}
+
+		a:hover {
+			color: #fcfcf7;
+		}
 
 		
 	</style>
@@ -64,11 +84,14 @@
 	<div id="bg" class="w3-animate-opacity bg"><br>
 		<div class="row optionRow">
 			<div class="col-4 optionBox w3-animate-zoom" >
-				<h1>Sign In<br><br><i class="fas fa-sign-in-alt"></i></h1>
+				<h1><a href="./User/User_Login.html">Sign In<br><br><i class="fas fa-sign-in-alt"></i></a></h1>
 			</div>
 			<div class="col-4 optionBox w3-animate-zoom">
-				<h1>Register Account<br><br><i class="fas fa-user-plus"></i></h1>
+				<h1><a href="./User/User_Register.html">Register Account<br><br><i class="fas fa-user-plus"></i></a></h1>
 			</div>
+		</div>
+		<div id="exit" class="w3-animate-zoom">
+			<span id="goBack"><a href="Welcome.html">RETURN</a></span>
 		</div>
 	</div>
 	

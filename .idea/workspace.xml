@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Login_or_Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/User/User_Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/User/User_Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/Login_or_Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Login_or_Register.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,22 +21,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="80" column="46" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="46" />
+            <state relative-caret-position="157">
+              <caret line="34" column="30" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/Login_or_Register.html">
+        <entry file="file://$PROJECT_DIR$/Public/User/User_Login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +52,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Public/Welcome.html" />
+        <option value="$PROJECT_DIR$/Public/User_Login.html" />
+        <option value="$PROJECT_DIR$/Public/User/User_Register.html" />
         <option value="$PROJECT_DIR$/Public/Login_or_Register.html" />
+        <option value="$PROJECT_DIR$/Public/User/User_Login.html" />
       </list>
     </option>
   </component>
@@ -71,6 +82,12 @@
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -79,10 +96,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sheke\Desktop\COMP3006\Public\User" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -106,12 +129,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626373250924</updated>
-      <workItem from="1626373252206" duration="3433000" />
+      <workItem from="1626373252206" duration="6729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3433000" />
+    <option name="totallyTimeSpent" value="6729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -140,17 +163,31 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Welcome.html">
+    <entry file="file://$PROJECT_DIR$/Public/Login_or_Register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="80" column="46" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="46" />
+        <state relative-caret-position="828">
+          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Login_or_Register.html">
+    <entry file="file://$PROJECT_DIR$/Public/User/User_Register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state relative-caret-position="400">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/User/User_Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
         </state>
       </provider>
     </entry>
