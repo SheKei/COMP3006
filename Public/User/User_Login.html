@@ -54,6 +54,26 @@
             position:absolute;
         }
 
+        #goBack{
+            background-color: #e8dfcc;
+            margin-left:auto;
+            margin-right: auto;
+            top: 80%;
+            left:0;
+            right:0;
+            position:absolute;
+            width: 200px;
+            height: 75px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        #return{
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+
         label{
             font-size: 30px;
         }
@@ -63,11 +83,14 @@
             padding: 10px;
         }
 
+        a:hover {
+            color: #fcfcf7;
+        }
+
 
     </style>
 </head>
 <body>
-
     <div id="bg">
         <div id="loginPage"><br>
             <h1>Sign In</h1><br>
@@ -90,12 +113,9 @@
             </div><br>
                 <button class="btn btn-dark text-center" id="login" name="login">Login</button>
             </span>
-
-
-
-
-
-
+        </div>
+        <div id="goBack">
+            <span id="return"><a href="../Login_or_Register.html">GO BACK</a></span>
         </div>
     </div>
 

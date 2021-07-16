@@ -11,10 +11,16 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
-        body, html {
+        body, html, h1 {
             height: 100%;
             margin: 0;
             font-family: "Century Gothic";
+        }
+
+        h1{
+            font-size: 40px;
+            letter-spacing: 5px;
+            text-align: center;
         }
 
         #bg {
@@ -25,22 +31,124 @@
             background-size: cover;
         }
 
-        #contents{
-            top: 50%;
+        #registerPage{
+            margin-right: auto;
+            margin-left:auto;
+            top: 5%;
             background-color: #e8dfcc;
             left:0;
             right:0;
             position:absolute;
-            text-align: center;
-            width: 70%;
-            height: 50%;
-
+            width: 90%;
+            height: 90%;
+            border-radius: 20px;
+            padding: 10px;
         }
+
+        #formPage{
+            top: 5%;
+            left:10%;
+            right:0;
+            position:absolute;
+        }
+
+        label{
+            font-size: 20px;
+        }
+
+        #surnameLbl, #confirmPasswordLbl{
+            text-align: right;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        a:hover{
+            color: #fcfcf7;
+        }
+
+
     </style>
 </head>
 <body>
 
     <div id="bg">
+        <div id="registerPage">
+
+            <span id="formPage">
+                <h1>REGISTER ACCOUNT</h1><br><br>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="forename">Forename:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="forename" id="forename" placeholder="First Name" required>
+                    </div>
+                    <div class="col-2" id="surnameLbl">
+                        <label for="surname">Surname:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="surname" id="surname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="dateOfBirth">Date of Birth:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="email">Email Address:</label>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="email@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Create a Username" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="password1">Password:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="password" class="form-control" name="password1" id="password1" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2" id="confirmDiv">
+                        <label for="password2" id="confirmPasswordLbl">Confirm Password:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="password" class="form-control" name="password2" id="password2" required>
+                    </div>
+                </div><br>
+
+                <div class="form-check text-center">
+                    <input class="form-check-input" type="checkbox" value="" id="agree" name="agree" >
+                    <label class="form-check-label" for="agree">
+                    I agree to the <strong><a href="#">Terms & Conditions</a></strong> upon registering this account.
+                    </label>
+                </div><br>
+                <div class="text-center">
+                    <button name="registerBtn" id="registerBtn" class="btn btn-dark text-center">Create Account</button>
+                </div><br>
+                <div class="text-center">
+                    <p><a href="../Login_or_Register.html">GO BACK</a></p>
+                </div>
+
+
+            </span>
+        </div>
 
     </div>
 
