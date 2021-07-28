@@ -7,6 +7,9 @@ let bcrypt = require ('bcrypt');
 let multer = require('multer');
 
 //IMPORT ROUTES
+let routes = require("./Routes");
+
+//IMPORT CONTROLLERS
 
 //CONFIGURE EXPRESS APP
 let app = new express();
@@ -25,7 +28,7 @@ let io = socketIo(server,{
 app.use(express.static(path.join(__dirname, "resources")));
 
 //SET APP UP TO USE EJS TEMPLATES
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "Public"));
 app.set("view engine", "ejs");
 
 //SET UP STATIC FILES
