@@ -1,0 +1,54 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Century Gothic";
+}
+
+#bg {
+    background-image: url("../images/Library.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#backdoorEmployee,#welcome, #enter{
+    background-color: #e8dfcc;
+}
+
+
+#welcome, #enter{
+    left:0;
+    position:absolute;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+#welcome{
+    top: 50%;
+    font-size: 60px;
+    width:100%;
+}
+
+#enter{
+    margin-left: auto;
+    margin-right: auto;
+    top:65%;
+    right:0;
+    width:30%;
+    font-size:45px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#backdoorEmployee{
+    font-size:20px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+a:hover {
+    color: #fcfcf7;
+}

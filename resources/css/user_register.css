@@ -1,0 +1,56 @@
+body, html, h1 {
+   height: 100%;
+   margin: 0;
+   font-family: "Century Gothic";
+}
+
+h1{
+   font-size: 40px;
+   letter-spacing: 5px;
+   text-align: center;
+}
+
+#bg {
+   background-image: url("../images/Library3.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+#registerPage{
+   margin-right: auto;
+   margin-left:auto;
+   top: 5%;
+   background-color: #e8dfcc;
+   left:0;
+   right:0;
+   position:absolute;
+   width: 90%;
+   min-height: 90%;
+   border-radius: 20px;
+   padding: 10px;
+}
+
+#formPage{
+   top: 5%;
+   left:10%;
+   right:0;
+   position:absolute;
+}
+
+label{
+   font-size: 20px;
+}
+
+#surnameLbl, #confirmPasswordLbl{
+   text-align: right;
+}
+
+p{
+   font-size: 20px;
+}
+
+a:hover{
+   color: #fcfcf7;
+}

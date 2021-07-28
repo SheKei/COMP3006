@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register Account</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/user_register.css"/>
+</head>
+<body>
+
+<div id="bg">
+    <div id="registerPage">
+
+            <span id="formPage">
+                <h1>REGISTER ACCOUNT</h1><br><br>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="forename">Forename:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="forename" id="forename" placeholder="First Name" required>
+                    </div>
+                    <div class="col-2" id="surnameLbl">
+                        <label for="surname">Surname:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="surname" id="surname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="dateOfBirth">Date of Birth:</label>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control" type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="email">Email Address:</label>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="email@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="streetName">Street Name:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Street Name" required>
+                    </div>
+                    <div class="col-2">
+                        <label for="postCode">Post Code:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" class="form-control" id="postCode" name="postCode" placeholder="Post Code" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="password1">Password:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="password" class="form-control" name="password1" id="password1" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2" id="confirmDiv">
+                        <label for="password2" id="confirmPasswordLbl">Confirm Password:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="password" class="form-control" name="password2" id="password2" required>
+                    </div>
+                </div><br><br>
+
+                <div class="form-check text-center">
+                    <input class="form-check-input" type="checkbox" value="" id="agree" name="agree" >
+                    <label class="form-check-label" for="agree">
+                    I agree to the <strong><a href="#">Terms & Conditions</a></strong> upon registering this account.
+                    </label>
+                </div><br>
+                <div class="text-center">
+                    <button name="registerBtn" id="registerBtn" class="btn btn-dark text-center">Create Account</button>
+                </div><br>
+                <div class="text-center">
+                    <p><a href="../Login_or_Register">GO BACK</a></p>
+                </div>
+
+
+            </span>
+    </div>
+
+</div>
+
+</body>
+</html>

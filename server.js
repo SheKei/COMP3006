@@ -47,6 +47,14 @@ let storage = multer.diskStorage({
 });
 let upload = multer({ storage:storage });
 
+//GET REQUESTS
+app.get("/welcome", routes.loadWelcomePage);
+app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
+app.get("/User_Login", routes.loadUserLoginPage);
+app.get("/User_Register", routes.loadUserRegisterPage);
+
+app.get("/Add_Book", routes.loadAddBookPage);
+
 //RUN THE SERVER ON PORT 9000
 let port = 9000;
 
