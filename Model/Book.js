@@ -11,7 +11,7 @@ class Book{
         this._synopsis = synopsis;
         this._genres = genres;
     }
-    
+
     get authorForename() {
         return this._authorForename;
     }
