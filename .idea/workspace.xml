@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Account.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Cheese_Pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Cheese_Pizza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Chocolate_Cake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Chocolate_Cake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Chocolate_Cupcake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Chocolate_Cupcake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Chocolate_Milkshake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Chocolate_Milkshake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Coffee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Coffee.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Hot_Chocolate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Hot_Chocolate.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Latte.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Latte.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Library.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Library.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Library2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Library2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Library3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Library3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Macaroons.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Macaroons.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Meat_Pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Meat_Pizza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Melon_Juice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Melon_Juice.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Mint_Cupcake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Mint_Cupcake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Orange_Juice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Orange_Juice.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Pepperoni_Pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Pepperoni_Pizza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Strawberry_Cake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Strawberry_Cake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Strawberry_Milkshake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Strawberry_Milkshake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Summer_Juice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Summer_Juice.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Toffee_Cupcake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Toffee_Cupcake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Veg_Pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Veg_Pizza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Librarian/Add_Book.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Librarian/Add_Book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Login_or_Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Login_or_Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User/User_Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User/User_Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User/User_Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User/User_Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Welcome.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/User/User_Register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="1724">
               <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
             </state>
           </provider>
@@ -88,11 +62,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="454">
-              <caret line="44" column="6" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/Account.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="972">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -120,14 +112,16 @@
         <option value="$PROJECT_DIR$/Public/User/User_Register.html" />
         <option value="$PROJECT_DIR$/Public/Librarian/Add_Book.html" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/Database.js" />
+        <option value="$PROJECT_DIR$/Model/Account.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="y" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1050" />
+    <option name="x" value="951" />
+    <option name="y" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -146,12 +140,6 @@
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
@@ -175,6 +163,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sheke\Desktop\COMP3006\resources" />
       <recent name="C:\Users\sheke\Desktop\COMP3006\Public\User" />
     </key>
   </component>
@@ -201,18 +190,18 @@
       <option name="presentableId" value="Default" />
       <updated>1626373250924</updated>
       <workItem from="1626373252206" duration="11667000" />
-      <workItem from="1627387201335" duration="6556000" />
+      <workItem from="1627387201335" duration="7189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18223000" />
+    <option name="totallyTimeSpent" value="18856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16060807" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16060807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,10 +239,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User/User_Register.html">
+    <entry file="file://$PROJECT_DIR$/Public/Librarian/Add_Book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+        <state relative-caret-position="980">
+          <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -264,17 +270,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Librarian/Add_Book.html">
+    <entry file="file://$PROJECT_DIR$/Public/User/User_Register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+        <state relative-caret-position="1724">
+          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/Model/Account.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="44" column="6" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+        <state relative-caret-position="972">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
