@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Schema/Account-Schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -80,11 +79,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Account.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="81">
+              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="8" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -95,6 +103,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="package.json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -114,6 +123,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Database.js" />
         <option value="$PROJECT_DIR$/Model/Account.js" />
+        <option value="$PROJECT_DIR$/Schema/package.json" />
+        <option value="$PROJECT_DIR$/Schema/Account-Schema.js" />
       </list>
     </option>
   </component>
@@ -140,11 +151,6 @@
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,18 +196,18 @@
       <option name="presentableId" value="Default" />
       <updated>1626373250924</updated>
       <workItem from="1626373252206" duration="11667000" />
-      <workItem from="1627387201335" duration="7189000" />
+      <workItem from="1627387201335" duration="7512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18856000" />
+    <option name="totallyTimeSpent" value="19179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16060807" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16060807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -277,10 +283,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Schema/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Account.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="81">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
         </state>
       </provider>
     </entry>
