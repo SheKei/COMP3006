@@ -20,8 +20,15 @@ function loadUserRegisterPage(request, response){
 function loadAddBookPage(request, response){
     response.render("Add_Book");
 }
+
+function loadViewAllStockPage(request,response){
+    response.render("View_All_Stock");
+    db.getAllBooks();
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
 module.exports.loadUserRegisterPage = loadUserRegisterPage;
 module.exports.loadAddBookPage = loadAddBookPage;
+module.exports.loadViewAllStockPage = loadViewAllStockPage;

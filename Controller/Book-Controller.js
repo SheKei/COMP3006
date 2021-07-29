@@ -17,7 +17,7 @@ function addBook(request, response, imgFilename){
 
 //Check which genres were checked
 function addGenres(request){
-    let genresArray = []; 
+    let genresArray = [];
     if(request.body.scifi === 'on'){genresArray.push('scifi');}
     if(request.body.adventure === 'on'){genresArray.push('adventure');}
     if(request.body.romance === 'on'){genresArray.push('romance');}

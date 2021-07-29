@@ -1,7 +1,8 @@
 class Book{
 
-    constructor(authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres) {
+    constructor(id,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres) {
 
+        this._id = id;
         this._authorForename = authorForename;
         this._authorSurname = authorSurname;
         this._bookName = bookName;
@@ -11,36 +12,42 @@ class Book{
         this._synopsis = synopsis;
         this._genres = genres;
     }
+    //id, forename, surname, bookname, stockprice, sellprice, stockAmount, synopsis, genres
+    getId(){
+        return this._id;
+    }
 
-    get authorForename() {
+    getAuthorForename() {
         return this._authorForename;
     }
 
-    get authorSurname() {
+    getAuthorSurname() {
         return this._authorSurname;
     }
 
-    get bookName() {
+    getBookName() {
         return this._bookName;
     }
 
-    get stockPrice() {
+    getStockPrice() {
         return this._stockPrice;
     }
 
-    get sellingPrice() {
+    getSellingPrice() {
         return this._sellingPrice;
     }
 
-    get stockAmount() {
+    getStockAmount() {
         return this._stockAmount;
     }
 
-    get synopsis() {
+    getSynopsis() {
         return this._synopsis;
     }
 
-    get genres() {
+    getGenres() {
         return this._genres;
     }
 }
+
+module.exports = Book;

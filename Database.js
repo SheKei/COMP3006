@@ -9,6 +9,7 @@ let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
 
 //IMPORT MODEL CLASSES
+let BookClass = require("./Model/Book");
 
 //PROCEDURES
 
@@ -18,6 +19,22 @@ function insertBook(authorForename, authorSurname, bookName, stockPrice, selling
     Book.collection.insertOne(bookObj, function(err){
         if(err){console.log(err);}
     });
+}
+
+//Get all books
+async function getAllBooks(){
+    let books = await Book.find({});
+    let bookObjArray = [];
+    if(books[0] !== undefined){
+        for(let i=0; i<books.length; i++){
+           bookObj = new BookClass(
+                books[i]._id, books[i].authorForename, books[i].authorSurname,
+                books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
+                books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
+            );
+            bookObjArray.push(bookObj);
+        }
+    }
 }
 
 //Create a new account upon registration
@@ -30,3 +47,4 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
 
 module.exports.insertBook = insertBook;
 module.exports.insertAccount = insertAccount;
+module.exports.getAllBooks = getAllBooks;

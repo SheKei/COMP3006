@@ -56,6 +56,7 @@ app.get("/User_Register", routes.loadUserRegisterPage);
 
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
+app.get("/View_All_Stock", routes.loadViewAllStockPage);
 
 //POST REQUEST add book
 app.post("/addBook", upload.single("imgCover"), (request, response) => {

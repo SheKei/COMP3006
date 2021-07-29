@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Public/View_All_Stock.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/view_all_stock.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Account-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Account-Controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/Book-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Book-Controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Add_Book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Add_Book.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Librarian/Add_Book.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User/User_Login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User/User_Register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schema/Account-Schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schema/Account-Schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/Login_or_Register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/Welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Schema/Book-Schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schema/Book-Schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Cheese_Pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Chocolate_Cake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Chocolate_Cupcake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Chocolate_Milkshake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Coffee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Hot_Chocolate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Latte.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Macaroons.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Meat_Pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Melon_Juice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Mint_Cupcake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Orange_Juice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Pepperoni_Pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Strawberry_Cake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Strawberry_Milkshake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Summer_Juice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Toffee_Cupcake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/Veg_Pizza.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,19 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
+        <entry file="file://$PROJECT_DIR$/Public/View_All_Stock.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Add_Book.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3861">
-              <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+            <state relative-caret-position="440">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -64,35 +37,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+            <state relative-caret-position="351">
+              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
+        <entry file="file://$PROJECT_DIR$/resources/css/view_all_stock.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="562">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Book.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/Book-Controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="454">
+              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -100,17 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schema/Book-Schema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="68" />
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -140,7 +113,6 @@
         <option value="$PROJECT_DIR$/Public/User/User_Register.html" />
         <option value="$PROJECT_DIR$/Model/Account.js" />
         <option value="$PROJECT_DIR$/Schema/package.json" />
-        <option value="$PROJECT_DIR$/Model/Book.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Public/Librarian/Add_Book.html" />
         <option value="$PROJECT_DIR$/Public/home.ejs" />
@@ -153,15 +125,18 @@
         <option value="$PROJECT_DIR$/Public/User_Login.ejs" />
         <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/resources/css/add_book.css" />
-        <option value="$PROJECT_DIR$/Routes.js" />
         <option value="$PROJECT_DIR$/Schema/Account-Schema.js" />
-        <option value="$PROJECT_DIR$/Schema/Book-Schema.js" />
         <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
         <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
         <option value="$PROJECT_DIR$/Public/Add_Book.ejs" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/Database.js" />
         <option value="$PROJECT_DIR$/Controller/Book-Controller.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/Public/View_All_Stock.ejs" />
+        <option value="$PROJECT_DIR$/resources/css/view_all_stock.css" />
+        <option value="$PROJECT_DIR$/Routes.js" />
+        <option value="$PROJECT_DIR$/Model/Book.js" />
+        <option value="$PROJECT_DIR$/Schema/Book-Schema.js" />
+        <option value="$PROJECT_DIR$/Database.js" />
       </list>
     </option>
   </component>
@@ -188,6 +163,11 @@
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
@@ -256,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1626373250924</updated>
       <workItem from="1626373252206" duration="11667000" />
-      <workItem from="1627387201335" duration="20961000" />
+      <workItem from="1627387201335" duration="26796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32628000" />
+    <option name="totallyTimeSpent" value="38463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -295,13 +275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Book.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -383,31 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/add_book.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -425,10 +377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
+    <entry file="file://$PROJECT_DIR$/Controller/Book-Controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="68" />
+        <state relative-caret-position="508">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -439,45 +391,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schema/Book-Schema.js">
+    <entry file="file://$PROJECT_DIR$/Public/Add_Book.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="105" />
+        <state relative-caret-position="585">
+          <caret line="143" column="18" selection-end-line="150" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/User_Login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="4" selection-end-line="44" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="324">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Add_Book.ejs">
+    <entry file="file://$PROJECT_DIR$/resources/css/add_book.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3861">
-          <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+        <state relative-caret-position="135">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/View_All_Stock.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/view_all_stock.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        <state relative-caret-position="351">
+          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schema/Book-Schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Book-Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="454">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
         </state>
       </provider>
     </entry>
