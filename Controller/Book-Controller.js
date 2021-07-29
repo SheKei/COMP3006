@@ -30,9 +30,16 @@ function addGenres(request){
     return genresArray;
 }
 
+async function getAllStockBooks(request, response){
+    let books = await db.getAllBooks();
+    if(books.length > 0){
+        response.render("View_All_Stock",{"books": books});
+    }
+}
+
 
 module.exports.addBook = addBook;
-
+module.exports.getAllStockBooks = getAllStockBooks;
 
 //scifi, adventure, romance, historical, horror, fantasy, mystery, comic, shortStories
 //authorForename, authorSurname, bookName, stockPrice, sellingPrice,

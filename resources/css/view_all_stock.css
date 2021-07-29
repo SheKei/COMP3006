@@ -1,4 +1,4 @@
-body, html, h1 {
+body, html, h1, h4,h5 {
     height: 100%;
     margin: 0;
     font-family: "Century Gothic",monospace;
@@ -8,10 +8,19 @@ body{
     background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
 }
 
+img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
 #viewStockPage{
     background-color: #f5efe4;
     width:90%;
-    height:95%;
+    min-height:95%;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;

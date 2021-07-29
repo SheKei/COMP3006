@@ -1,5 +1,6 @@
 let db = require("./database");
 let session = require('express-session');
+let bookController = require('./Controller/Book-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -22,8 +23,7 @@ function loadAddBookPage(request, response){
 }
 
 function loadViewAllStockPage(request,response){
-    response.render("View_All_Stock");
-    db.getAllBooks();
+    bookController.getAllStockBooks(request, response);
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;

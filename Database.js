@@ -35,6 +35,7 @@ async function getAllBooks(){
             bookObjArray.push(bookObj);
         }
     }
+    return bookObjArray;
 }
 
 //Create a new account upon registration
