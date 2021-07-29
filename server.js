@@ -59,7 +59,6 @@ app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
 
 //GET REQUEST TO VIEW STOCK BOOK
-//app.get("/viewInvite/:inviteId/:inviteType", routes.loadViewInviteDetails);
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
 //POST REQUEST add book

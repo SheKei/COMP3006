@@ -8,6 +8,21 @@ body{
     background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
 }
 
+img{
+    width:350px;
+    height: 350px;
+    border-radius: 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label{margin:1%;}
+
+#bookIdLbl, #bookID{
+    font-size:20px;
+}
+
 #viewBookPage{
     background-color: #f5efe4;
     width:90%;
@@ -20,4 +35,8 @@ body{
 
 #bookContainer{
     padding: 2%;
+}
+
+#genres{
+    display:none;
 }

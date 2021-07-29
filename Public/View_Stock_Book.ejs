@@ -11,12 +11,150 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/view_stock_book.css"/>
+    <script type="text/javascript" src="/jquery/view_stock_book.js"></script>
 </head>
 <body>
-<div id="viewBookPage">
-    <div id="bookContainer">
-        <h1><%= book.getId() %></h1>
+<div id="viewBookPage" class="col-12">
+    <div id="bookContainer" class="col-12">
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-2">
+                        <label id="bookIdLbl" for="bookID">Stock No:</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="text" name="bookID" id="bookID"
+                               class="form-control" value="<%= book.getId() %>" readonly>
+                    </div>
+                </div><br>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="authorForename">Author's Forename:</label>
+                    </div>
+                    <div class="col-4">
+                        <input value="<%= book.getAuthorForename() %>" type="text" class="form-control" id="authorForename" name="authorForename" required>
+                    </div>
+                    <div class="col-2">
+                        <label for="authorSurname">Author's Surname:</label>
+                    </div>
+                    <div class="col-4">
+                        <input value="<%= book.getAuthorSurname() %>" type="text" class="form-control" id="authorSurname" name="authorSurname" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="bookName">Book Name:</label>
+                    </div>
+                    <div class="col-10">
+                        <input value="<%= book.getBookName() %>" type="text" class="form-control" id="bookName" name="bookName" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label>Stock Price(£):</label>
+                    </div>
+                    <div class="col-2">
+                        <input value="<%= stockPound %>" type="number" min="1" class="form-control" name="stockPound" id="stockPound" required>
+                    </div>
+                    <div class="col-1" class="decimal">
+                        <p>.</p>
+                    </div>
+                    <div class="col-2" id="stockPennyCol">
+                        <input value="<%= stockPenny %>" type="number" min="1" max="99" class="form-control" name="stockPenny" id="stockPenny"required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label>Selling Price(£):</label>
+                    </div>
+                    <div class="col-2">
+                        <input value="<%= sellPound %>" type="number" min="1" class="form-control" name="sellPound" id="sellPound" required>
+                    </div>
+                    <div class="col-1" class="decimal">
+                        <p>.</p>
+                    </div>
+                    <div class="col-2" id="sellPennyCol">
+                        <input value="<%= sellPenny %>" type="number" min="1" max="99" class="form-control" name="sellPenny" id="sellPenny" required>
+                    </div>
+                </div>
+                <div class="form-group row move">
+                    <div class="col-2">
+                        <label>Stock Amount:</label>
+                    </div>
+                    <div class="col-2">
+                        <input value="<%= book.getStockAmount() %>" type="number" min="1" class="form-control" name="stockAmount" id="stockAmount" required>
+                    </div>
+                </div>
+                <div class="form-group row move">
+                    <div class="col-2">
+                        <label>Synopsis:</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea id="synopsis" name="synopsis" class="form-control" cols="10" rows="6" required><%= book.getSynopsis() %></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <h4>Genre(s):</h4>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <div class="form-check">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="scifi" name="scifi">
+                                <label class="form-check-label" for="scifi">Science Fiction</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="adventure" name="adventure">
+                                <label class="form-check-label" for="adventure">Adventure</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="romance" name="romance">
+                                <label class="form-check-label" for="romance">Romance</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="historical" name="historical">
+                                <label class="form-check-label" for="historical">Historical</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="horror" name="horror">
+                                <label class="form-check-label" for="horror">Horror</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="fantasy" name="fantasy">
+                                <label class="form-check-label" for="fantasy">Fantasy</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="mystery" name="mystery">
+                                <label class="form-check-label" for="mystery">Mystery</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="comic" name="comic">
+                                <label class="form-check-label" for="comic">Comic</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="shortStories" name="shortStories">
+                                <label class="form-check-label" for="shortStories">Short Stories</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div><img src="/images/<%= book.getImage() %>" ></div>
+            </div>
+        </div>
     </div>
+    <p id="genres"><%= listGenres %></p>
 </div>
 </body>
 </html>

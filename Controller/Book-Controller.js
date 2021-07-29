@@ -40,8 +40,25 @@ async function getAllStockBooks(request, response){
 async function viewStockBookItem(response, bookID){
     let book = await db.getOneBook(bookID);
     if(book !== undefined){
-        response.render("View_Stock_Book",{"book": book});
+        let text = convertArrayToString(book.getGenres());
+        console.log(text);
+        response.render("View_Stock_Book",{
+            "book": book,
+            "stockPound":Math.floor(book.getStockPrice()),//SPLIT FLOAT PRICE TO INTEGERS & DECIMALS
+            "stockPenny":Math.floor((book.getStockPrice() - Math.floor(book.getStockPrice()))*100),
+            "sellPound":Math.floor(book.getSellingPrice()),
+            "sellPenny":Math.floor((book.getSellingPrice() - Math.floor(book.getSellingPrice()))*100),
+            "listGenres": convertArrayToString(book.getGenres())
+        });
     }
+}
+
+function convertArrayToString(array){
+    let string = "";
+    for(let i=0;i<array.length;i++){
+        string = string + array[i] + ",";
+    }
+    return string = string.substring(0, string.length - 1);
 }
 
 

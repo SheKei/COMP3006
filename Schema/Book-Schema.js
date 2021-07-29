@@ -8,9 +8,9 @@ let bookSchema = new mongoose.Schema({
     sellingPrice: Number,
     stockAmount: Number,
     synopsis: String,
-    genres:{
-        genre: String,
-    },
+    genres:[
+        String,
+    ],
     image: String
 });
 //authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image
