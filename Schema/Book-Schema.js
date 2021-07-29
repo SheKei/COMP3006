@@ -13,6 +13,6 @@ let bookSchema = new mongoose.Schema({
     }],
     image: String
 });
-
+//authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image
 let Book = mongoose.model("book", bookSchema);
 module.exports.Book = Book;
