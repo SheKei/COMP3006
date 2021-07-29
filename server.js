@@ -58,6 +58,10 @@ app.get("/User_Register", routes.loadUserRegisterPage);
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
 
+//GET REQUEST TO VIEW STOCK BOOK
+//app.get("/viewInvite/:inviteId/:inviteType", routes.loadViewInviteDetails);
+app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
+
 //POST REQUEST add book
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {

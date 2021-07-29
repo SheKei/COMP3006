@@ -20,8 +20,8 @@
             <% for (i=0; i<books.length; i++) { %>
 
                 <div class="col-3">
-                    <div><img class="text-center" src="/images/<%= books[i].getImage() %>" ></div><br>
-                    <div><h4 class="text-center"><%= books[i].getBookName() %></h4></div>
+                    <div><img src="/images/<%= books[i].getImage() %>" ></div><br>
+                    <div><h4 class="text-center"><a href="./View_Stock_Book/<%= books[i].getId() %>"><%= books[i].getBookName() %></a></h4></div>
                     <div><h5 class="text-center"><%= books[i].getAuthorForename()%>  <%= books[i].getAuthorSurname()%></h5></div>
                     <br><br>
                 </div>

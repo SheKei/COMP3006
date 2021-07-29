@@ -37,9 +37,18 @@ async function getAllStockBooks(request, response){
     }
 }
 
+async function viewStockBookItem(response, bookID){
+    let book = await db.getOneBook(bookID);
+    if(book !== undefined){
+        response.render("View_Stock_Book",{"book": book});
+    }
+}
+
+
 
 module.exports.addBook = addBook;
 module.exports.getAllStockBooks = getAllStockBooks;
+module.exports.viewStockBookItem = viewStockBookItem;
 
 //scifi, adventure, romance, historical, horror, fantasy, mystery, comic, shortStories
 //authorForename, authorSurname, bookName, stockPrice, sellingPrice,
