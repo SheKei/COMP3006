@@ -21,6 +21,15 @@ function insertBook(authorForename, authorSurname, bookName, stockPrice, selling
     });
 }
 
+//Update details of a stock book
+function updateBook(bookID,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image){
+    Book.collection.updateOne(
+        {_id:mongoose.Types.ObjectId(bookID)},
+        {
+            $set:{authorForename:authorForename, authorSurname: authorSurname, bookName:bookName, stockPrice:stockPrice, sellingPrice:sellingPrice, stockAmount:stockAmount, synopsis:synopsis, genres: genres, image:image}
+        });
+}
+
 //Get all books and return as an array of book objects
 async function getAllBooks(){
     let books = await Book.find({});
@@ -50,6 +59,8 @@ async function getOneBook(bookID){
     }else{return null;}
 }
 
+
+
 //Create a new account upon registration
 function insertAccount(firstname, lastname, birthday, email, streetName,postCode,password){
     let accountObj = {firstname: firstname, lastname: lastname, birthday:birthday, email:email, streetName:streetName, postCode:postCode, password:password};
@@ -59,6 +70,7 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
 }
 
 module.exports.insertBook = insertBook;
+module.exports.updateBook = updateBook;
 module.exports.insertAccount = insertAccount;
 module.exports.getAllBooks = getAllBooks;
 module.exports.getOneBook = getOneBook;
