@@ -11,6 +11,7 @@ let routes = require("./Routes");
 
 //IMPORT CONTROLLERS
 let bookController = require("./Controller/Book-Controller");
+let accountController = require("./Controller/Account-Controller");
 
 //CONFIGURE EXPRESS APP
 let app = new express();
@@ -76,6 +77,9 @@ app.post("/updateBookImg", upload.single("imgName"), (request, response) => {
 
 //POST REQUEST update book
 app.post("/updateBook", bookController.updateBook);
+
+//POST REQUEST register account
+app.post("/registerAccount", accountController.createAccount);
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;

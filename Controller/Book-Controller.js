@@ -30,7 +30,7 @@ function updateBook(request, response){
 
 //Update file image for book cover
 function updateBookImage(request, response, imgName){
-    db.updateBookImage(request.body.theBookID, imgName);
+    db.updateBookImage(mongoose.Types.ObjectId(request.body.theBookID), imgName);
     response.redirect("/View_Stock_Book/"+request.body.theBookID);//Refresh page
 }
 
@@ -57,6 +57,7 @@ async function getAllStockBooks(request, response){
     }
 }
 
+//Display current details of a selected stock item
 async function viewStockBookItem(response, bookID){
     let book = await db.getOneBook(bookID);
     if(book !== undefined){
@@ -71,6 +72,7 @@ async function viewStockBookItem(response, bookID){
     }
 }
 
+//Covert strings in an array to one string
 function convertArrayToString(array){
     let string = "";
     for(let i=0;i<array.length;i++){
