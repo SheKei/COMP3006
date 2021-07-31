@@ -48,6 +48,9 @@ let storage = multer.diskStorage({
 });
 let upload = multer({ storage:storage });
 
+//ENABLE PROCESSING OF POST FORMS
+app.use(express.urlencoded({extended: true}));
+
 //GET REQUESTS for USERS
 app.get("/welcome", routes.loadWelcomePage);
 app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
@@ -58,12 +61,21 @@ app.get("/User_Register", routes.loadUserRegisterPage);
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
 
+//GET REQUEST TO VIEW STOCK BOOK
+app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
+
 //POST REQUEST add book
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
-    if(request.file) {
-        bookController.addBook(request,response,request.file.filename);
-    }
+    if(request.file) {bookController.addBook(request,response,request.file.filename);}
 });
+
+//POST REQUEST to update cover image of existing book
+app.post("/updateBookImg", upload.single("imgName"), (request, response) => {
+    if(request.file) {bookController.updateBookImage(request,response,request.file.filename);}
+});
+
+//POST REQUEST update book
+app.post("/updateBook", bookController.updateBook);
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;

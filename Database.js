@@ -21,21 +21,53 @@ function insertBook(authorForename, authorSurname, bookName, stockPrice, selling
     });
 }
 
-//Get all books
+//Update details of a stock book
+function updateBook(bookID,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image){
+    Book.collection.updateOne(
+        {_id:mongoose.Types.ObjectId(bookID)},
+        {
+            $set:{authorForename:authorForename, authorSurname: authorSurname, bookName:bookName, stockPrice:stockPrice, sellingPrice:sellingPrice, stockAmount:stockAmount, synopsis:synopsis, genres: genres, image:image}
+        });
+}
+
+//Update file image for an existing book
+function updateBookImage(bookID, imageName){
+    Book.collection.updateOne(
+        {_id:mongoose.Types.ObjectId(bookID)},
+        {$set:{image:imageName}}
+    );
+}
+
+//Get all books and return as an array of book objects
 async function getAllBooks(){
     let books = await Book.find({});
     let bookObjArray = [];
     if(books[0] !== undefined){
-        for(let i=0; i<books.length; i++){
-           bookObj = new BookClass(
+        for(let i=0; i<books.length; i++){ //For each result
+           bookObj = new BookClass(        //Convert to a book obj
                 books[i]._id, books[i].authorForename, books[i].authorSurname,
                 books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
                 books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
             );
-            bookObjArray.push(bookObj);
+            bookObjArray.push(bookObj);    //Then add to array
         }
-    }
+        return bookObjArray;
+    }else{return null;}                    //Return null if no results
 }
+
+//Get one book using its id and return it as a book object
+async function getOneBook(bookID){
+    let books = await Book.find({_id: bookID});
+    if(books[0] !== undefined){
+        return new BookClass(
+            books[0]._id, books[0].authorForename, books[0].authorSurname,
+            books[0].bookName, books[0].stockPrice, books[0].sellingPrice,
+            books[0].stockAmount, books[0].synopsis, books[0].genres, books[0].image
+        );
+    }else{return null;}
+}
+
+
 
 //Create a new account upon registration
 function insertAccount(firstname, lastname, birthday, email, streetName,postCode,password){
@@ -46,5 +78,8 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
 }
 
 module.exports.insertBook = insertBook;
+module.exports.updateBook = updateBook;
+module.exports.updateBookImage = updateBookImage;
 module.exports.insertAccount = insertAccount;
 module.exports.getAllBooks = getAllBooks;
+module.exports.getOneBook = getOneBook;

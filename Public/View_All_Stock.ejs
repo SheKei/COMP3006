@@ -15,7 +15,18 @@
 <body>
 <div id="viewStockPage">
     <div id="stockContainer">
-        <h1>View All Current Stock</h1>
+        <h1>View All Current Stock</h1><br><br>
+        <div class="row">
+            <% for (i=0; i<books.length; i++) { %>
+
+                <div class="col-3">
+                    <div><img src="/images/<%= books[i].getImage() %>" ></div><br>
+                    <div><h4 class="text-center"><a href="./View_Stock_Book/<%= books[i].getId() %>"><%= books[i].getBookName() %></a></h4></div>
+                    <div><h5 class="text-center"><%= books[i].getAuthorForename()%>  <%= books[i].getAuthorSurname()%></h5></div>
+                    <br><br>
+                </div>
+            <% }%>
+        </div>
     </div>
 </div>
 </body>

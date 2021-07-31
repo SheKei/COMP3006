@@ -1,0 +1,46 @@
+body, html, h1, h4,h5 {
+    height: 100%;
+    margin: 0;
+    font-family: "Century Gothic",monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
+}
+
+a:hover{
+    color: #1B1B1B;
+}
+
+img{
+    width:350px;
+    height: 350px;
+    border-radius: 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label{margin:1%;}
+
+#bookIdLbl, #bookID{
+    font-size:20px;
+}
+
+#viewBookPage{
+    background-color: #f5efe4;
+    width:90%;
+    min-height:95%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#bookContainer{
+    padding: 2%;
+}
+
+#genres, #imgCover, #theBookID{
+    display:none;
+}

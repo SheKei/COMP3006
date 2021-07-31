@@ -1,6 +1,6 @@
 class Book{
 
-    constructor(id,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres) {
+    constructor(id,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image) {
 
         this._id = id;
         this._authorForename = authorForename;
@@ -11,8 +11,9 @@ class Book{
         this._stockAmount = stockAmount;
         this._synopsis = synopsis;
         this._genres = genres;
+        this._image = image;
     }
-    //id, forename, surname, bookname, stockprice, sellprice, stockAmount, synopsis, genres
+    //id, forename, surname, bookname, stockprice, sellprice, stockAmount, synopsis, genres, image
     getId(){
         return this._id;
     }
@@ -47,6 +48,10 @@ class Book{
 
     getGenres() {
         return this._genres;
+    }
+
+    getImage(){
+        return this._image;
     }
 }
 
