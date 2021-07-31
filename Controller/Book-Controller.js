@@ -28,6 +28,12 @@ function updateBook(request, response){
     response.redirect("/View_Stock_Book/"+request.body.bookID); //Refresh page
 }
 
+//Update file image for book cover
+function updateBookImage(request, response, imgName){
+    db.updateBookImage(request.body.theBookID, imgName);
+    response.redirect("/View_Stock_Book/"+request.body.theBookID);//Refresh page
+}
+
 //Check which genres were checked
 function addGenres(request){
     let genresArray = [];
@@ -77,6 +83,7 @@ function convertArrayToString(array){
 
 module.exports.addBook = addBook;
 module.exports.updateBook = updateBook;
+module.exports.updateBookImage = updateBookImage;
 module.exports.getAllStockBooks = getAllStockBooks;
 module.exports.viewStockBookItem = viewStockBookItem;
 

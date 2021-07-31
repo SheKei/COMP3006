@@ -8,6 +8,10 @@ body{
     background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
 }
 
+a:hover{
+    color: #1B1B1B;
+}
+
 img{
     width:350px;
     height: 350px;
@@ -37,6 +41,6 @@ label{margin:1%;}
     padding: 2%;
 }
 
-#genres, #imgCover{
+#genres, #imgCover, #theBookID{
     display:none;
 }

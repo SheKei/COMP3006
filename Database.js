@@ -30,6 +30,14 @@ function updateBook(bookID,authorForename, authorSurname, bookName, stockPrice, 
         });
 }
 
+//Update file image for an existing book
+function updateBookImage(bookID, imageName){
+    Book.collection.updateOne(
+        {_id:mongoose.Types.ObjectId(bookID)},
+        {$set:{image:imageName}}
+    );
+}
+
 //Get all books and return as an array of book objects
 async function getAllBooks(){
     let books = await Book.find({});
@@ -71,6 +79,7 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
 
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
+module.exports.updateBookImage = updateBookImage;
 module.exports.insertAccount = insertAccount;
 module.exports.getAllBooks = getAllBooks;
 module.exports.getOneBook = getOneBook;
