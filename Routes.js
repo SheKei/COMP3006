@@ -36,6 +36,11 @@ function loadViewStockBookPage(request, response){
     bookController.viewStockBookItem(response, request.params.bookId);
 }
 
+//Load customer support chat room as ADMIN
+function loadEmployeeChatRoom(request,response){
+    response.render("Employee_Customer_Support");
+}
+
 function loadUserHomePage(request,response){
     console.log("Home Page " + request.session.user);
     response.render("User_Home");
@@ -81,3 +86,4 @@ module.exports.loadViewBookPage = loadViewBookPage;
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
+module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
