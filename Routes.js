@@ -36,6 +36,10 @@ function loadViewStockBookPage(request, response){
     bookController.viewStockBookItem(response, request.params.bookId);
 }
 
+function loadUserHomePage(request,response){
+    response.render("User_Home");
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
@@ -43,3 +47,4 @@ module.exports.loadUserRegisterPage = loadUserRegisterPage;
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
+module.exports.loadUserHomePage = loadUserHomePage;
