@@ -45,6 +45,11 @@ function loadViewAllBookItemsPage(request,response){
     bookController.getAllBookItems(request,response);
 }
 
+//View a book as a customer
+function loadViewBookPage(request,response){
+    bookController.viewBookItem(response, request.params.bookId);
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
@@ -54,3 +59,4 @@ module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
+module.exports.loadViewBookPage = loadViewBookPage;

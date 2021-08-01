@@ -81,6 +81,17 @@ async function viewStockBookItem(response, bookID){
     }
 }
 
+//Display current details of a selected stock item
+async function viewBookItem(response, bookID){
+    let book = await db.getOneBook(bookID);
+    console.log(book !== undefined);
+    if(book !== undefined){
+        response.render("View_Book",{
+            "book": book
+        });
+    }
+}
+
 //Covert strings in an array to one string
 function convertArrayToString(array){
     let string = "";
@@ -98,6 +109,7 @@ module.exports.updateBookImage = updateBookImage;
 module.exports.getAllStockBooks = getAllStockBooks;
 module.exports.viewStockBookItem = viewStockBookItem;
 module.exports.getAllBookItems = getAllBookItems;
+module.exports.viewBookItem = viewBookItem;
 
 //scifi, adventure, romance, historical, horror, fantasy, mystery, comic, shortStories
 //authorForename, authorSurname, bookName, stockPrice, sellingPrice,

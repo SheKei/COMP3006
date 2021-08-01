@@ -104,6 +104,9 @@ app.get("/User_Home/:userID", function(request,response){
     response.redirect("/User_Home");
 });
 
+//GET REQUEST TO VIEW BOOK as customer
+app.get("/View_Book/:bookId", routes.loadViewBookPage);
+
 //RUN THE SERVER ON PORT 9000
 let port = 9000;
 
