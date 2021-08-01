@@ -40,6 +40,11 @@ function loadUserHomePage(request,response){
     response.render("User_Home");
 }
 
+//View books as a customer
+function loadViewAllBookItemsPage(request,response){
+    bookController.getAllBookItems(request,response);
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
@@ -48,3 +53,4 @@ module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadUserHomePage = loadUserHomePage;
+module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;

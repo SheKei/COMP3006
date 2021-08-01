@@ -50,10 +50,19 @@ function addGenres(request){
     return genresArray;
 }
 
+//View books as stock items
 async function getAllStockBooks(request, response){
     let books = await db.getAllBooks();
     if(books.length > 0){
         response.render("View_All_Stock",{"books": books});
+    }
+}
+
+//View book items as a customer
+async function getAllBookItems(request,response){
+    let books = await db.getAllBooks();
+    if(books.length > 0){
+        response.render("View_All_Books",{"books": books});
     }
 }
 
@@ -88,6 +97,7 @@ module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
 module.exports.getAllStockBooks = getAllStockBooks;
 module.exports.viewStockBookItem = viewStockBookItem;
+module.exports.getAllBookItems = getAllBookItems;
 
 //scifi, adventure, romance, historical, horror, fantasy, mystery, comic, shortStories
 //authorForename, authorSurname, bookName, stockPrice, sellingPrice,

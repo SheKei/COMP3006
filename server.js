@@ -92,6 +92,9 @@ app.post("/registerAccount", accountController.createAccount);
 //POST REQUEST to login
 app.post("/checkLogin", accountController.login);
 
+//GET REQUESTS for customers
+app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
+
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
 app.get("/User_Home/:userID", function(request,response){
