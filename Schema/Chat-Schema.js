@@ -8,5 +8,5 @@ let chatSchema = new mongoose.Schema({
     timestamp: Date
 });
 
-let Chat = mongoose.model("chat", bookSchema);
+let Chat = mongoose.model("chat", chatSchema);
 module.exports.Chat = Chat;

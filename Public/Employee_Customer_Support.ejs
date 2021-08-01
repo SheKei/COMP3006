@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/20c7401107.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_contact_shop.css"/>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
 </head>
 <body>
 <header><%- include("Employee_Navbar"); %></header>
@@ -35,5 +36,52 @@
 </div>
 </body>
 </html>
+<script>
+    $(function(){
+        let socket = io("http://localhost:9000");
+
+        let user = "admin";
+        let customer = "610580434665755c249b5b9e";
+
+        $("#msg").keypress(function(){
+            let message = $("#msg").val();
+
+            if(message === ""){
+                $('#sendMsgBtn').prop('disabled', true);
+            }
+            else{
+                $('#sendMsgBtn').prop('disabled', false);
+            }
+        });
+
+
+        //Add event handler
+        $("#sendMsgBtn").click(function(){
+            let message = $("#msg").val();
+
+            if(message !== ""){
+                let d = new Date();
+                let month = d.getMonth() + 1;
+                let date = d.getDate();
+                if(date<10){date = "0"+date;}
+                if(month<10){month="0"+month;}
+
+                let timestamp = date + "/" + month + "/" + d.getFullYear() + " - " + d.getHours() + ":" + d.getMinutes();
+                                            //msg, recipient, sender, timestamp
+                socket.emit("send message", message, customer, user,timestamp);
+                $("#messages").append( message + ' <p class="time"> ' + timestamp + '</p></p>' );
+            }
+        });
+
+        socket.on("received message", function(msg, recipient, sender, timestamp){
+
+            if(sender.trim() === customer.trim() && recipient.trim() === user.trim()){
+                $("#messages").append("<p class='message'>" + msg + "</p><p>"+timestamp+"</p>");
+            }
+
+        });
+    });
+</script>
+
 
 

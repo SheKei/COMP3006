@@ -8,6 +8,7 @@ mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
 let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
 let Basket = require('./Schema/Basket-Schema').Basket;
+let Chat = require("./Schema/Chat-Schema").Chat;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
