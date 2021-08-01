@@ -8,29 +8,16 @@ body{
     background: linear-gradient(to top right, #e8dfcc 10%, #ccbe93 90%);
 }
 
-#stockFormPage{
+#homePage{
     width: 90%;
-    min-height: 720px;
+    height: 90%;
     background-color: #f5efe4;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-#formContainer{
+#homeContainer{
     padding:2%;
-}
-
-.move{
-    left:2%;
-}
-
-#stockPennyCol, #sellPennyCol{
-    right: 90px;
-}
-
-.decimal{
-    font-size: 25px;
-    right:10px;
 }

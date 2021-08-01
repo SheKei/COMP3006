@@ -12,6 +12,7 @@ let routes = require("./Routes");
 //IMPORT CONTROLLERS
 let bookController = require("./Controller/Book-Controller");
 let accountController = require("./Controller/Account-Controller");
+let basketController = require("./Controller/Basket-Controller");
 
 //CONFIGURE EXPRESS APP
 let app = new express();
@@ -69,28 +70,32 @@ app.get("/User_Home", routes.loadUserHomePage);
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
+app.get("/View_Basket", routes.loadBasketPage);
 
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
-//POST REQUEST add book
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}
 });
 
-//POST REQUEST to update cover image of existing book
+//FORM POST REQUEST to update cover image of existing book
 app.post("/updateBookImg", upload.single("imgName"), (request, response) => {
     if(request.file) {bookController.updateBookImage(request,response,request.file.filename);}
 });
 
-//POST REQUEST update book
+//FORM POST REQUEST update book
 app.post("/updateBook", bookController.updateBook);
 
-//POST REQUEST register account
+//FORM POST REQUEST register account
 app.post("/registerAccount", accountController.createAccount);
 
-//POST REQUEST to login
+//FORM POST REQUEST to login
 app.post("/checkLogin", accountController.login);
+
+//GET REQUESTS for customers
+app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
+app.get("/Contact_Shop", routes.loadCustomerSupportPage);
 
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
@@ -100,6 +105,12 @@ app.get("/User_Home/:userID", function(request,response){
     currentUser = sesh.user;
     response.redirect("/User_Home");
 });
+
+//GET REQUEST TO VIEW BOOK as customer
+app.get("/View_Book/:bookId", routes.loadViewBookPage);
+
+//FORM POST REQUEST to add item to basket
+app.post("/addToBasket", routes.addToBasket);
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;

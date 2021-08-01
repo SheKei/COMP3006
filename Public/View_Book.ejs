@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Book</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/view_book.css"/>
+</head>
+<body>
+<header><%- include("User_Navbar"); %></header>
+    <div id="viewBookPage">
+        <div id="bookContainer">
+            <div class="row">
+                <div class="col-6"><br><br>
+                    <div><img src="/images/<%= book.getImage() %>" ></div>
+                </div>
+                <div class="col-6">
+                    <div><h1 class="text-center"> <%= book.getBookName() %></h1></div>
+                    <div><h2 class="text-center">By <%= book.getAuthorForename() %> <%= book.getAuthorSurname() %></h2></div><br><br><br>
+                    <div><h3 class="text-center">Genres: <%= theGenres %></h3></div><br><br>
+                    <div><section><p id="synopsis"><strong>Synopsis: </strong><%= book.getSynopsis() %></p></section></div><br>
+                    <div><h3>£<%= book.getSellingPrice() %></h3></div><br><br>
+                    <form method="post" action="addToBasket">
+                    <div class="form-group row">
+                        <input type="text" name="bookID" id="bookID" value="<%= book.getId() %>" readonly>
+                        <div class="col-3">
+                            <label for="orderAmount">Quantity:</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" min="1" class="form-control" name="orderAmount" id="orderAmount" placeholder="1" required>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-dark">Add to Basket</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -7,11 +7,13 @@ mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
 //IMPORT SCHEMAS
 let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
+let Basket = require('./Schema/Basket-Schema').Basket;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
 let Credentials = require("./Model/Credentials");
 let AccountClass = require("./Model/Account");
+let BasketClass = require('./Model/Basket');
 
 //PROCEDURES
 
@@ -98,6 +100,41 @@ async function getLoginCredentials(emailAddress){
     return theAccount;
 }
 
+//Check if there is already item is already in basket
+async function checkBasket(userID, itemID, quantity){
+    let basket = await Basket.find({userID:userID, itemID:itemID});
+
+    if(basket[0] === undefined){//If item is not in basket, add into basket
+        let basketObj = {userID: userID, itemID: itemID, quantity:quantity};
+        Basket.collection.insertOne(basketObj, function(err){if(err){console.log(err);}});
+    }else{
+        Basket.collection.updateOne(//Else update quantity
+            {userID: userID, itemID: itemID},
+            {$set:{quantity:parseInt(basket[0].quantity) + parseInt(quantity)}}
+        );
+    }
+}
+
+//Get all items in a user's basket
+async function getAllItemsInBasket(userID){
+    let basket = await Basket.find({userID:userID});
+    let basketItems = [];
+    if(basket.length > 0){
+        for(let i=0;i<basket.length;i++){
+            let item = await Book.find({_id:mongoose.Types.ObjectId(basket[i].itemID)});
+            let itemObj = new BasketClass(basket[i]._id, basket[i].userID, basket[i].itemID, item[0].image, item[0].bookName, basket[i].quantity, item[0].sellingPrice);
+            basketItems.push(itemObj);
+        }
+    }
+    return basketItems;
+}
+
+//Save a chat message log
+function logChat(sender,recipient,message,timeStamp){
+    let chatObj = {sender: sender, recipient: recipient, message: message, timeStamp: timeStamp};
+    Chat.collection.insertOne(chatObj, function(err, result){if(err){console.log(err);}});
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -106,3 +143,8 @@ module.exports.getOneBook = getOneBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
+
+module.exports.checkBasket = checkBasket;
+module.exports.getAllItemsInBasket = getAllItemsInBasket;
+
+module.exports.logChat = logChat;
