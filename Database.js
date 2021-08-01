@@ -129,6 +129,12 @@ async function getAllItemsInBasket(userID){
     return basketItems;
 }
 
+//Save a chat message log
+function logChat(sender,recipient,message,timeStamp){
+    let chatObj = {sender: sender, recipient: recipient, message: message, timeStamp: timeStamp};
+    Chat.collection.insertOne(chatObj, function(err, result){if(err){console.log(err);}});
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -137,5 +143,8 @@ module.exports.getOneBook = getOneBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
+
 module.exports.checkBasket = checkBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
+
+module.exports.logChat = logChat;
