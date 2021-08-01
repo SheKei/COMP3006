@@ -109,7 +109,7 @@ async function checkBasket(userID, itemID, quantity){
     }else{
         Basket.collection.updateOne(//Else update quantity
             {userID: userID, itemID: itemID},
-            {$set:{quantity:basket[0].quantity + quantity}}
+            {$set:{quantity:parseInt(basket[0].quantity) + parseInt(quantity)}}
         );
     }
 }
