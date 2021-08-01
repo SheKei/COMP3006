@@ -13,6 +13,7 @@ let routes = require("./Routes");
 let bookController = require("./Controller/Book-Controller");
 let accountController = require("./Controller/Account-Controller");
 let basketController = require("./Controller/Basket-Controller");
+let chatController = require("./Controller/Chat-Controller");
 
 //CONFIGURE EXPRESS APP
 let app = new express();
@@ -112,6 +113,21 @@ app.get("/View_Book/:bookId", routes.loadViewBookPage);
 
 //FORM POST REQUEST to add item to basket
 app.post("/addToBasket", routes.addToBasket);
+
+//WEB SOCKET
+io.on("connection", function(socket){
+
+    //Wait for someone to send a message
+    socket.on("send message", function(msg, recipient, sender, timestamp){
+        //Log message
+        chatController.logMessage(sender,recipient,msg,timestamp);
+
+        //Emit by server to find which chatroom message should be sent to
+        socket.broadcast.emit("received message" , msg, recipient, sender, timestamp);
+
+    });
+
+});
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;
