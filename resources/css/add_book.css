@@ -5,7 +5,7 @@ body, html, h1 {
 }
 
 body{
-    background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
+    background: linear-gradient(to top right, #e8dfcc 10%, #ccbe93 90%);
 }
 
 #stockFormPage{

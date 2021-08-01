@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Basket</title>
     <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,22 +11,42 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/basket.css"/>
+    <script type="text/javascript" src="/jquery/basket.js"></script>
 </head>
 <body>
+<header><%- include("User_Navbar"); %></header>
+<div id="basketPage">
+    <div id="basketContainer">
+        <h1>Basket</h1><br><br>
+        <% if( basket.length > 0){ %>
+            <% for(i=0;i<basket.length;i++){ %>
+                <div>
+                    <div class="row">
+                        <div class="col-1">
+                            <i class="far fa-times-circle" id="<%= basket[i].getItemId() %>"></i>
+                        </div>
+                        <div class="col-2">
+                            <img width="100" height="100" src="/images/<%= basket[i].getImg() %>" >
+                        </div>
+                        <div class="col-2">
+                            <h4><%= basket[i].getItemName() %></h4>
+                        </div>
+                        <div class="col-2">
+                            <h4>QTY: <%= basket[i].getQuantity() %></h4>
+                        </div>
+                        <div class="col-2">
+                            <h4>£<%= basket[i].getIndividualPrice() %></h4>
+                        </div>
+                        <div class="col-3 text-center">
+                            <h4><strong>£<%= basket[i].getTotalPrice() %></strong></h4>
+                        </div>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="basketModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">View Basket</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-        </div>
+                    </div><br>
+                </div>
+            <% } %>
+        <% } %>
     </div>
 </div>
-
 </body>
 </html>
+

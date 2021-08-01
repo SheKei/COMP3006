@@ -8,4 +8,17 @@ function checkBasket(userID,response, request){
     response.redirect("/View_Book/"+request.body.bookID);
 }
 
+//Display items currently in basket
+async function displayBasket(userID,response){
+    let basket = await db.getAllItemsInBasket(userID);
+    if(basket.length > 0){
+        console.log("length > 0");
+        response.render("Basket",{"basket": basket});
+    }else{
+        console.log("length = 0");
+        response.render("Basket",{"basket": []});
+    }
+}
+
 module.exports.checkBasket = checkBasket;
+module.exports.displayBasket = displayBasket;

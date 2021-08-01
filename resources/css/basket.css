@@ -1,3 +1,34 @@
-h3{
+body, h1,h2,h3,h4,h5,strong{
     font-family: "Century Gothic", monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #e8dfcc 21%, #ccbe93 100%);
+}
+
+img{
+    border-radius: 15px;
+}
+
+#basketPage{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 650px;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#basketContainer{
+    padding:5%;
+}
+
+.fa-times-circle{
+    font-size: 30px;
+    margin-top: 45px;
+}
+
+.fa-times-circle:hover{
+    color: orangered;
 }

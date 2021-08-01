@@ -1,29 +1,45 @@
-class Credentials {
+class Basket {
 
-    constructor(basketId,userId, itemId, quantity) {
+    constructor(basketId,userId, itemId, image, ItemName, quantity, Price) {
         this.basketID = basketId;
         this.userID = userId;
         this.itemID = itemId;
-        this._basketId = basketId;
-        this._userId = userId;
-        this._itemId = itemId;
-        this._quantity = quantity;
+        this.img = image;
+        this.itemName = ItemName;
+        this.quantity = quantity;
+        this.price = Price;
     }
 
     getBasketId() {
-        return this._basketId;
+        return this.basketID;
     }
 
     getUserId() {
-        return this._userId;
+        return this.userID;
     }
 
     getItemId() {
-        return this._itemId;
+        return this.itemID;
+    }
+
+    getImg(){
+        return this.img;
+    }
+
+    getItemName(){
+        return this.itemName;
     }
 
     getQuantity() {
-        return this._quantity;
+        return this.quantity;
+    }
+
+    getIndividualPrice(){
+        return this.price;
+    }
+
+    getTotalPrice(){
+        return parseFloat(this.price)*parseFloat(this.quantity);
     }
 }
 

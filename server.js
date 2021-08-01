@@ -70,6 +70,7 @@ app.get("/User_Home", routes.loadUserHomePage);
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
+app.get("/View_Basket", routes.loadBasketPage);
 
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);

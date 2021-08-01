@@ -13,6 +13,7 @@ let Basket = require('./Schema/Basket-Schema').Basket;
 let BookClass = require("./Model/Book");
 let Credentials = require("./Model/Credentials");
 let AccountClass = require("./Model/Account");
+let BasketClass = require('./Model/Basket');
 
 //PROCEDURES
 
@@ -114,6 +115,20 @@ async function checkBasket(userID, itemID, quantity){
     }
 }
 
+//Get all items in a user's basket
+async function getAllItemsInBasket(userID){
+    let basket = await Basket.find({userID:userID});
+    let basketItems = [];
+    if(basket.length > 0){
+        for(let i=0;i<basket.length;i++){
+            let item = await Book.find({_id:mongoose.Types.ObjectId(basket[i].itemID)});
+            let itemObj = new BasketClass(basket[i]._id, basket[i].userID, basket[i].itemID, item[0].image, item[0].bookName, basket[i].quantity, item[0].sellingPrice);
+            basketItems.push(itemObj);
+        }
+    }
+    return basketItems;
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -123,3 +138,4 @@ module.exports.getOneBook = getOneBook;
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 module.exports.checkBasket = checkBasket;
+module.exports.getAllItemsInBasket = getAllItemsInBasket;

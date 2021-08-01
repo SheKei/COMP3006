@@ -58,6 +58,10 @@ function addToBasket(request,response){
     basketController.checkBasket(request.session.user, response, request);
 }
 
+function loadBasketPage(request,response){
+    basketController.displayBasket(request.session.user, response);
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
@@ -68,4 +72,5 @@ module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
+module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
