@@ -1,7 +1,7 @@
 let db = require("./database");
 let session = require('express-session');
 let bookController = require('./Controller/Book-Controller');
-
+let basketController = require('./Controller/Basket-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -53,6 +53,11 @@ function loadViewBookPage(request,response){
     bookController.viewBookItem(response, request.params.bookId);
 }
 
+//Pass on session user to basket controller
+function addToBasket(request,response){
+    basketController.checkBasket(request.session.user, response, request);
+}
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
@@ -63,3 +68,4 @@ module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
+module.exports.addToBasket = addToBasket;

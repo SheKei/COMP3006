@@ -7,6 +7,7 @@ mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
 //IMPORT SCHEMAS
 let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
+let Basket = require('./Schema/Basket-Schema').Basket;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
@@ -98,6 +99,21 @@ async function getLoginCredentials(emailAddress){
     return theAccount;
 }
 
+//Check if there is already item is already in basket
+async function checkBasket(userID, itemID, quantity){
+    let basket = await Basket.find({userID:userID, itemID:itemID});
+
+    if(basket[0] === undefined){//If item is not in basket, add into basket
+        let basketObj = {userID: userID, itemID: itemID, quantity:quantity};
+        Basket.collection.insertOne(basketObj, function(err){if(err){console.log(err);}});
+    }else{
+        Basket.collection.updateOne(//Else update quantity
+            {userID: userID, itemID: itemID},
+            {$set:{quantity:basket[0].quantity + quantity}}
+        );
+    }
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -106,3 +122,4 @@ module.exports.getOneBook = getOneBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
+module.exports.checkBasket = checkBasket;
