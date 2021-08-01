@@ -58,8 +58,14 @@ function addToBasket(request,response){
     basketController.checkBasket(request.session.user, response, request);
 }
 
+//Display items in customer's basket
 function loadBasketPage(request,response){
     basketController.displayBasket(request.session.user, response);
+}
+
+//Display customer support chatroom
+function loadCustomerSupportPage(request,response){
+    response.render("User_Contact_Shop");
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;
@@ -74,3 +80,4 @@ module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
+module.exports.loadCustomerSupportPage = loadCustomerSupportPage;

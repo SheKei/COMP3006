@@ -95,6 +95,7 @@ app.post("/checkLogin", accountController.login);
 
 //GET REQUESTS for customers
 app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
+app.get("/Contact_Shop", routes.loadCustomerSupportPage);
 
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
