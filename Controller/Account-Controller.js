@@ -14,5 +14,33 @@ function createAccount(request, response){
     response.end();
 }
 
+//Gather inputs and check login credentials
+async function login(request, response){
+    let emailInput = request.body.email;
+    let passwordInput = request.body.password;
+    console.log("email = " + emailInput);
+    console.log("password = " + passwordInput);
+
+    let access = false;
+
+    let credentials = await db.getLoginCredentials(emailInput);
+    //console.log(credentials[0] !== null);
+    //console.log(credentials[0].getFirstName());
+    console.log("after db called");
+    if(credentials !== null){
+        if(emailInput === credentials.getEmailAddress()){   //If emails match
+            let password = credentials.getPassword();       //then compare passwords
+            access = bcrypt.compareSync(passwordInput, password );
+        }
+    }
+
+    if(access){
+        response.redirect("/User_Home/"+credentials.getUserID());
+    }else{
+        response.redirect("/User_Login");
+    }
+}
+
 module.exports.createAccount = createAccount;
+module.exports.login = login;
 

@@ -10,6 +10,8 @@ let Book = require("./Schema/Book-Schema").Book;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
+let Credentials = require("./Model/Credentials");
+let AccountClass = require("./Model/Account");
 
 //PROCEDURES
 
@@ -67,8 +69,6 @@ async function getOneBook(bookID){
     }else{return null;}
 }
 
-
-
 //Create a new account upon registration
 function insertAccount(firstname, lastname, birthday, email, streetName,postCode,password){
     let accountObj = {firstname: firstname, lastname: lastname, birthday:birthday, email:email, streetName:streetName, postCode:postCode, password:password};
@@ -77,9 +77,32 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
     });
 }
 
+//Find an existing account using email address
+async function checkLoginCredentials(inputEmail){
+    let credentials = await Account.find({email: inputEmail});
+    let loginAccount = null;
+    if(credentials[0] !== undefined){
+        loginAccount = new Credentials(credentials[0].email, credentials[0].password);
+    }
+    return loginAccount;
+}
+
+//Get account credentials
+async function getLoginCredentials(emailAddress){
+    let account = await Account.find({email: emailAddress});
+    let theAccount = null;
+    if(account[0] !== undefined){
+        console.log("in here");
+        theAccount = new AccountClass(account[0]._id,account[0].firstname,account[0].lastname, account[0].birthday, account[0].email, account[0].streetName, account[0].postCode, account[0].password);
+    }
+    return theAccount;
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
-module.exports.insertAccount = insertAccount;
 module.exports.getAllBooks = getAllBooks;
 module.exports.getOneBook = getOneBook;
+
+module.exports.insertAccount = insertAccount;
+module.exports.getLoginCredentials = getLoginCredentials;

@@ -1,12 +1,18 @@
 class Account {
 
-    constructor(forename, surname, dateOfBirth, emailAddress, street, thePostCode) {
+    constructor(theUerID,forename, surname, dateOfBirth, emailAddress, street, thePostCode, thePassword) {
+        this.userID = theUerID;
         this.firstname =forename;
         this.lastname = surname;
         this.birthday = dateOfBirth;
         this.email = emailAddress;
         this.streetName = street;
         this.postCode = thePostCode;
+        this.password = thePassword;
+    }
+
+    getUserID(){
+        return this.userID;
     }
 
     getFirstName(){
@@ -14,24 +20,28 @@ class Account {
     }
 
 
-    get surname() {
+    getSurname() {
         return this.lastname;
     }
 
-    get dateOfBirth() {
+    getDateOfBirth() {
         return this.birthday;
     }
 
-    get emailAddress() {
+    getEmailAddress() {
         return this.email;
     }
 
-    get street() {
+    getStreet() {
         return this.streetName;
     }
 
-    get thePostCode() {
+    getThePostCode() {
         return this.postCode;
+    }
+
+    getPassword(){
+        return this.password;
     }
 }
 

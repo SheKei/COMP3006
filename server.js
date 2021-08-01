@@ -36,6 +36,13 @@ app.set("view engine", "ejs");
 //SET UP STATIC FILES
 app.use(express.static(path.join(__dirname, "resources")));
 
+//SET UP SESSION USAGE
+let secretSesh = bcrypt.hashSync("secret", 10);
+let sesh;
+app.use(session({
+    secret: secretSesh
+}));
+
 //FOR UPLOADING PICTURES
 let storage = multer.diskStorage({
     destination: function(request, file, cb) {
@@ -57,6 +64,7 @@ app.get("/welcome", routes.loadWelcomePage);
 app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
 app.get("/User_Login", routes.loadUserLoginPage);
 app.get("/User_Register", routes.loadUserRegisterPage);
+app.get("/User_Home", routes.loadUserHomePage);
 
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
@@ -80,6 +88,18 @@ app.post("/updateBook", bookController.updateBook);
 
 //POST REQUEST register account
 app.post("/registerAccount", accountController.createAccount);
+
+//POST REQUEST to login
+app.post("/checkLogin", accountController.login);
+
+let currentUser = "";
+//GET REQUEST to save user id as session after successful login
+app.get("/User_Home/:userID", function(request,response){
+    sesh=request.session;
+    sesh.user = request.params.userID;
+    currentUser = sesh.user;
+    response.redirect("/User_Home");
+});
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;
