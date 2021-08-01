@@ -65,7 +65,7 @@ function loadBasketPage(request,response){
 
 //Display customer support chatroom
 function loadCustomerSupportPage(request,response){
-    response.render("User_Contact_Shop");
+    response.render("User_Contact_Shop",{"userID":request.session.user});
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;

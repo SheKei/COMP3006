@@ -1,0 +1,28 @@
+body, h1,h2,h3,h4,h5,strong{
+    font-family: "Century Gothic", monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #e8dfcc 21%, #ccbe93 100%);
+}
+
+#contactSupportPage{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    min-height: 700px;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#contactSupportContainer{
+    padding:2%;
+}
+
+#msgBoard{
+    width:95%;
+    min-height: 650px;
+    border-radius: 15px;
+    background-color: #fffbf2;
+}
