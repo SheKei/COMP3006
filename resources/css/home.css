@@ -1,0 +1,23 @@
+body, html, h1 {
+    height: 100%;
+    margin: 0;
+    font-family: "Century Gothic",monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
+}
+
+#homePage{
+    width: 90%;
+    height: 90%;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#homeContainer{
+    padding:2%;
+}

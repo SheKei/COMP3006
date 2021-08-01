@@ -12,8 +12,9 @@ a:hover{
     color: #1B1B1B;
 }
 img{
-    width:400px;
-    height: 400px;
+    width:350px;
+    height: 350px;
+    top-margin:5%;
     border-radius: 15px;
     display: block;
     margin-right: auto;
@@ -22,8 +23,8 @@ img{
 
 #viewBookPage{
     background-color: #f5efe4;
-    width:80%;
-    min-height:80%;
+    width:90%;
+    min-height:90%;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;

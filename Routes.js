@@ -37,16 +37,19 @@ function loadViewStockBookPage(request, response){
 }
 
 function loadUserHomePage(request,response){
+    console.log("Home Page " + request.session.user);
     response.render("User_Home");
 }
 
 //View books as a customer
 function loadViewAllBookItemsPage(request,response){
+    console.log("View ALL Books Page " + request.session.user);
     bookController.getAllBookItems(request,response);
 }
 
 //View a book as a customer
 function loadViewBookPage(request,response){
+    console.log("View Book " + request.session.user);
     bookController.viewBookItem(response, request.params.bookId);
 }
 
