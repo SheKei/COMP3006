@@ -84,10 +84,11 @@ async function viewStockBookItem(response, bookID){
 //Display current details of a selected stock item
 async function viewBookItem(response, bookID){
     let book = await db.getOneBook(bookID);
-    console.log(book !== undefined);
     if(book !== undefined){
+        let genres = convertArrayToString(book.getGenres());
         response.render("View_Book",{
-            "book": book
+            "book": book,
+            "theGenres": genres
         });
     }
 }
