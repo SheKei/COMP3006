@@ -69,14 +69,14 @@
                 let timestamp = date + "/" + month + "/" + d.getFullYear() + " - " + d.getHours() + ":" + d.getMinutes();
                                             //msg, recipient, sender, timestamp
                 socket.emit("send message", message, customer, user,timestamp);
-                $("#messages").append( message + ' <p class="time"> ' + timestamp + '</p></p>' );
+                $("#messages").prepend( message + ' <p class="time"> ' + timestamp + '</p></p>' );
             }
         });
 
         socket.on("received message", function(msg, recipient, sender, timestamp){
 
             if(sender.trim() === customer.trim() && recipient.trim() === "admin"){
-                $("#messages").append("<p class='message'>" + msg + "</p><p>"+timestamp+"</p>");
+                $("#messages").prepend("<p class='message'>" + msg + "</p><p>"+timestamp+"</p>");
             }
 
         });
