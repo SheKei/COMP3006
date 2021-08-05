@@ -5,6 +5,8 @@ let socketIo = require("socket.io");
 let session = require('express-session');
 let bcrypt = require ('bcrypt');
 let multer = require('multer');
+let moment = require('moment');
+moment().format();
 
 //IMPORT ROUTES
 let routes = require("./Routes");
@@ -103,7 +105,7 @@ app.post("/updateAccount", routes.updateAccount);
 //GET REQUESTS for customers
 app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
 app.get("/Contact_Shop", routes.loadCustomerSupportPage);
-
+app.get("/Checkout_Basket", routes.checkoutBasket);
 
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
@@ -132,8 +134,8 @@ io.on("connection", function(socket){
         chatController.logMessage(sender,recipient,msg,timestamp);
 
         //Emit by server to find which chatroom message should be sent to
-        socket.broadcast.emit("received message" , msg, recipient, sender, timestamp);
-
+        socket.broadcast.emit("received message" , msg, recipient, sender,
+            moment(timestamp).utc().format('DD-MM-YYYY  h:mm a'));
     });
 
 });

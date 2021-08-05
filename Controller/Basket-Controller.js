@@ -24,6 +24,13 @@ async function displayBasket(userID,response){
     }
 }
 
+//Checkout basket items
+function checkout(userID, response){
+    db.checkout(userID);
+    response.redirect("/User_Home");
+}
+
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.displayBasket = displayBasket;
+module.exports.checkout = checkout;

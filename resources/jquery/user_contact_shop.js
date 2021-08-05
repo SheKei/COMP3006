@@ -35,7 +35,7 @@ $(function(){
     socket.on("received message", function(msg, recipient, sender, timestamp){
         if(sender.trim() === "admin" && recipient.trim() === user.trim()){
             $("#messages").prepend(
-                "<div class='adminDiv'><p>" + msg + "</p>" +
+                "<div class='adminDiv'><p>Admin: " + msg + "</p>" +
                 "<p class='font-weight-bold'>"+timestamp+"</p></div><br><br><br><br><br><br><br>");
         }
 

@@ -14,6 +14,8 @@ async function displayChatHistoryForCustomers(userID,response){
 
 async function displayChatHistoryForAdmin(userID,response){
     let msg = await db.retrieveChatHistory(userID);
+    let account = await db.getAccount(userID);
+    let fullname = account.getFirstName() + " " + account.getSurname();
     if(msg.length>0){response.render("Employee_Customer_Support",{"msg":msg});}
 }
 

@@ -11,6 +11,7 @@ let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
 let Basket = require('./Schema/Basket-Schema').Basket;
 let Chat = require("./Schema/Chat-Schema").Chat;
+let Order = require("./Schema/Order-Schema").Order;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
@@ -158,6 +159,35 @@ async function getAllItemsInBasket(userID){
     return basketItems;
 }
 
+//Add all basket items into an invoice order
+async function checkout(userID){
+    let basket = await Basket.find({userID:userID});
+    if(basket.length > 0){
+        let items =[]; let amount=[];
+
+        for(let i=0;i<basket.length;i++){
+            items.push(basket[i].itemID);
+            amount.push(basket[i].quantity);
+            updateStockAmount(basket[i].itemID, basket[i].quantity);
+            removeItemFromBasket(userID, basket[i].itemID);
+        }
+
+        let orderObj = {userID: userID, itemID: items,
+        orderQuantity: amount, orderStatus:"Awaiting", dateOfOrder:new Date()};
+
+        Order.collection.insertOne(orderObj, function(err){
+            if(err){console.log(err);}
+        });
+    }
+}
+
+function updateStockAmount(itemID, substract){
+    Book.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(itemID)},
+        {$inc:{quantity:parseInt(parseInt(substract)*-1)}}
+    );
+}
+
 //Save a chat message log
 function logChat(sender,recipient,message,timeStamp){
     let chatObj = {sender: sender, recipient: recipient, message: message, timeStamp: timeStamp};
@@ -198,6 +228,7 @@ module.exports.updateAccountDetails = updateAccountDetails;
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
+module.exports.checkout = checkout;
 
 module.exports.logChat = logChat;
 module.exports.retrieveChatHistory = retrieveChatHistory;

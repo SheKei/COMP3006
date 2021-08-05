@@ -67,6 +67,12 @@ function removeItemFromBasket(request,response){
     basketController.removeItemFromBasket(request.session.user,request,response);
 }
 
+//Process basket items into an order
+function checkoutBasket(request, response){
+    basketController.checkout(request.session.user, response);
+}
+
+
 //Update account
 function updateAccount(request,response){
     accountController.updateAccountDetails(request.session.user, request, response);
@@ -99,6 +105,7 @@ module.exports.loadViewBookPage = loadViewBookPage;
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
+module.exports.checkoutBasket = checkoutBasket;
 module.exports.updateAccount = updateAccount;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
