@@ -78,6 +78,7 @@ app.get("/Employee_Customer_Support", routes.loadEmployeeChatRoom);
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
+//FORM POST REQUEST TO ADD BOOK
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}
 });
@@ -95,6 +96,9 @@ app.post("/registerAccount", accountController.createAccount);
 
 //FORM POST REQUEST to login
 app.post("/checkLogin", accountController.login);
+
+//FORM POST REQUEST to update account
+app.post("/updateAccount", routes.updateAccount);
 
 //GET REQUESTS for customers
 app.get("/View_All_Books", routes.loadViewAllBookItemsPage);

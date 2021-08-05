@@ -112,6 +112,15 @@ async function getLoginCredentials(emailAddress){
     return theAccount;
 }
 
+//Update the account details
+function updateAccountDetails(userID, firstname, lastname,birthday, email, streetName,postCode ){
+    Account.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(userID)},
+        {$set:{userID:userID, firstname:firstname, lastname:lastname,
+                birthday:birthday, email:email, streetName:streetName,postCode:postCode
+        }});
+}
+
 //Check if there is already item is already in basket
 async function checkBasket(userID, itemID, quantity){
     let basket = await Basket.find({userID:userID, itemID:itemID});
@@ -161,6 +170,7 @@ module.exports.getOneBook = getOneBook;
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 module.exports.getAccount = getAccount;
+module.exports.updateAccountDetails = updateAccountDetails;
 
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
