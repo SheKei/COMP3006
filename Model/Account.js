@@ -19,7 +19,6 @@ class Account {
         return this.firstname;
     }
 
-
     getSurname() {
         return this.lastname;
     }

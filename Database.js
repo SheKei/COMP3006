@@ -80,6 +80,18 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
     });
 }
 
+//Get all account details for display
+async function getAccount(userID){
+    let account = await Account.find({_id: Mongoose.Types.ObjectId(userID)});
+    let accountObj = null;
+    if(account[0] !== undefined){
+        accountObj = new AccountClass(_id, account[0].firstname, account[0].lastname,
+        account[0].birthday, account[0].email, account[0].streetName,
+        account[0].postCode, account[0].password);
+    }
+    return accountObj;
+}
+
 //Find an existing account using email address
 async function checkLoginCredentials(inputEmail){
     let credentials = await Account.find({email: inputEmail});
@@ -95,7 +107,6 @@ async function getLoginCredentials(emailAddress){
     let account = await Account.find({email: emailAddress});
     let theAccount = null;
     if(account[0] !== undefined){
-        console.log("in here");
         theAccount = new AccountClass(account[0]._id,account[0].firstname,account[0].lastname, account[0].birthday, account[0].email, account[0].streetName, account[0].postCode, account[0].password);
     }
     return theAccount;
