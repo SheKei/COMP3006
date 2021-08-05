@@ -5,7 +5,7 @@ let chatSchema = new mongoose.Schema({
     sender: String,
     recipient: String,
     message: String,
-    timestamp: Date
+    timeStamp: String
 });
 
 let Chat = mongoose.model("chat", chatSchema);

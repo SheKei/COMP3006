@@ -1,4 +1,6 @@
 let mongoose = require("mongoose");
+let moment = require('moment');
+moment().format();
 
 //CONNECT TO DATABASE
 let dbUrl = "mongodb://localhost:27017/bookstoredb";
@@ -15,6 +17,7 @@ let BookClass = require("./Model/Book");
 let Credentials = require("./Model/Credentials");
 let AccountClass = require("./Model/Account");
 let BasketClass = require('./Model/Basket');
+let ChatClass = require("./Model/Chat");
 
 //PROCEDURES
 
@@ -161,6 +164,20 @@ function logChat(sender,recipient,message,timeStamp){
     Chat.collection.insertOne(chatObj, function(err, result){if(err){console.log(err);}});
 }
 
+//Return messages between two users
+async function retrieveChatHistory(userID){
+    let msgs = await Chat.find({$or:[{sender: userID, recipient:"admin"},{sender:"admin", recipient:userID}]});
+    let msgArray = [];
+    if(msgs.length > 0){
+        for(let i=0;i<msgs.length;i++){
+            let msgObj = new ChatClass(msgs[i].sender, msgs[i].recipient,msgs[i].message,msgs[i].timeStamp);
+
+            msgArray.push(msgObj);
+        }console.log(msgs[0]);
+    }
+    return msgArray;
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -177,3 +194,4 @@ module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
 
 module.exports.logChat = logChat;
+module.exports.retrieveChatHistory = retrieveChatHistory;

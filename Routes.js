@@ -3,6 +3,7 @@ let session = require('express-session');
 let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');
 let accountController = require('./Controller/Account-Controller');
+let chatController = require('./Controller/Chat-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -39,7 +40,7 @@ function loadViewStockBookPage(request, response){
 
 //Load customer support chat room as ADMIN
 function loadEmployeeChatRoom(request,response){
-    response.render("Employee_Customer_Support");
+    chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
 }
 
 function loadUserHomePage(request,response){
