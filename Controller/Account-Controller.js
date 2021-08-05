@@ -47,7 +47,7 @@ async function displayAccount(userID, response){
         response.render("User_Account",{
             "firstname": accountObj.getFirstName(),
             "surname": accountObj.getSurname(),
-            "dateOfBirth": accountObj.getDateOfBirth(),
+            "dateOfBirth": moment(accountObj.getDateOfBirth()).utc().format('YYYY-MM-DD'),
             "email": accountObj.getEmail(),
             "street": accountObj.getStreet(),
             "postCode": accountObj.getPostCode()

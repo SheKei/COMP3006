@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Controller/Account-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Account-Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Basket-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Basket-Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User_Account.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Account.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,10 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="1385">
               <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
             </state>
           </provider>
@@ -74,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+            <state relative-caret-position="324">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -148,10 +143,10 @@
         <option value="$PROJECT_DIR$/Public/User_Navbar.ejs" />
         <option value="$PROJECT_DIR$/Controller/Basket-Controller.js" />
         <option value="$PROJECT_DIR$/Model/Account.js" />
-        <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
         <option value="$PROJECT_DIR$/Routes.js" />
         <option value="$PROJECT_DIR$/Public/User_Account.ejs" />
         <option value="$PROJECT_DIR$/Database.js" />
+        <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
       </list>
     </option>
   </component>
@@ -233,12 +228,12 @@
       <workItem from="1627387201335" duration="26796000" />
       <workItem from="1627580576616" duration="15811000" />
       <workItem from="1627743096889" duration="3709000" />
-      <workItem from="1628147184561" duration="4078000" />
+      <workItem from="1628147184561" duration="4228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86148000" />
+    <option name="totallyTimeSpent" value="86298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -598,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -614,8 +602,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="1385">
           <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
         </state>
       </provider>
     </entry>
