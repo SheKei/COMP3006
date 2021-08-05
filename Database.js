@@ -172,10 +172,11 @@ async function retrieveChatHistory(userID){
         let account = await Account.find({_id:mongoose.Types.ObjectId(userID)});
         let customerName = account[0].firstname + " " + account[0].lastname;
         for(let i=0;i<msgs.length;i++) {
+            let timestamp = moment(msgs[i].timeStamp).utc().format('DD-MM-YYYY  h:mm a');
             if(msgs[i].sender === "admin"){
-                msgObj = new ChatClass(msgs[i].sender, customerName, msgs[i].message, msgs[i].timeStamp);
+                msgObj = new ChatClass(msgs[i].sender, customerName, msgs[i].message, timestamp);
             }else{
-                msgObj = new ChatClass(customerName, msgs[i].recipient, msgs[i].message, msgs[i].timeStamp);
+                msgObj = new ChatClass(customerName, msgs[i].recipient, msgs[i].message, timestamp);
             }
             msgArray.push(msgObj);
         }
