@@ -42,7 +42,7 @@
 
         let employee = "admin";
         let user = $("#userID").html();
-
+        user = user.trim();
         $("#msg").keypress(function(){
             let message = $("#msg").val();
 
@@ -74,7 +74,7 @@
 
         socket.on("received message", function(msg, recipient, sender, timestamp){
 
-            if(sender.trim() === user.trim() && recipient.trim() === employee.trim()){
+            if(sender.trim() === "admin" && recipient.trim() === user.trim()){
                 $("#messages").append("<p class='message'>" + msg + "</p><p>"+timestamp+"</p>");
             }
 
