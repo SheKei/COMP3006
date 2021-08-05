@@ -42,19 +42,16 @@ function loadEmployeeChatRoom(request,response){
 }
 
 function loadUserHomePage(request,response){
-    console.log("Home Page " + request.session.user);
     response.render("User_Home");
 }
 
 //View books as a customer
 function loadViewAllBookItemsPage(request,response){
-    console.log("View ALL Books Page " + request.session.user);
     bookController.getAllBookItems(request,response);
 }
 
 //View a book as a customer
 function loadViewBookPage(request,response){
-    console.log("View Book " + request.session.user);
     bookController.viewBookItem(response, request.params.bookId);
 }
 
@@ -65,7 +62,6 @@ function addToBasket(request,response){
 
 //Remove item from basket
 function removeItemFromBasket(request,response){
-    console.log("userid is " + request.session.user);
     basketController.removeItemFromBasket(request.session.user,request,response);
 }
 
@@ -77,6 +73,10 @@ function loadBasketPage(request,response){
 //Display customer support chatroom
 function loadCustomerSupportPage(request,response){
     response.render("User_Contact_Shop",{"userID":request.session.user});
+}
+
+function loadAccountPage(request,response){
+    response.render("User_Account");
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;
@@ -94,3 +94,4 @@ module.exports.addToBasket = addToBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
+module.exports.loadAccountPage = loadAccountPage;

@@ -68,6 +68,7 @@ app.get("/User_Login", routes.loadUserLoginPage);
 app.get("/User_Register", routes.loadUserRegisterPage);
 app.get("/User_Home", routes.loadUserHomePage);
 app.get("/View_Basket", routes.loadBasketPage);
+app.get("/User_Account", routes.loadAccountPage);
 
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
