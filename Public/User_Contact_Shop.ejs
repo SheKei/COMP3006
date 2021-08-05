@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Customer Support</title>
+    <title>Contact Shop</title>
     <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_contact_shop.css"/>
     <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <script type="text/javascript" src="/jquery/user_contact_shop.js"></script>
 </head>
 <body>
 <header><%- include("User_Navbar"); %></header>
     <div id="contactSupportPage">
         <div id="contactSupportContainer">
-            <h2>Contact Support</h2><br>
+            <h2>Contact Shop</h2><br>
             <div class="row">
                 <div class="col-4">
-                    <h5 id="userID"><%= userID %></h5>
+                    <h5 id="userID" class="hidden"><%= userID %></h5>
                     <textarea class="form-control" rows="6" id="msg" name="msg" required></textarea><br>
                     <div class="text-center"><button type="button" id="sendMsgBtn" class="btn btn-dark">Send</button></div>
                 </div>
@@ -31,12 +32,15 @@
                         <% if(msg.length > 0){%>
                             <% for(i=0; i<msg.length; i++) { %>
                                 <% if(msg[i].getSender() !== "admin"){%>
-                                    <p class="customer"><span><%= msg[i].getSender() %>: <%= msg[i].getMessage() %></span></p>
-                                    <p class="customer"><%= msg[i].getTimestamp() %></p>
-
+                                    <div class="customerDiv">
+                                        <p class="customer"><span><%= msg[i].getMessage() %></span></p>
+                                        <p class="customer font-weight-bold"><%= msg[i].getTimestamp() %></p>
+                                    </div><br><br>
                                 <%}else{%>
-                                    <p class="admin"><%= msg[i].getMessage() %></p>
-                                    <p class="admin"><%= msg[i].getTimestamp() %></p>
+                                    <div class="adminDiv">
+                                        <p class="admin">Admin: <%= msg[i].getMessage() %></p>
+                                        <p class="admin font-weight-bold"><%= msg[i].getTimestamp() %></p>
+                                    </div><br><br><br><br><br><br>
                                 <%}%>
                             <%}%>
                         <%}%>
@@ -48,49 +52,7 @@
 </body>
 </html>
 <script>
-    $(function(){
-        let socket = io("http://localhost:9000");
 
-        let employee = "admin";
-        let user = $("#userID").html();
-        user = user.trim();
-        $("#msg").keypress(function(){
-            let message = $("#msg").val();
-
-            if(message === ""){
-                $('#sendMsgBtn').prop('disabled', true);
-            }
-            else{
-                $('#sendMsgBtn').prop('disabled', false);
-            }
-        });
-
-
-        //Add event handler
-        $("#sendMsgBtn").click(function(){
-            let message = $("#msg").val();
-
-            if(message !== ""){
-                let d = new Date();
-                let month = d.getMonth() + 1;
-                let date = d.getDate();
-                if(date<10){date = "0"+date;}
-                if(month<10){month="0"+month;}
-
-                let timestamp = date + "/" + month + "/" + d.getFullYear() + " - " + d.getHours() + ":" + d.getMinutes();
-                socket.emit("send message", message, employee, user,new Date());
-                $("#messages").prepend( message + ' <p class="time"> ' + timestamp + '</p></p>' );
-            }
-        });
-
-        socket.on("received message", function(msg, recipient, sender, timestamp){
-
-            if(sender.trim() === "admin" && recipient.trim() === user.trim()){
-                $("#messages").prepend("<p class='message'>" + msg + "</p><p>"+timestamp+"</p>");
-            }
-
-        });
-    });
 </script>
 
 

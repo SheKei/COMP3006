@@ -6,6 +6,10 @@ body{
     background: linear-gradient(to top right, #e8dfcc 21%, #ccbe93 100%);
 }
 
+.hidden{
+    display: none;
+}
+
 #contactSupportPage{
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +31,10 @@ body{
     border-radius: 15px;
     background-color: #fffbf2;
     display: inline-block;
+}
+
+#messages{
+    overflow: auto;
 }
 
 .adminDiv, .customerDiv{
