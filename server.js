@@ -67,11 +67,11 @@ app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
 app.get("/User_Login", routes.loadUserLoginPage);
 app.get("/User_Register", routes.loadUserRegisterPage);
 app.get("/User_Home", routes.loadUserHomePage);
+app.get("/View_Basket", routes.loadBasketPage);
 
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
-app.get("/View_Basket", routes.loadBasketPage);
 app.get("/Employee_Customer_Support", routes.loadEmployeeChatRoom);
 
 //GET REQUEST TO VIEW STOCK BOOK
@@ -110,9 +110,7 @@ app.get("/User_Home/:userID", function(request,response){
 });
 
 //GET REQUEST to remove an item from basket
-app.get("/Remove_Basket/:itemID",function(response, request){
-    basketController.removeItemFromBasket(request.session.user, request, response);
-});
+app.get("/removeBasket/:itemID",routes.removeItemFromBasket);
 
 //GET REQUEST TO VIEW BOOK as customer
 app.get("/View_Book/:bookId", routes.loadViewBookPage);

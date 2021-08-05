@@ -63,6 +63,12 @@ function addToBasket(request,response){
     basketController.checkBasket(request.session.user, response, request);
 }
 
+//Remove item from basket
+function removeItemFromBasket(request,response){
+    console.log("userid is " + request.session.user);
+    basketController.removeItemFromBasket(request.session.user,request,response);
+}
+
 //Display items in customer's basket
 function loadBasketPage(request,response){
     basketController.displayBasket(request.session.user, response);
@@ -85,5 +91,6 @@ module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
+module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;

@@ -10,8 +10,10 @@ function checkBasket(userID,response, request){
 
 //Remove an item from basket
 function removeItemFromBasket(userID, request,response){
+    console.log("userid is " + request.session.user);
+    console.log("itemid is " + request.params.itemID);
     db.removeItemFromBasket(userID, request.params.itemID);
-    displayBasket(userID, response);
+    response.redirect("/View_Basket");
 }
 
 //Display items currently in basket

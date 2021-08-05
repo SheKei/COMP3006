@@ -118,7 +118,7 @@ async function checkBasket(userID, itemID, quantity){
 
 //Remove an item from basket
 function removeItemFromBasket(userID, itemID){
-    Basket.deleteOne({userID: userID, itemID: itemID});
+    Basket.collection.deleteOne({userID: userID, itemID: itemID});
 }
 
 //Get all items in a user's basket
