@@ -23,6 +23,27 @@ body{
 #msgBoard{
     width:95%;
     min-height: 650px;
+    padding: 2%;
     border-radius: 15px;
     background-color: #fffbf2;
+    display: inline-block;
+}
+
+.adminDiv, .customerDiv{
+    display: inline-block;
+    overflow: auto;
+    padding:2%;
+    min-width: 100px;
+    min-height:50px;
+    border-radius: 25px;
+}
+
+
+.adminDiv{
+    float: right;
+    background-color: #ffffff;
+}
+
+.customerDiv{
+    background-color: #e8dfcc;
 }

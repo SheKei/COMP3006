@@ -167,13 +167,18 @@ function logChat(sender,recipient,message,timeStamp){
 //Return messages between two users
 async function retrieveChatHistory(userID){
     let msgs = await Chat.find({$or:[{sender: userID, recipient:"admin"},{sender:"admin", recipient:userID}]});
-    let msgArray = [];
+    let msgArray = []; let msgObj;
     if(msgs.length > 0){
-        for(let i=0;i<msgs.length;i++){
-            let msgObj = new ChatClass(msgs[i].sender, msgs[i].recipient,msgs[i].message,msgs[i].timeStamp);
-
+        let account = await Account.find({_id:mongoose.Types.ObjectId(userID)});
+        let customerName = account[0].firstname + " " + account[0].lastname;
+        for(let i=0;i<msgs.length;i++) {
+            if(msgs[i].sender === "admin"){
+                msgObj = new ChatClass(msgs[i].sender, customerName, msgs[i].message, msgs[i].timeStamp);
+            }else{
+                msgObj = new ChatClass(customerName, msgs[i].recipient, msgs[i].message, msgs[i].timeStamp);
+            }
             msgArray.push(msgObj);
-        }console.log(msgs[0]);
+        }
     }
     return msgArray;
 }

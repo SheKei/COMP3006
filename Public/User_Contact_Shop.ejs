@@ -78,7 +78,7 @@
                 if(month<10){month="0"+month;}
 
                 let timestamp = date + "/" + month + "/" + d.getFullYear() + " - " + d.getHours() + ":" + d.getMinutes();
-                socket.emit("send message", message, employee, user,timestamp);
+                socket.emit("send message", message, employee, user,new Date());
                 $("#messages").prepend( message + ' <p class="time"> ' + timestamp + '</p></p>' );
             }
         });
