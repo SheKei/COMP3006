@@ -82,10 +82,10 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
 
 //Get all account details for display
 async function getAccount(userID){
-    let account = await Account.find({_id: Mongoose.Types.ObjectId(userID)});
+    let account = await Account.find({_id: mongoose.Types.ObjectId(userID)});
     let accountObj = null;
     if(account[0] !== undefined){
-        accountObj = new AccountClass(_id, account[0].firstname, account[0].lastname,
+        accountObj = new AccountClass(account[0]._id, account[0].firstname, account[0].lastname,
         account[0].birthday, account[0].email, account[0].streetName,
         account[0].postCode, account[0].password);
     }
@@ -160,6 +160,7 @@ module.exports.getOneBook = getOneBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
+module.exports.getAccount = getAccount;
 
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;

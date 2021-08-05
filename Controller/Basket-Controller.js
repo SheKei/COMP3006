@@ -10,8 +10,6 @@ function checkBasket(userID,response, request){
 
 //Remove an item from basket
 function removeItemFromBasket(userID, request,response){
-    console.log("userid is " + request.session.user);
-    console.log("itemid is " + request.params.itemID);
     db.removeItemFromBasket(userID, request.params.itemID);
     response.redirect("/View_Basket");
 }
@@ -20,10 +18,8 @@ function removeItemFromBasket(userID, request,response){
 async function displayBasket(userID,response){
     let basket = await db.getAllItemsInBasket(userID);
     if(basket.length > 0){
-        console.log("length > 0");
         response.render("Basket",{"basket": basket});
     }else{
-        console.log("length = 0");
         response.render("Basket",{"basket": []});
     }
 }

@@ -41,6 +41,21 @@ async function login(request, response){
     }
 }
 
+async function displayAccount(userID, response){
+    let accountObj = await db.getAccount(userID);
+    if(accountObj !== null){
+        response.render("User_Account",{
+            "firstname": accountObj.getFirstName(),
+            "surname": accountObj.getSurname(),
+            "dateOfBirth": accountObj.getDateOfBirth(),
+            "email": accountObj.getEmail(),
+            "street": accountObj.getStreet(),
+            "postCode": accountObj.getPostCode()
+        });
+    }
+}
+
 module.exports.createAccount = createAccount;
+module.exports.displayAccount = displayAccount;
 module.exports.login = login;
 

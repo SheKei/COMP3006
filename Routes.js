@@ -2,6 +2,7 @@ let db = require("./database");
 let session = require('express-session');
 let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');
+let accountController = require('./Controller/Account-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -76,7 +77,7 @@ function loadCustomerSupportPage(request,response){
 }
 
 function loadAccountPage(request,response){
-    response.render("User_Account");
+    accountController.displayAccount(request.session.user, response);
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;
