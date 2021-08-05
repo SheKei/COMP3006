@@ -166,7 +166,7 @@ function logChat(sender,recipient,message,timeStamp){
 
 //Return messages between two users
 async function retrieveChatHistory(userID){
-    let msgs = await Chat.find({$or:[{sender: userID, recipient:"admin"},{sender:"admin", recipient:userID}]});
+    let msgs = await Chat.find({$or:[{sender: userID, recipient:"admin"},{sender:"admin", recipient:userID}]}).sort({'timeStamp': -1});
     let msgArray = []; let msgObj;
     if(msgs.length > 0){
         let account = await Account.find({_id:mongoose.Types.ObjectId(userID)});

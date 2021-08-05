@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Employee_Customer_Support.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Employee_Customer_Support.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schema/Chat-Schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schema/Chat-Schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/user_contact_shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/user_contact_shop.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="176" column="18" lean-forward="true" selection-start-line="176" selection-start-column="18" selection-end-line="177" selection-end-column="16" />
+            <state relative-caret-position="118">
+              <caret line="168" column="134" selection-start-line="168" selection-start-column="134" selection-end-line="168" selection-end-column="134" />
             </state>
           </provider>
         </entry>
@@ -239,12 +235,12 @@
       <workItem from="1627387201335" duration="26796000" />
       <workItem from="1627580576616" duration="15811000" />
       <workItem from="1627743096889" duration="3709000" />
-      <workItem from="1628147184561" duration="21063000" />
+      <workItem from="1628147184561" duration="21309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103133000" />
+    <option name="totallyTimeSpent" value="103379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -626,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="176" column="18" lean-forward="true" selection-start-line="176" selection-start-column="18" selection-end-line="177" selection-end-column="16" />
+        <state relative-caret-position="118">
+          <caret line="168" column="134" selection-start-line="168" selection-start-column="134" selection-end-line="168" selection-end-column="134" />
         </state>
       </provider>
     </entry>
