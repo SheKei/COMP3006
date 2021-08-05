@@ -8,6 +8,12 @@ function checkBasket(userID,response, request){
     response.redirect("/View_Book/"+request.body.bookID);
 }
 
+//Remove an item from basket
+function removeItemFromBasket(userID, request,response){
+    db.removeItemFromBasket(userID, request.params.itemID);
+    displayBasket(userID, response);
+}
+
 //Display items currently in basket
 async function displayBasket(userID,response){
     let basket = await db.getAllItemsInBasket(userID);
@@ -21,4 +27,5 @@ async function displayBasket(userID,response){
 }
 
 module.exports.checkBasket = checkBasket;
+module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.displayBasket = displayBasket;

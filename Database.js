@@ -116,6 +116,11 @@ async function checkBasket(userID, itemID, quantity){
     }
 }
 
+//Remove an item from basket
+function removeItemFromBasket(userID, itemID){
+    Basket.deleteOne({userID: userID, itemID: itemID});
+}
+
 //Get all items in a user's basket
 async function getAllItemsInBasket(userID){
     let basket = await Basket.find({userID:userID});
@@ -146,6 +151,7 @@ module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 
 module.exports.checkBasket = checkBasket;
+module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
 
 module.exports.logChat = logChat;

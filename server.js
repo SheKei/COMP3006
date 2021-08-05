@@ -99,6 +99,7 @@ app.post("/checkLogin", accountController.login);
 app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
 app.get("/Contact_Shop", routes.loadCustomerSupportPage);
 
+
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
 app.get("/User_Home/:userID", function(request,response){
@@ -106,6 +107,11 @@ app.get("/User_Home/:userID", function(request,response){
     sesh.user = request.params.userID;
     currentUser = sesh.user;
     response.redirect("/User_Home");
+});
+
+//GET REQUEST to remove an item from basket
+app.get("/Remove_Basket/:itemID",function(response, request){
+    basketController.removeItemFromBasket(request.session.user, request, response);
 });
 
 //GET REQUEST TO VIEW BOOK as customer
