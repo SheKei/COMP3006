@@ -9,12 +9,11 @@ function logMessage(sender,recipient,message,timestamp){
 
 async function displayChatHistoryForCustomers(userID,response){
     let msg = await db.retrieveChatHistory(userID);
-    if(msg.length>0){response.render(page,{"User_Contact_Shop":msg});}
+    if(msg.length>0){response.render("User_Contact_Shop",{"userID":userID,"msg":msg});}
 }
 
 async function displayChatHistoryForAdmin(userID,response){
     let msg = await db.retrieveChatHistory(userID);
-    console.log(msg[0].getTimestamp());
     if(msg.length>0){response.render("Employee_Customer_Support",{"msg":msg});}
 }
 

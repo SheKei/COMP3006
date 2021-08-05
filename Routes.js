@@ -79,7 +79,7 @@ function loadBasketPage(request,response){
 
 //Display customer support chatroom
 function loadCustomerSupportPage(request,response){
-    response.render("User_Contact_Shop",{"userID":request.session.user});
+    chatController.displayChatHistoryForCustomers(request.session.user,response);
 }
 
 function loadAccountPage(request,response){
