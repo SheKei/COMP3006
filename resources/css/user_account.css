@@ -8,16 +8,25 @@ body{
     background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
 }
 
-#accountPage{
-    background-color: #f5efe4;
-    width:90%;
-    min-height:90%;
-    border-radius: 15px;
+#accountDiv, #passwordDiv{
+    margin-right:auto;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    min-height: 600px;
+    top: 50px;
+
 }
 
-#accountContainer{
+#accountDiv{
+    width: 200px;
+}
+
+#passwordDiv{
+    width:200px;
+}
+
+
+.container{
     padding: 2%;
 }

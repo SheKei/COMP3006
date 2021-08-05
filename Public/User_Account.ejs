@@ -14,17 +14,102 @@
 </head>
 <body>
 <header><%- include("User_Navbar"); %></header>
-    <div id="accountPage">
-        <div id="accountContainer">
-            <h1>Account Details:</h1>
-            <%= firstname %>
-            <%= surname %>
-            <%= dateOfBirth %>
-            <%= email %>
-            <%= street %>
-            <%= postCode %>
+    <div class="row">
+        <div id="accountDiv" class="col-5">
+            <div class="container">
+                <h2>Account Details</h2><br>
+                <form method="post" action="/updateAccount">
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Forename:</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="firstname" id="firstname" value="<%= firstname %>" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Surname:</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="lastname" id="lastname" value="<%= surname %>" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Email  Address:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="email" class="form-control" name="email" id="email" value="<%= email %>" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Date of Birth:</label>
+                        </div>
+                        <div class="col-4">
+                            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" value="<%= dateOfBirth %>" required>
+                        </div>
+                    </div><br>
+                    <div><h2>Delivery Address:</h2></div><br>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Street Name: </label>
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="street" id="street" value="<%= street %>" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label>Post Code: </label>
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="postCode" id="postCode" value="<%= postCode %>" required>
+                        </div>
+                    </div><br>
+                    <button type="submit" class="btn btn-dark">Update Account Details</button>
+                </form>
+            </div>
+        </div>
+        <div id="passwordDiv" class="col-4">
+            <div class="container" id="passwordContainer">
+                <h2>Update Password</h2><br>
+                <form method="post" action="/updatePassword">
+                    <div class="form-group row">
+                        <div class="col-3">
+                            Current Password:
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" type="password" name="currentPassword" id="currentPassword" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            New Password:
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" type="password" name="newPassword" id="newPassword" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            Confirm New Password:
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" required>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark">Update Password</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+
+
 
 </body>
 </html>
