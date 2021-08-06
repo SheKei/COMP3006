@@ -19,6 +19,8 @@ let Credentials = require("./Model/Credentials");
 let AccountClass = require("./Model/Account");
 let BasketClass = require('./Model/Basket');
 let ChatClass = require("./Model/Chat");
+let OrderClass = require("./Model/Order");
+let OrderItemClass = require("./Model/Order_Item");
 
 //PROCEDURES
 
@@ -214,6 +216,49 @@ async function retrieveChatHistory(userID){
     return msgArray;
 }
 
+//Get all orders
+async function getOrders(){
+    let order = await Order.find({});
+    let orderArray = [];
+    if(order.length>0){
+        for(let i=0;i<order.length;i++){
+            //orderID, userID, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null, order[i].orderStatus, order[i].dateOfOrder, null);
+            orderArray.push(orderObj);
+        }
+    }
+    return orderArray;
+}
+
+//Get selected order's details
+async function getSelectedOrder(orderID){
+    let order = Order.findOne({_id:mongoose.Types.ObjectId(orderID)});
+    let orderObj = null;
+
+    if(order[0]._id !== undefined){
+        let user = await Account.find({_id:mongoose.Types.ObjectId(order[0].userID)});
+        let orderItems = returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
+
+        orderObj = new OrderClass(orderID, order[0].userID,
+            user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
+            order[0].orderStatus,order[0].dateOfOrder, orderItems
+            );
+    }
+
+    return orderObj;
+}
+
+//Return an array of order item objects
+async function returnOrderItemsObjects(items, quantities){
+    let orderItemObjArray = [];
+    for(let i=0;i<items.length;i++){
+        //Get price and name using id
+        let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
+        //itemID, itemName, orderQuantity, totalItemPrice
+        let orderItemObj = new OrderItemClass(items[i],item[0].bookName, quantities[i],(quantities[i]*item[0].sellingPrice));
+    }
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -232,3 +277,6 @@ module.exports.checkout = checkout;
 
 module.exports.logChat = logChat;
 module.exports.retrieveChatHistory = retrieveChatHistory;
+
+module.exports.getOrders = getOrders;
+module.exports.getSelectedOrder = getSelectedOrder;
