@@ -15,10 +15,10 @@ async function viewOrderEmployee(orderID, response){
     let order = await db.getSelectedOrder(orderID);
     if(order !== null){
         let orderItems = order.getOrderItems();
-        console.log("view order control "+ orderItems[0]);
         response.render("View_Order_Employee",{
             "order":order,
-            "orderItems": orderItems
+            "orderItems": orderItems,
+            "orderPrice": calculateTotalOrder(orderItems)
         });
     }
 }
@@ -27,6 +27,14 @@ async function viewOrderEmployee(orderID, response){
 function deliverOrder(orderID, response){
     db.updateOrderStatus(orderID);
     response.redirect("/View_Order_Employee/"+orderID);
+}
+
+function calculateTotalOrder(items){
+    let price = 0.00;
+    for(let i=0;i<items.length;i++){
+        price = price+ items[i].getTotalItemPrice();
+    }
+    return price;
 }
 
 module.exports.viewOrders = viewOrders;

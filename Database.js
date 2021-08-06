@@ -219,16 +219,13 @@ async function retrieveChatHistory(userID){
 //Get all orders
 async function getOrders(){
     let order = await Order.find({});
-    let orderArray = [];
-    if(order.length>0){
-        for(let i=0;i<order.length;i++){
-            //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
-            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
-                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
-            orderArray.push(orderObj);
-        }
-    }
-    return orderArray;
+    return returnOrderObjects(order);
+}
+
+//Get all orders from one customer
+async function getCustomerOrders(userID){
+    let order = await Order.find({userID: userID});
+    return returnOrderObjects(order);
 }
 
 //Get selected order's details
@@ -248,6 +245,20 @@ async function getSelectedOrder(orderID){
     }
 
     return orderObj;
+}
+
+//Return an array of order objects
+async function returnOrderObjects(order){
+    let orderArray = [];
+    if(order.length>0){
+        for(let i=0;i<order.length;i++){
+            //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
+                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
+            orderArray.push(orderObj);
+        }
+    }
+    return orderArray;
 }
 
 //Return an array of order item objects
@@ -292,5 +303,6 @@ module.exports.logChat = logChat;
 module.exports.retrieveChatHistory = retrieveChatHistory;
 
 module.exports.getOrders = getOrders;
+module.exports.getCustomerOrders = getCustomerOrders;
 module.exports.getSelectedOrder = getSelectedOrder;
 module.exports.updateOrderStatus = updateOrderStatus;
