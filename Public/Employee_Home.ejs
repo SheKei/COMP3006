@@ -16,10 +16,27 @@
 <header><%- include("Employee_Navbar"); %></header>
 <div id="homePage">
     <div class="homeContainer">
-        <h1>View Orders</h1>
+        <h1>View Orders</h1><br>
         <% if(orders.length>0){%>
             <% for(let i=0;i<orders.length;i++){ %>
-                <h2><%= orders[i].getOrderID() %></h2>
+                <div class="row">
+                    <div class="col-4">
+                        <h4>Order ID:<br><%= orders[i].getOrderID() %></h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Date of Order:<br><%= orders[i].getOrderDate() %></h4>
+                    </div>
+                    <div class="col-2">
+                        <h4>Order Status:<br><%= orders[i].getOrderStatus() %></h4>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button class="btn btn-dark">
+                            <a href="/View_Order_Employee/<%= orders[i].getOrderID() %>">
+                                Process Order
+                            </a>
+                        </button>
+                    </div>
+                </div><hr class="line">
             <% } %>
         <% } %>
     </div>

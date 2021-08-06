@@ -222,8 +222,9 @@ async function getOrders(){
     let orderArray = [];
     if(order.length>0){
         for(let i=0;i<order.length;i++){
-            //orderID, userID, street, postCode, orderStatus, orderDate, orderItems
-            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null, order[i].orderStatus, order[i].dateOfOrder, null);
+            //orderID, userID, userName, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,
+                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
             orderArray.push(orderObj);
         }
     }
@@ -241,7 +242,8 @@ async function getSelectedOrder(orderID){
 
         orderObj = new OrderClass(orderID, order[0].userID,
             user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
-            order[0].orderStatus,order[0].dateOfOrder, orderItems
+            order[0].orderStatus,
+            order[0].dateOfOrder, orderItems
             );
     }
 
