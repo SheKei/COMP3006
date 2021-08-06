@@ -78,6 +78,11 @@ async function getOneBook(bookID){
     }else{return null;}
 }
 
+//Return list of customers to talk to
+async function getListOfCustomers(){
+    return await Account.find({});
+}
+
 //Create a new account upon registration
 function insertAccount(firstname, lastname, birthday, email, streetName,postCode,password){
     let accountObj = {firstname: firstname, lastname: lastname, birthday:birthday, email:email, streetName:streetName, postCode:postCode, password:password};
@@ -306,6 +311,7 @@ module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
 module.exports.checkout = checkout;
 
+module.exports.getListOfCustomers = getListOfCustomers;
 module.exports.logChat = logChat;
 module.exports.retrieveChatHistory = retrieveChatHistory;
 

@@ -78,6 +78,9 @@ app.get("/View_Order_Employee/:orderId", routes.loadViewInovoiceOrderPage);
 //GET REQUEST TO DELIVER CUSTOMER ORDER
 app.get("/Process_Order/:orderId", routes.deliverOrder);
 
+//GET REQUEST TO CHOOSE A CUSTOMER TO CONTACT
+app.get("/Employee_Customer_Support/:userId", routes.loadEmployeeChosenChatRoom);
+
 //FORM POST REQUEST TO ADD BOOK
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}

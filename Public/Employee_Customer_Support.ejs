@@ -22,6 +22,25 @@
         <h2>Customer Support</h2><br>
         <div class="row">
             <div class="col-4">
+                <div class="row">
+                    <div class="col-4">
+                        <button id="talkBtn" type="submit" class="btn btn-dark float-right">Talk to:</button>
+                    </div>
+                    <div class="col-6">
+                        <select name="customer" id="customer" class="form-control">
+                            <% if(customers.length >0){%>
+                                <option value="<%= userID %>"><%= fullname %></option>
+                                <% for(let i=0;i<customers.length;i++){ %>
+                                    <option value="<%= customers[i]._id %>">
+                                        <%= customers[i].firstname %> <%= customers[i].lastname %>
+                                    </option>
+                                <% } %>
+                            <% } %>
+                        </select>
+                    </div>
+                </div><br>
+                <h5 class="text-center"> Currently speaking to: <strong id="fullname"><%= fullname %></strong></h5>
+                <input type="text" class="hidden" id="userID" value="<%= userID %>" readonly>
                 <textarea class="form-control" rows="6" id="msg" name="msg" required></textarea><br>
                 <div class="text-center"><button type="button" id="sendMsgBtn" class="btn btn-dark">Send</button></div>
             </div>

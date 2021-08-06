@@ -39,9 +39,14 @@ function loadViewStockBookPage(request, response){
     bookController.viewStockBookItem(response, request.params.bookId);
 }
 
-//Load customer support chat room as ADMIN
+//Load default customer support chat room as ADMIN
 function loadEmployeeChatRoom(request,response){
-    chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
+    chatController.loadDefaultChatroom(response);
+}
+
+//Load chatroom chosen by admin
+function loadEmployeeChosenChatRoom(request,response){
+    chatController.loadChosenChatroom(request.params.userId, response);
 }
 
 //View all orders in summarized version as employee
@@ -129,6 +134,7 @@ module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
+module.exports.loadEmployeeChosenChatRoom = loadEmployeeChosenChatRoom;
 module.exports.loadViewOrdersPage = loadViewOrdersPage;
 module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
 module.exports.deliverOrder = deliverOrder;

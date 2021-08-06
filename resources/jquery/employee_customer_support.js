@@ -1,8 +1,9 @@
 $(function(){
     let socket = io("http://localhost:9000");
-
+    let customerFullname = $("#fullname").html();
     let user = "admin";
-    let customer = "610580434665755c249b5b9e";
+    let customer = $('#userID').val();
+    customer = customer.trim();
 
     $("#msg").keypress(function(){
         let message = $("#msg").val();
@@ -14,6 +15,12 @@ $(function(){
         }
     });
 
+    //Choose a user to talk to
+    $("#talkBtn").click(function(){
+        let chosenID = $("#customer").val();
+        chosenID = chosenID.trim();
+        window.location.replace("/Employee_Customer_Support/"+chosenID);
+    });
 
     //Add event handler
     $("#sendMsgBtn").click(function(){
@@ -38,7 +45,7 @@ $(function(){
 
         if(sender.trim() === customer.trim() && recipient.trim() === "admin"){
             $("#messages").prepend(
-                "<div class='customerDiv'><p>" + msg + "</p>" +
+                "<div class='customerDiv'><p>"+customerFullname + ":<br>" + msg + "</p>" +
                 "<p class='font-weight-bold'>"+timestamp+"</p></div><br>");
         }
 
