@@ -5,6 +5,8 @@ let socketIo = require("socket.io");
 let session = require('express-session');
 let bcrypt = require ('bcrypt');
 let multer = require('multer');
+let moment = require('moment');
+moment().format();
 
 //IMPORT ROUTES
 let routes = require("./Routes");
@@ -13,6 +15,7 @@ let routes = require("./Routes");
 let bookController = require("./Controller/Book-Controller");
 let accountController = require("./Controller/Account-Controller");
 let basketController = require("./Controller/Basket-Controller");
+let chatController = require("./Controller/Chat-Controller");
 
 //CONFIGURE EXPRESS APP
 let app = new express();
@@ -66,15 +69,18 @@ app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
 app.get("/User_Login", routes.loadUserLoginPage);
 app.get("/User_Register", routes.loadUserRegisterPage);
 app.get("/User_Home", routes.loadUserHomePage);
+app.get("/View_Basket", routes.loadBasketPage);
+app.get("/User_Account", routes.loadAccountPage);
 
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
-app.get("/View_Basket", routes.loadBasketPage);
+app.get("/Employee_Customer_Support", routes.loadEmployeeChatRoom);
 
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
+//FORM POST REQUEST TO ADD BOOK
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}
 });
@@ -93,9 +99,13 @@ app.post("/registerAccount", accountController.createAccount);
 //FORM POST REQUEST to login
 app.post("/checkLogin", accountController.login);
 
+//FORM POST REQUEST to update account
+app.post("/updateAccount", routes.updateAccount);
+
 //GET REQUESTS for customers
 app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
 app.get("/Contact_Shop", routes.loadCustomerSupportPage);
+app.get("/Checkout_Basket", routes.checkoutBasket);
 
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login
@@ -106,11 +116,29 @@ app.get("/User_Home/:userID", function(request,response){
     response.redirect("/User_Home");
 });
 
+//GET REQUEST to remove an item from basket
+app.get("/removeBasket/:itemID",routes.removeItemFromBasket);
+
 //GET REQUEST TO VIEW BOOK as customer
 app.get("/View_Book/:bookId", routes.loadViewBookPage);
 
 //FORM POST REQUEST to add item to basket
 app.post("/addToBasket", routes.addToBasket);
+
+//WEB SOCKET
+io.on("connection", function(socket){
+
+    //Wait for someone to send a message
+    socket.on("send message", function(msg, recipient, sender, timestamp){
+        //Log message
+        chatController.logMessage(sender,recipient,msg,timestamp);
+
+        //Emit by server to find which chatroom message should be sent to
+        socket.broadcast.emit("received message" , msg, recipient, sender,
+            moment(timestamp).utc().format('DD-MM-YYYY  h:mm a'));
+    });
+
+});
 
 //RUN THE SERVER ON PORT 9000
 let port = 9000;

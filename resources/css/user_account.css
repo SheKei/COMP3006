@@ -1,0 +1,32 @@
+body, html, h1, h2, h3, h4,h5 {
+    height: 100%;
+    margin: 0;
+    font-family: "Century Gothic",monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #e8dfcc 0%, #ccbe93 100%);
+}
+
+#accountDiv, #passwordDiv{
+    margin-right:auto;
+    margin-left: auto;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    min-height: 600px;
+    top: 50px;
+
+}
+
+#accountDiv{
+    width: 200px;
+}
+
+#passwordDiv{
+    width:200px;
+}
+
+
+.container{
+    padding: 2%;
+}

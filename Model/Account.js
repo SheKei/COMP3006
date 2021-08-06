@@ -19,7 +19,6 @@ class Account {
         return this.firstname;
     }
 
-
     getSurname() {
         return this.lastname;
     }
@@ -28,7 +27,7 @@ class Account {
         return this.birthday;
     }
 
-    getEmailAddress() {
+    getEmail() {
         return this.email;
     }
 
@@ -36,7 +35,7 @@ class Account {
         return this.streetName;
     }
 
-    getThePostCode() {
+    getPostCode() {
         return this.postCode;
     }
 

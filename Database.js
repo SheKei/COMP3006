@@ -1,4 +1,6 @@
 let mongoose = require("mongoose");
+let moment = require('moment');
+moment().format();
 
 //CONNECT TO DATABASE
 let dbUrl = "mongodb://localhost:27017/bookstoredb";
@@ -8,12 +10,17 @@ mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
 let Account = require("./Schema/Account-Schema").Account;
 let Book = require("./Schema/Book-Schema").Book;
 let Basket = require('./Schema/Basket-Schema').Basket;
+let Chat = require("./Schema/Chat-Schema").Chat;
+let Order = require("./Schema/Order-Schema").Order;
 
 //IMPORT MODEL CLASSES
 let BookClass = require("./Model/Book");
 let Credentials = require("./Model/Credentials");
 let AccountClass = require("./Model/Account");
 let BasketClass = require('./Model/Basket');
+let ChatClass = require("./Model/Chat");
+let OrderClass = require("./Model/Order");
+let OrderItemClass = require("./Model/Order_Item");
 
 //PROCEDURES
 
@@ -79,6 +86,18 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
     });
 }
 
+//Get all account details for display
+async function getAccount(userID){
+    let account = await Account.find({_id: mongoose.Types.ObjectId(userID)});
+    let accountObj = null;
+    if(account[0] !== undefined){
+        accountObj = new AccountClass(account[0]._id, account[0].firstname, account[0].lastname,
+        account[0].birthday, account[0].email, account[0].streetName,
+        account[0].postCode, account[0].password);
+    }
+    return accountObj;
+}
+
 //Find an existing account using email address
 async function checkLoginCredentials(inputEmail){
     let credentials = await Account.find({email: inputEmail});
@@ -94,10 +113,18 @@ async function getLoginCredentials(emailAddress){
     let account = await Account.find({email: emailAddress});
     let theAccount = null;
     if(account[0] !== undefined){
-        console.log("in here");
         theAccount = new AccountClass(account[0]._id,account[0].firstname,account[0].lastname, account[0].birthday, account[0].email, account[0].streetName, account[0].postCode, account[0].password);
     }
     return theAccount;
+}
+
+//Update the account details
+function updateAccountDetails(userID, firstname, lastname,birthday, email, streetName,postCode ){
+    Account.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(userID)},
+        {$set:{userID:userID, firstname:firstname, lastname:lastname,
+                birthday:birthday, email:email, streetName:streetName,postCode:postCode
+        }});
 }
 
 //Check if there is already item is already in basket
@@ -115,6 +142,11 @@ async function checkBasket(userID, itemID, quantity){
     }
 }
 
+//Remove an item from basket
+function removeItemFromBasket(userID, itemID){
+    Basket.collection.deleteOne({userID: userID, itemID: itemID});
+}
+
 //Get all items in a user's basket
 async function getAllItemsInBasket(userID){
     let basket = await Basket.find({userID:userID});
@@ -129,10 +161,102 @@ async function getAllItemsInBasket(userID){
     return basketItems;
 }
 
+//Add all basket items into an invoice order
+async function checkout(userID){
+    let basket = await Basket.find({userID:userID});
+    if(basket.length > 0){
+        let items =[]; let amount=[];
+
+        for(let i=0;i<basket.length;i++){
+            items.push(basket[i].itemID);
+            amount.push(basket[i].quantity);
+            updateStockAmount(basket[i].itemID, basket[i].quantity);
+            removeItemFromBasket(userID, basket[i].itemID);
+        }
+
+        let orderObj = {userID: userID, itemID: items,
+        orderQuantity: amount, orderStatus:"Awaiting", dateOfOrder:new Date()};
+
+        Order.collection.insertOne(orderObj, function(err){
+            if(err){console.log(err);}
+        });
+    }
+}
+
+function updateStockAmount(itemID, substract){
+    Book.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(itemID)},
+        {$inc:{quantity:parseInt(parseInt(substract)*-1)}}
+    );
+}
+
 //Save a chat message log
 function logChat(sender,recipient,message,timeStamp){
     let chatObj = {sender: sender, recipient: recipient, message: message, timeStamp: timeStamp};
     Chat.collection.insertOne(chatObj, function(err, result){if(err){console.log(err);}});
+}
+
+//Return messages between two users
+async function retrieveChatHistory(userID){
+    let msgs = await Chat.find({$or:[{sender: userID, recipient:"admin"},{sender:"admin", recipient:userID}]}).sort({'timeStamp': -1});
+    let msgArray = []; let msgObj;
+    if(msgs.length > 0){
+        let account = await Account.find({_id:mongoose.Types.ObjectId(userID)});
+        let customerName = account[0].firstname + " " + account[0].lastname;
+        for(let i=0;i<msgs.length;i++) {
+            let timestamp = moment(msgs[i].timeStamp).utc().format('DD-MM-YYYY  h:mm a');
+            if(msgs[i].sender === "admin"){
+                msgObj = new ChatClass(msgs[i].sender, customerName, msgs[i].message, timestamp);
+            }else{
+                msgObj = new ChatClass(customerName, msgs[i].recipient, msgs[i].message, timestamp);
+            }
+            msgArray.push(msgObj);
+        }
+    }
+    return msgArray;
+}
+
+//Get all orders
+async function getOrders(){
+    let order = await Order.find({});
+    let orderArray = [];
+    if(order.length>0){
+        for(let i=0;i<order.length;i++){
+            //orderID, userID, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null, order[i].orderStatus, order[i].dateOfOrder, null);
+            orderArray.push(orderObj);
+        }
+    }
+    return orderArray;
+}
+
+//Get selected order's details
+async function getSelectedOrder(orderID){
+    let order = Order.findOne({_id:mongoose.Types.ObjectId(orderID)});
+    let orderObj = null;
+
+    if(order[0]._id !== undefined){
+        let user = await Account.find({_id:mongoose.Types.ObjectId(order[0].userID)});
+        let orderItems = returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
+
+        orderObj = new OrderClass(orderID, order[0].userID,
+            user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
+            order[0].orderStatus,order[0].dateOfOrder, orderItems
+            );
+    }
+
+    return orderObj;
+}
+
+//Return an array of order item objects
+async function returnOrderItemsObjects(items, quantities){
+    let orderItemObjArray = [];
+    for(let i=0;i<items.length;i++){
+        //Get price and name using id
+        let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
+        //itemID, itemName, orderQuantity, totalItemPrice
+        let orderItemObj = new OrderItemClass(items[i],item[0].bookName, quantities[i],(quantities[i]*item[0].sellingPrice));
+    }
 }
 
 module.exports.insertBook = insertBook;
@@ -143,8 +267,16 @@ module.exports.getOneBook = getOneBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
+module.exports.getAccount = getAccount;
+module.exports.updateAccountDetails = updateAccountDetails;
 
 module.exports.checkBasket = checkBasket;
+module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
+module.exports.checkout = checkout;
 
 module.exports.logChat = logChat;
+module.exports.retrieveChatHistory = retrieveChatHistory;
+
+module.exports.getOrders = getOrders;
+module.exports.getSelectedOrder = getSelectedOrder;

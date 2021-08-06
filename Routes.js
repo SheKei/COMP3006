@@ -2,6 +2,8 @@ let db = require("./database");
 let session = require('express-session');
 let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');
+let accountController = require('./Controller/Account-Controller');
+let chatController = require('./Controller/Chat-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -36,26 +38,44 @@ function loadViewStockBookPage(request, response){
     bookController.viewStockBookItem(response, request.params.bookId);
 }
 
+//Load customer support chat room as ADMIN
+function loadEmployeeChatRoom(request,response){
+    chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
+}
+
 function loadUserHomePage(request,response){
-    console.log("Home Page " + request.session.user);
     response.render("User_Home");
 }
 
 //View books as a customer
 function loadViewAllBookItemsPage(request,response){
-    console.log("View ALL Books Page " + request.session.user);
     bookController.getAllBookItems(request,response);
 }
 
 //View a book as a customer
 function loadViewBookPage(request,response){
-    console.log("View Book " + request.session.user);
     bookController.viewBookItem(response, request.params.bookId);
 }
 
 //Pass on session user to basket controller
 function addToBasket(request,response){
     basketController.checkBasket(request.session.user, response, request);
+}
+
+//Remove item from basket
+function removeItemFromBasket(request,response){
+    basketController.removeItemFromBasket(request.session.user,request,response);
+}
+
+//Process basket items into an order
+function checkoutBasket(request, response){
+    basketController.checkout(request.session.user, response);
+}
+
+
+//Update account
+function updateAccount(request,response){
+    accountController.updateAccountDetails(request.session.user, request, response);
 }
 
 //Display items in customer's basket
@@ -65,7 +85,11 @@ function loadBasketPage(request,response){
 
 //Display customer support chatroom
 function loadCustomerSupportPage(request,response){
-    response.render("User_Contact_Shop",{"userID":request.session.user});
+    chatController.displayChatHistoryForCustomers(request.session.user,response);
+}
+
+function loadAccountPage(request,response){
+    accountController.displayAccount(request.session.user, response);
 }
 
 module.exports.loadWelcomePage = loadWelcomePage;
@@ -80,4 +104,9 @@ module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
+module.exports.removeItemFromBasket = removeItemFromBasket;
+module.exports.checkoutBasket = checkoutBasket;
+module.exports.updateAccount = updateAccount;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
+module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
+module.exports.loadAccountPage = loadAccountPage;

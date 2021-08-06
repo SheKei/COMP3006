@@ -41,6 +41,33 @@ async function login(request, response){
     }
 }
 
+async function displayAccount(userID, response){
+    let accountObj = await db.getAccount(userID);
+    if(accountObj !== null){
+        response.render("User_Account",{
+            "firstname": accountObj.getFirstName(),
+            "surname": accountObj.getSurname(),
+            "dateOfBirth": moment(accountObj.getDateOfBirth()).utc().format('YYYY-MM-DD'),
+            "email": accountObj.getEmail(),
+            "street": accountObj.getStreet(),
+            "postCode": accountObj.getPostCode()
+        });
+    }
+}
+
+//Update account details
+function updateAccountDetails(userID, request, response){
+    console.log(userID);
+    console.log(request.body.firstname);
+    db.updateAccountDetails(
+        userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
+        request.body.email, request.body.street, request.body.postCode
+    );
+    response.redirect("/User_Account");
+}
+
 module.exports.createAccount = createAccount;
+module.exports.displayAccount = displayAccount;
+module.exports.updateAccountDetails = updateAccountDetails;
 module.exports.login = login;
 
