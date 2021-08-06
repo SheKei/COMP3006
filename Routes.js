@@ -59,8 +59,9 @@ function deliverOrder(request,response){
     orderController.deliverOrder(request.params.orderId, response);
 }
 
+//Show user's home page
 function loadUserHomePage(request,response){
-    response.render("User_Home");
+    orderController.viewCustomerOrders(request.session.user, response);
 }
 
 //View books as a customer

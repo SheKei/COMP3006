@@ -10,6 +10,14 @@ async function viewOrders(response){
     }
 }
 
+//View all orders made by the customer
+async function viewCustomerOrders(userID,response){
+    let orders = await db.getCustomerOrders(userID);
+    if(orders.length > 0){
+        response.render("User_Home", {"orders":orders});
+    }
+}
+
 //View an order as employee
 async function viewOrderEmployee(orderID, response){
     let order = await db.getSelectedOrder(orderID);
@@ -40,3 +48,4 @@ function calculateTotalOrder(items){
 module.exports.viewOrders = viewOrders;
 module.exports.viewOrderEmployee = viewOrderEmployee;
 module.exports.deliverOrder = deliverOrder;
+module.exports.viewCustomerOrders = viewCustomerOrders;

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Controller/Order-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Order-Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/View_Order_Employee.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/View_Order_Employee.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Welcome.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Welcome.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/User_Home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,20 +35,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/Order-Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state relative-caret-position="432">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/View_Order_Employee.ejs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="346">
+              <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/User_Home.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Employee_Home.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="886">
+              <caret line="40" column="15" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="40" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -120,18 +137,18 @@
         <option value="$PROJECT_DIR$/Public/Basket.ejs" />
         <option value="$PROJECT_DIR$/Public/Employee_Home.ejs.js" />
         <option value="$PROJECT_DIR$/Public/Employee_Navbar.ejs" />
-        <option value="$PROJECT_DIR$/Public/User_Home.ejs" />
         <option value="$PROJECT_DIR$/resources/css/employee_home.css" />
         <option value="$PROJECT_DIR$/Model/Order_Item.js" />
         <option value="$PROJECT_DIR$/Model/Order.js" />
         <option value="$PROJECT_DIR$/resources/css/view_order_employee.css" />
-        <option value="$PROJECT_DIR$/Routes.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Public/Welcome.ejs" />
         <option value="$PROJECT_DIR$/Database.js" />
-        <option value="$PROJECT_DIR$/Controller/Order-Controller.js" />
         <option value="$PROJECT_DIR$/Public/Employee_Home.ejs" />
         <option value="$PROJECT_DIR$/Public/View_Order_Employee.ejs" />
+        <option value="$PROJECT_DIR$/Public/User_Home.ejs" />
+        <option value="$PROJECT_DIR$/Routes.js" />
+        <option value="$PROJECT_DIR$/Controller/Order-Controller.js" />
       </list>
     </option>
   </component>
@@ -172,6 +189,12 @@
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,12 +247,12 @@
       <workItem from="1627580576616" duration="15811000" />
       <workItem from="1627743096889" duration="3709000" />
       <workItem from="1628147184561" duration="28603000" />
-      <workItem from="1628232047413" duration="9223000" />
+      <workItem from="1628232047413" duration="9611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119896000" />
+    <option name="totallyTimeSpent" value="120284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -536,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Home.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/view_all_books.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -578,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="122" column="43" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Welcome.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -613,24 +622,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Order-Controller.js">
+    <entry file="file://$PROJECT_DIR$/Public/View_Order_Employee.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state relative-caret-position="224">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Employee_Home.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="886">
+          <caret line="40" column="15" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="40" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/View_Order_Employee.ejs">
+    <entry file="file://$PROJECT_DIR$/Public/User_Home.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="211">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Order-Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
         </state>
       </provider>
     </entry>
