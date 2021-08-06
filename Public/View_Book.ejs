@@ -17,15 +17,20 @@
     <div id="viewBookPage">
         <div id="bookContainer">
             <div class="row">
-                <div class="col-6"><br><br>
-                    <div><img src="/images/<%= book.getImage() %>" ></div>
+                <div class="col-6"><br><br><br>
+                    <div><img src="/images/<%= book.getImage() %>" ></div><br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark">
+                            <a href="/View_All_Books">Go Back</a>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-6">
-                    <div><h1 class="text-center"> <%= book.getBookName() %></h1></div>
-                    <div><h2 class="text-center">By <%= book.getAuthorForename() %> <%= book.getAuthorSurname() %></h2></div><br><br><br>
+                    <div><h2 class="text-center"> <%= book.getBookName() %></h2></div>
+                    <div><h3 class="text-center">By <%= book.getAuthorForename() %> <%= book.getAuthorSurname() %></h3></div><br>
                     <div><h3 class="text-center">Genres: <%= theGenres %></h3></div><br><br>
                     <div><section><p id="synopsis"><strong>Synopsis: </strong><%= book.getSynopsis() %></p></section></div><br>
-                    <div><h3>£<%= book.getSellingPrice() %></h3></div><br><br>
+                    <div><h3>£<%= book.getSellingPrice() %></h3></div>
                     <form method="post" action="addToBasket">
                     <div class="form-group row">
                         <input type="text" name="bookID" id="bookID" value="<%= book.getId() %>" readonly>
@@ -33,13 +38,14 @@
                             <label for="orderAmount">Quantity:</label>
                         </div>
                         <div class="col-2">
-                            <input type="number" min="1" class="form-control" name="orderAmount" id="orderAmount" placeholder="1" required>
+                            <input type="number" value="1" min="1" class="form-control" name="orderAmount" id="orderAmount" placeholder="1" required>
                         </div>
                         <div class="col-4">
                             <button type="submit" class="btn btn-dark">Add to Basket</button>
                         </div>
                     </div>
                     </form>
+
                 </div>
             </div>
         </div>

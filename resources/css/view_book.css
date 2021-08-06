@@ -11,9 +11,14 @@ body{
 a:hover{
     color: #1B1B1B;
 }
+
+button.btn{
+    padding:2%;
+}
+
 img{
-    width:350px;
-    height: 350px;
+    width:300px;
+    height: 300px;
     top-margin:5%;
     border-radius: 15px;
     display: block;
@@ -23,23 +28,23 @@ img{
 
 #viewBookPage{
     background-color: #f5efe4;
-    width:90%;
-    min-height:90%;
+    width:75%;
+    min-height: 500px;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 #bookContainer{
-    padding: 5%;
+    padding: 2%;
 }
 
-#synopsis{font-size:20px;}
+#synopsis{font-size:18px;}
 
 label{
     margin:1%;
-    font-size:20px;
+    font-size:18px;
     text-align: right;
 }
 
