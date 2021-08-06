@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/employee_home.css"/>
+</head>
+<body>
+<header><%- include("Employee_Navbar"); %></header>
+<div id="homePage">
+    <div class="homeContainer">
+        <h1>View Orders</h1>
+        <% if(orders.length>0){%>
+            <% for(let i=0;i<orders.length;i++){ %>
+                <h2><%= orders[i].getOrderID() %></h2>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

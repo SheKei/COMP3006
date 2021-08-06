@@ -4,6 +4,7 @@ let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');
 let accountController = require('./Controller/Account-Controller');
 let chatController = require('./Controller/Chat-Controller');
+let orderController = require('./Controller/Order-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -41,6 +42,10 @@ function loadViewStockBookPage(request, response){
 //Load customer support chat room as ADMIN
 function loadEmployeeChatRoom(request,response){
     chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
+}
+
+function loadViewOrdersPage(request,response){
+    orderController.viewOrders(response);
 }
 
 function loadUserHomePage(request,response){
@@ -92,13 +97,19 @@ function loadAccountPage(request,response){
     accountController.displayAccount(request.session.user, response);
 }
 
+
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
 module.exports.loadUserRegisterPage = loadUserRegisterPage;
+
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
+module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
+module.exports.loadViewOrdersPage = loadViewOrdersPage;
+
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
@@ -108,5 +119,4 @@ module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.checkoutBasket = checkoutBasket;
 module.exports.updateAccount = updateAccount;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
-module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
 module.exports.loadAccountPage = loadAccountPage;

@@ -76,6 +76,7 @@ app.get("/User_Account", routes.loadAccountPage);
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
 app.get("/Employee_Customer_Support", routes.loadEmployeeChatRoom);
+app.get("/Employee_Home", routes.loadViewOrdersPage);
 
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
