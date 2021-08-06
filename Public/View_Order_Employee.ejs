@@ -17,20 +17,38 @@
 <div class="orderPage">
     <div class="orderContainer">
         <% if(order !== null){ %>
-            <%= order.getOrderID() %>
-        <%= order.getUserID() %>
-        <%= order.getUserFullname() %>
-        <%= order.getOrderDate() %>
-        <%= order.getStreet() %>
-        <%= order.getPostCode() %>
-            <% if(orderItems.length >0){ %>
-            <% for(let i=0; i<orderItems.length; i++){%>
-            <%= orderItems[i].getItemID() %>
-                    <%= orderItems[i].getItemName() %>
-                    <%= orderItems[i].getOrderQuantity() %>
-                    <%= orderItems[i].getTotalItemPrice() %>
-            <% } %>
-            <% } %>
+            <h2>View Invoice</h2>
+            <hr class="line">
+            <h4>Order ID: <%= order.getOrderID() %></h4>
+            <h4>Date of Order: <%= order.getOrderDate() %></h4>
+            <h4>Order Status: <strong><%= order.getOrderStatus() %></strong></h4>
+            <hr class="line">
+            <div class="row">
+                <div class="col-7">
+                    <div><h4>Customer's ID:<br><%= order.getUserID() %></h4></div>
+                    <div><h4>Customer's Full Name:<br><%= order.getUserFullname() %></h4></div>
+                    <div><h4>Customer's Address:<br><%= order.getStreet() %> , <%= order.getPostCode() %></h4></div>
+                    <div><h4>Customer's Email Address:<br><%= order.getUserEmail() %></h4></div>
+                    <% if(order.getOrderStatus() === "Awaiting"){%>
+                        <div>
+                            <button class="btn btn-dark">
+                                <a href="/Process_Order/<%= order.getOrderID() %>">Deliver Order</a>
+                            </button>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="col-5">
+                    <div><h4>Items:</h4></div>
+                    <% if(orderItems.length >0){ %>
+                        <% for(let i=0; i<orderItems.length; i++){%>
+                            <div><h5>Item ID: <%= orderItems[i].getItemID() %></h5></div>
+                            <div><h5>Item Name: <%= orderItems[i].getItemName() %></h5></div>
+                            <div><h5>Quantity: <%= orderItems[i].getOrderQuantity() %></h5></div>
+                            <div><h5>Total Item Price: £<%= orderItems[i].getTotalItemPrice() %></h5></div><br>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
         <% } %>
     </div>
 </div>

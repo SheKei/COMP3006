@@ -1,6 +1,5 @@
 body, html, h1, h4,h5 {
     height: 100%;
-    margin: 0;
     font-family: "Century Gothic",monospace;
 }
 
@@ -11,6 +10,10 @@ body{
 button.btn{
     padding: 10px;
     margin:10px;
+}
+
+hr.line{
+    border-top: 1px solid black;
 }
 
 .orderPage{

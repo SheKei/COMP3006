@@ -222,8 +222,8 @@ async function getOrders(){
     let orderArray = [];
     if(order.length>0){
         for(let i=0;i<order.length;i++){
-            //orderID, userID, userName, street, postCode, orderStatus, orderDate, orderItems
-            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,
+            //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
                 order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
             orderArray.push(orderObj);
         }
@@ -241,7 +241,7 @@ async function getSelectedOrder(orderID){
         let orderItems = await returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
         //console.log("get selected order"+orderItems[0]);
         orderObj = new OrderClass(orderID, order[0].userID,
-            user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
+            user[0].firstname + " " + user[0].lastname, user[0].email,user[0].streetName, user[0].postCode,
             order[0].orderStatus,
             (moment(order[0].dateOfOrder).utc().format('DD-MM-YYYY hh:mm a')), orderItems
             );

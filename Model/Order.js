@@ -1,9 +1,10 @@
 class Order{
 
-    constructor(orderID, userID, userFullname, street, postCode, orderStatus, orderDate, orderItems) {
+    constructor(orderID, userID, userFullname, email, street, postCode, orderStatus, orderDate, orderItems) {
         this._orderID = orderID;
         this._userID = userID;
         this._userFullname = userFullname;
+        this._email = email;
         this._street = street;
         this._postCode = postCode;
         this._orderStatus = orderStatus;
@@ -21,6 +22,10 @@ class Order{
 
     getUserFullname(){
         return this._userFullname;
+    }
+
+    getUserEmail(){
+        return this._email;
     }
 
     getStreet() {
