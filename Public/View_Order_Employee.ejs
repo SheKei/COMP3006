@@ -16,7 +16,22 @@
 <header><%- include("Employee_Navbar"); %></header>
 <div class="orderPage">
     <div class="orderContainer">
-        
+        <% if(order !== null){ %>
+            <%= order.getOrderID() %>
+        <%= order.getUserID() %>
+        <%= order.getUserFullname() %>
+        <%= order.getOrderDate() %>
+        <%= order.getStreet() %>
+        <%= order.getPostCode() %>
+            <% if(orderItems.length >0){ %>
+            <% for(let i=0; i<orderItems.length; i++){%>
+            <%= orderItems[i].getItemID() %>
+                    <%= orderItems[i].getItemName() %>
+                    <%= orderItems[i].getOrderQuantity() %>
+                    <%= orderItems[i].getTotalItemPrice() %>
+            <% } %>
+            <% } %>
+        <% } %>
     </div>
 </div>
 </body>

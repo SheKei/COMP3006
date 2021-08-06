@@ -51,7 +51,7 @@ function loadViewOrdersPage(request,response){
 
 //View a specific order as employee
 function loadViewInvoiceOrderPage(request,response){
-    orderController;
+    orderController.viewOrderEmployee(request.params.orderId, response);
 }
 
 function loadUserHomePage(request,response){

@@ -233,13 +233,13 @@ async function getOrders(){
 
 //Get selected order's details
 async function getSelectedOrder(orderID){
-    let order = Order.findOne({_id:mongoose.Types.ObjectId(orderID)});
+    let order = await Order.find({_id:mongoose.Types.ObjectId(orderID)});
     let orderObj = null;
 
     if(order[0]._id !== undefined){
         let user = await Account.find({_id:mongoose.Types.ObjectId(order[0].userID)});
-        let orderItems = returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
-
+        let orderItems = await returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
+        //console.log("get selected order"+orderItems[0]);
         orderObj = new OrderClass(orderID, order[0].userID,
             user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
             order[0].orderStatus,
@@ -253,12 +253,18 @@ async function getSelectedOrder(orderID){
 //Return an array of order item objects
 async function returnOrderItemsObjects(items, quantities){
     let orderItemObjArray = [];
+    console.log(items);
+    console.log(quantities);
     for(let i=0;i<items.length;i++){
+        console.log("in here");
         //Get price and name using id
         let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
+        console.log("in here: "+items[i]);
         //itemID, itemName, orderQuantity, totalItemPrice
         let orderItemObj = new OrderItemClass(items[i],item[0].bookName, quantities[i],(quantities[i]*item[0].sellingPrice));
+        orderItemObjArray.push(orderItemObj);
     }
+    return orderItemObjArray;
 }
 
 module.exports.insertBook = insertBook;

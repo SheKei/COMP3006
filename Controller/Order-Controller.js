@@ -9,4 +9,17 @@ async function viewOrders(response){
     }
 }
 
+async function viewOrderEmployee(orderID, response){
+    let order = await db.getSelectedOrder(orderID);
+    if(order !== null){
+        let orderItems = order.getOrderItems();
+        console.log("view order control "+ orderItems[0]);
+        response.render("View_Order_Employee",{
+            "order":order,
+            "orderItems": orderItems
+        });
+    }
+}
+
 module.exports.viewOrders = viewOrders;
+module.exports.viewOrderEmployee = viewOrderEmployee;
