@@ -44,8 +44,14 @@ function loadEmployeeChatRoom(request,response){
     chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
 }
 
+//View all orders in summarized version
 function loadViewOrdersPage(request,response){
     orderController.viewOrders(response);
+}
+
+//View a specific order as employee
+function loadViewInvoiceOrderPage(request,response){
+    orderController;
 }
 
 function loadUserHomePage(request,response){
@@ -109,6 +115,7 @@ module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
 module.exports.loadViewOrdersPage = loadViewOrdersPage;
+module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
 
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;

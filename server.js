@@ -81,6 +81,9 @@ app.get("/Employee_Home", routes.loadViewOrdersPage);
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
+//GET REQUEST TO VIEW INVOICE ORDER
+app.get("/View_Order_Employee/:orderId", routes.loadViewInovoiceOrderPage);
+
 //FORM POST REQUEST TO ADD BOOK
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}
