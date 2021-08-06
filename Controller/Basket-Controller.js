@@ -17,10 +17,11 @@ function removeItemFromBasket(userID, request,response){
 //Display items currently in basket
 async function displayBasket(userID,response){
     let basket = await db.getAllItemsInBasket(userID);
+    let account = await db.getAccount(userID);
     if(basket.length > 0){
-        response.render("Basket",{"basket": basket});
+        response.render("Basket",{"basket": basket, "account":account, "price":calculateTotalPrice(basket)});
     }else{
-        response.render("Basket",{"basket": []});
+        response.render("Basket",{"basket": [], "account":account, "price":0.00});
     }
 }
 
@@ -28,6 +29,15 @@ async function displayBasket(userID,response){
 function checkout(userID, response){
     db.checkout(userID);
     response.redirect("/User_Home");
+}
+
+//Calculate total basket price
+function calculateTotalPrice(basket){
+    let price =0.00;
+    for(let i=0;i<basket.length;i++){
+        price = price + basket[i].getTotalPrice();
+    }
+    return price;
 }
 
 module.exports.checkBasket = checkBasket;

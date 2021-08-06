@@ -260,7 +260,7 @@ async function returnOrderObjects(order){
         for(let i=0;i<order.length;i++){
             //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
             let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
-                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
+                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY hh:mm a')) , null);
             orderArray.push(orderObj);
         }
     }

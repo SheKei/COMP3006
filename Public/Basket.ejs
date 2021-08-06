@@ -16,37 +16,55 @@
 <body>
 <header><%- include("User_Navbar"); %></header>
 <div id="basketPage">
-    <div id="basketContainer">
-        <h1>Basket</h1><br><br>
-        <% if( basket.length > 0){ %>
-            <% for(i=0;i<basket.length;i++){ %>
-                <div>
-                    <div class="row">
-                        <div class="col-1">
-                            <i class="far fa-times-circle" id="<%= basket[i].getItemId() %>"></i>
-                        </div>
-                        <div class="col-2">
-                            <img width="100" height="100" src="/images/<%= basket[i].getImg() %>" >
-                        </div>
-                        <div class="col-2">
-                            <h4><%= basket[i].getItemName() %></h4>
-                        </div>
-                        <div class="col-2">
-                            <h4>QTY: <%= basket[i].getQuantity() %></h4>
-                        </div>
-                        <div class="col-2">
-                            <h4>£<%= basket[i].getIndividualPrice() %></h4>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><strong>£<%= basket[i].getTotalPrice() %></strong></h4>
-                        </div>
+    <div class="row">
+        <div class="col-6">
+                <h2 class="text-center">Basket</h2><br>
+                <% if( basket.length > 0){ %>
+                    <% for(i=0;i<basket.length;i++){ %>
                         <div>
-                            <button type="button" class="btn btn-dark"><a href="/Checkout_Basket">Check Out</a></button>
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="far fa-times-circle" id="<%= basket[i].getItemId() %>"></i>
+                                </div>
+                                <div class="col-2">
+                                    <img width="100" height="100" src="/images/<%= basket[i].getImg() %>" >
+                                </div>
+                                <div class="col-2">
+                                    <h5><%= basket[i].getItemName() %></h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5>QTY: <%= basket[i].getQuantity() %></h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5>£<%= basket[i].getIndividualPrice() %></h5>
+                                </div>
+                                <div class="col-3 text-center">
+                                    <h5><strong>£<%= basket[i].getTotalPrice() %></strong></h5>
+                                </div>
+                            </div><br>
                         </div>
-                    </div><br>
-                </div>
+                    <% } %>
+                <% } %>
+        </div>
+        <div class="col-4">
+            <h3 class="text-center">Confirm Order Details</h3><br>
+            <p>Please make sure the details below are correct before checking out. Details cannot be amended after check out.</p>
+            <% if(account !== null) { %>
+                <span><p><strong>Full Name:</strong> <%= account.getFirstName() %> <%= account.getSurname() %><br>
+                <strong>Email Contact:</strong> <%= account.getEmail() %><br>
+                <strong>Delivery Address:</strong> <%= account.getStreet() %> , <%= account.getPostCode() %></p>
+                </span><br><br>
+                <% if(basket.length > 0){ %>
+                    <h3 class="text-center">Total Order to Pay: <strong>£<%= price %></strong></h3><br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">
+                            <a href="/Checkout_Basket">Check Out</a>
+                        </button>
+                    </div>
+
+                <% } %>
             <% } %>
-        <% } %>
+        </div>
     </div>
 </div>
 </body>

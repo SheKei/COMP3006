@@ -10,19 +10,27 @@ img{
     border-radius: 15px;
 }
 
-#basketPage{
+
+.col-6{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    min-height: 650px;
     background-color: #f5efe4;
     border-radius: 15px;
     margin-top: 20px;
+    width: 80%;
+    min-height: 550px;
 }
 
-#basketContainer{
-    padding:5%;
+.col-4{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f5efe4;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 80%;
+    min-height: 550px;
 }
+
 
 .fa-times-circle{
     font-size: 30px;
