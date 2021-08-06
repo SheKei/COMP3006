@@ -243,7 +243,7 @@ async function getSelectedOrder(orderID){
         orderObj = new OrderClass(orderID, order[0].userID,
             user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
             order[0].orderStatus,
-            order[0].dateOfOrder, orderItems
+            (moment(order[0].dateOfOrder).utc().format('DD-MM-YYYY hh:mm a')), orderItems
             );
     }
 
