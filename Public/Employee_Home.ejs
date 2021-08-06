@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/employee_home.css"/>
+</head>
+<body>
+<header><%- include("Employee_Navbar"); %></header>
+<div id="homePage">
+    <div class="homeContainer">
+        <h1>View Orders</h1><br>
+        <% if(orders.length>0){%>
+            <% for(let i=0;i<orders.length;i++){ %>
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Order ID:<br><%= orders[i].getOrderID() %></h5>
+                    </div>
+                    <div class="col-3">
+                        <h5>Date of Order:<br><%= orders[i].getOrderDate() %></h5>
+                    </div>
+                    <div class="col-2">
+                        <h5>Order Status:<br><%= orders[i].getOrderStatus() %></h5>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button class="btn btn-dark">
+                            <a href="/View_Order_Employee/<%= orders[i].getOrderID() %>">
+                                View Order
+                            </a>
+                        </button>
+                    </div>
+                </div><hr class="line">
+            <% } %>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

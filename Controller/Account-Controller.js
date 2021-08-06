@@ -18,17 +18,11 @@ function createAccount(request, response){
 async function login(request, response){
     let emailInput = request.body.email;
     let passwordInput = request.body.password;
-    console.log("email = " + emailInput);
-    console.log("password = " + passwordInput);
-
     let access = false;
 
     let credentials = await db.getLoginCredentials(emailInput);
-    //console.log(credentials[0] !== null);
-    //console.log(credentials[0].getFirstName());
-    console.log("after db called");
     if(credentials !== null){
-        if(emailInput === credentials.getEmailAddress()){   //If emails match
+        if(emailInput === credentials.getEmail()){   //If emails match
             let password = credentials.getPassword();       //then compare passwords
             access = bcrypt.compareSync(passwordInput, password );
         }
@@ -57,8 +51,6 @@ async function displayAccount(userID, response){
 
 //Update account details
 function updateAccountDetails(userID, request, response){
-    console.log(userID);
-    console.log(request.body.firstname);
     db.updateAccountDetails(
         userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
         request.body.email, request.body.street, request.body.postCode
@@ -66,8 +58,21 @@ function updateAccountDetails(userID, request, response){
     response.redirect("/User_Account");
 }
 
+//Check if user inputted correct current password before updating to new password
+async function checkPassword(userID, request, response){
+    let account = await db.getAccount(userID);
+    if(account !== null){//If user entered the correct current password
+        if(bcrypt.compareSync(request.body.currentPassword, account.getPassword())){
+            //then update to new password
+            db.updatePassword(userID,bcrypt.hashSync(request.body.newPassword, saltRounds));
+        }
+    }
+    response.redirect("/User_Account");
+}
+
 module.exports.createAccount = createAccount;
 module.exports.displayAccount = displayAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
 module.exports.login = login;
+module.exports.checkPassword = checkPassword;
 

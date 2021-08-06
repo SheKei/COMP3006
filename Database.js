@@ -123,8 +123,14 @@ function updateAccountDetails(userID, firstname, lastname,birthday, email, stree
     Account.collection.updateOne(
         {_id: mongoose.Types.ObjectId(userID)},
         {$set:{userID:userID, firstname:firstname, lastname:lastname,
-                birthday:birthday, email:email, streetName:streetName,postCode:postCode
-        }});
+                birthday:birthday, email:email, streetName:streetName,postCode:postCode}});
+}
+
+//Change password of account
+function updatePassword(userID, newPassword){
+    Account.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(userID)},
+        {$set:{password:newPassword}});
 }
 
 //Check if there is already item is already in basket
@@ -218,34 +224,47 @@ async function retrieveChatHistory(userID){
 
 //Get all orders
 async function getOrders(){
-    let order = await Order.find({});
-    let orderArray = [];
-    if(order.length>0){
-        for(let i=0;i<order.length;i++){
-            //orderID, userID, street, postCode, orderStatus, orderDate, orderItems
-            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null, order[i].orderStatus, order[i].dateOfOrder, null);
-            orderArray.push(orderObj);
-        }
-    }
-    return orderArray;
+    let order = await Order.find({}).sort({'dateOfOrder': -1});
+    return returnOrderObjects(order);
+}
+
+//Get all orders from one customer
+async function getCustomerOrders(userID){
+    let order = await Order.find({userID: userID}).sort({'dateOfOrder': -1});
+    return returnOrderObjects(order);
 }
 
 //Get selected order's details
 async function getSelectedOrder(orderID){
-    let order = Order.findOne({_id:mongoose.Types.ObjectId(orderID)});
+    let order = await Order.find({_id:mongoose.Types.ObjectId(orderID)});
     let orderObj = null;
 
     if(order[0]._id !== undefined){
         let user = await Account.find({_id:mongoose.Types.ObjectId(order[0].userID)});
-        let orderItems = returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
-
+        let orderItems = await returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
+        //console.log("get selected order"+orderItems[0]);
         orderObj = new OrderClass(orderID, order[0].userID,
-            user[0].firstname + " " + user[0].lastname,user[0].streetName, user[0].postCode,
-            order[0].orderStatus,order[0].dateOfOrder, orderItems
+            user[0].firstname + " " + user[0].lastname, user[0].email,user[0].streetName, user[0].postCode,
+            order[0].orderStatus,
+            (moment(order[0].dateOfOrder).utc().format('DD-MM-YYYY hh:mm a')), orderItems
             );
     }
 
     return orderObj;
+}
+
+//Return an array of order objects
+async function returnOrderObjects(order){
+    let orderArray = [];
+    if(order.length>0){
+        for(let i=0;i<order.length;i++){
+            //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
+                order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY')) , null);
+            orderArray.push(orderObj);
+        }
+    }
+    return orderArray;
 }
 
 //Return an array of order item objects
@@ -254,9 +273,20 @@ async function returnOrderItemsObjects(items, quantities){
     for(let i=0;i<items.length;i++){
         //Get price and name using id
         let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
+        console.log("in here: "+items[i]);
         //itemID, itemName, orderQuantity, totalItemPrice
         let orderItemObj = new OrderItemClass(items[i],item[0].bookName, quantities[i],(quantities[i]*item[0].sellingPrice));
+        orderItemObjArray.push(orderItemObj);
     }
+    return orderItemObjArray;
+}
+
+//Update order status from awaiting to delivered
+function updateOrderStatus(orderID){
+    Order.collection.updateOne(//Else update quantity
+        {_id: mongoose.Types.ObjectId(orderID)},
+        {$set:{orderStatus: "Delivered"}}
+    );
 }
 
 module.exports.insertBook = insertBook;
@@ -269,6 +299,7 @@ module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 module.exports.getAccount = getAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
+module.exports.updatePassword = updatePassword;
 
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
@@ -279,4 +310,6 @@ module.exports.logChat = logChat;
 module.exports.retrieveChatHistory = retrieveChatHistory;
 
 module.exports.getOrders = getOrders;
+module.exports.getCustomerOrders = getCustomerOrders;
 module.exports.getSelectedOrder = getSelectedOrder;
+module.exports.updateOrderStatus = updateOrderStatus;

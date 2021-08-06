@@ -4,6 +4,7 @@ let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');
 let accountController = require('./Controller/Account-Controller');
 let chatController = require('./Controller/Chat-Controller');
+let orderController = require('./Controller/Order-Controller');
 
 function loadWelcomePage(request,response){
     response.render("Welcome");
@@ -43,8 +44,24 @@ function loadEmployeeChatRoom(request,response){
     chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
 }
 
+//View all orders in summarized version as employee
+function loadViewOrdersPage(request,response){
+    orderController.viewOrders(response);
+}
+
+//View a specific order as employee
+function loadViewInvoiceOrderPage(request,response){
+    orderController.viewOrderEmployee(request.params.orderId, response);
+}
+
+//Deliver an order and update status
+function deliverOrder(request,response){
+    orderController.deliverOrder(request.params.orderId, response);
+}
+
+//Show user's home page
 function loadUserHomePage(request,response){
-    response.render("User_Home");
+    orderController.viewCustomerOrders(request.session.user, response);
 }
 
 //View books as a customer
@@ -72,10 +89,19 @@ function checkoutBasket(request, response){
     basketController.checkout(request.session.user, response);
 }
 
+//View order as customer
+function viewCustomerOrder(request,response){
+    orderController.viewOrderCustomer(request.params.orderId, response);
+}
 
 //Update account
 function updateAccount(request,response){
     accountController.updateAccountDetails(request.session.user, request, response);
+}
+
+//Update account password
+function updatePassword(request,response){
+    accountController.checkPassword(request.session.user,request,response);
 }
 
 //Display items in customer's basket
@@ -92,13 +118,21 @@ function loadAccountPage(request,response){
     accountController.displayAccount(request.session.user, response);
 }
 
+
+
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
 module.exports.loadUserRegisterPage = loadUserRegisterPage;
+
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
+module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
+module.exports.loadViewOrdersPage = loadViewOrdersPage;
+module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
+module.exports.deliverOrder = deliverOrder;
+
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
@@ -106,7 +140,8 @@ module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.checkoutBasket = checkoutBasket;
+module.exports.viewCustomerOrder = viewCustomerOrder;
 module.exports.updateAccount = updateAccount;
+module.exports.updatePassword = updatePassword;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
-module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
 module.exports.loadAccountPage = loadAccountPage;
