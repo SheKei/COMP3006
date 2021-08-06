@@ -22,7 +22,7 @@ async function login(request, response){
 
     let credentials = await db.getLoginCredentials(emailInput);
     if(credentials !== null){
-        if(emailInput === credentials.getEmailAddress()){   //If emails match
+        if(emailInput === credentials.getEmail()){   //If emails match
             let password = credentials.getPassword();       //then compare passwords
             access = bcrypt.compareSync(passwordInput, password );
         }

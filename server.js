@@ -128,6 +128,11 @@ app.get("/User_Home/:userID", function(request,response){
     response.redirect("/User_Home");
 });
 
+app.get("/LogOut", function(request,response){
+    request.session.destroy();      //Erase session data
+    response.redirect("/Welcome"); //Redirect to login page
+});
+
 //GET REQUEST to remove an item from basket
 app.get("/removeBasket/:itemID",routes.removeItemFromBasket);
 

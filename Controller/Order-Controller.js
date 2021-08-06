@@ -15,6 +15,8 @@ async function viewCustomerOrders(userID,response){
     let orders = await db.getCustomerOrders(userID);
     if(orders.length > 0){
         response.render("User_Home", {"orders":orders});
+    }else{
+        response.render("User_Home", {"orders":""});
     }
 }
 

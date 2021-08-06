@@ -101,7 +101,7 @@ function updateAccount(request,response){
 
 //Update account password
 function updatePassword(request,response){
-    accountController.checkPassword(request.session.user,response);
+    accountController.checkPassword(request.session.user,request,response);
 }
 
 //Display items in customer's basket

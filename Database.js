@@ -224,13 +224,13 @@ async function retrieveChatHistory(userID){
 
 //Get all orders
 async function getOrders(){
-    let order = await Order.find({});
+    let order = await Order.find({}).sort({'dateOfOrder': -1});
     return returnOrderObjects(order);
 }
 
 //Get all orders from one customer
 async function getCustomerOrders(userID){
-    let order = await Order.find({userID: userID});
+    let order = await Order.find({userID: userID}).sort({'dateOfOrder': -1});
     return returnOrderObjects(order);
 }
 
