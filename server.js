@@ -63,15 +63,6 @@ let upload = multer({ storage:storage });
 //ENABLE PROCESSING OF POST FORMS
 app.use(express.urlencoded({extended: true}));
 
-//GET REQUESTS for USERS
-app.get("/welcome", routes.loadWelcomePage);
-app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
-app.get("/User_Login", routes.loadUserLoginPage);
-app.get("/User_Register", routes.loadUserRegisterPage);
-app.get("/User_Home", routes.loadUserHomePage);
-app.get("/View_Basket", routes.loadBasketPage);
-app.get("/User_Account", routes.loadAccountPage);
-
 //GET REQUESTS for ADMIN
 app.get("/Add_Book", routes.loadAddBookPage);
 app.get("/View_All_Stock", routes.loadViewAllStockPage);
@@ -100,6 +91,18 @@ app.post("/updateBookImg", upload.single("imgName"), (request, response) => {
 //FORM POST REQUEST update book
 app.post("/updateBook", bookController.updateBook);
 
+//GET REQUESTS for USERS
+app.get("/welcome", routes.loadWelcomePage);
+app.get("/Login_or_Register", routes.loadLoginOrRegisterPage);
+app.get("/User_Login", routes.loadUserLoginPage);
+app.get("/User_Register", routes.loadUserRegisterPage);
+app.get("/User_Home", routes.loadUserHomePage);
+app.get("/View_Basket", routes.loadBasketPage);
+app.get("/User_Account", routes.loadAccountPage);
+app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
+app.get("/Contact_Shop", routes.loadCustomerSupportPage);
+app.get("/Checkout_Basket", routes.checkoutBasket);
+
 //FORM POST REQUEST register account
 app.post("/registerAccount", accountController.createAccount);
 
@@ -109,10 +112,9 @@ app.post("/checkLogin", accountController.login);
 //FORM POST REQUEST to update account
 app.post("/updateAccount", routes.updateAccount);
 
-//GET REQUESTS for customers
-app.get("/View_All_Books", routes.loadViewAllBookItemsPage);
-app.get("/Contact_Shop", routes.loadCustomerSupportPage);
-app.get("/Checkout_Basket", routes.checkoutBasket);
+//GET REQUESTS to view an order as customer
+app.get("/View_Order_Customer/:orderId", routes.viewCustomerOrder);
+
 
 let currentUser = "";
 //GET REQUEST to save user id as session after successful login

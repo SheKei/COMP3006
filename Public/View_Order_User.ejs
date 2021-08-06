@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Order</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/view_order_employee.css"/>
+</head>
+<body>
+<header><%- include("User_Navbar"); %></header>
+<div class="orderPage">
+    <div class="orderContainer">
+        <% if(order !== null){ %>
+            <h2>View Invoice</h2>
+            <hr class="line">
+            <h4>Order ID: <%= order.getOrderID() %></h4>
+            <h4>Date of Order: <%= order.getOrderDate() %></h4>
+            <h4>Order Paid: £<%= orderPrice %></h4>
+            <h4>Order Status: <strong><%= order.getOrderStatus() %></strong></h4>
+            <hr class="line">
+            <div class="row">
+                <div class="col-7">
+                    <div><h4>Customer's ID:<br><%= order.getUserID() %></h4></div>
+                    <div><h4>Customer's Full Name:<br><%= order.getUserFullname() %></h4></div>
+                    <div><h4>Customer's Address:<br><%= order.getStreet() %> , <%= order.getPostCode() %></h4></div>
+                    <div><h4>Customer's Email Address:<br><%= order.getUserEmail() %></h4></div>
+                </div>
+                <div class="col-5">
+                    <div><h4>Items:</h4></div>
+                    <% if(orderItems.length >0){ %>
+                        <% for(let i=0; i<orderItems.length; i++){%>
+                            <div><h5>Item ID: <%= orderItems[i].getItemID() %></h5></div>
+                            <div><h5>Item Name: <%= orderItems[i].getItemName() %></h5></div>
+                            <div><h5>Quantity: <%= orderItems[i].getOrderQuantity() %></h5></div>
+                            <div><h5>Total Item Price: £<%= orderItems[i].getTotalItemPrice() %></h5></div><br>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

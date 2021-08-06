@@ -31,6 +31,19 @@ async function viewOrderEmployee(orderID, response){
     }
 }
 
+//View an order as customer
+async function viewOrderCustomer(orderID, response){
+    let order = await db.getSelectedOrder(orderID);
+    if(order !== null){
+        let orderItems = order.getOrderItems();
+        response.render("View_Order_User",{
+            "order":order,
+            "orderItems": orderItems,
+            "orderPrice": calculateTotalOrder(orderItems)
+        });
+    }
+}
+
 //Mark an order as delivered
 function deliverOrder(orderID, response){
     db.updateOrderStatus(orderID);
@@ -49,3 +62,4 @@ module.exports.viewOrders = viewOrders;
 module.exports.viewOrderEmployee = viewOrderEmployee;
 module.exports.deliverOrder = deliverOrder;
 module.exports.viewCustomerOrders = viewCustomerOrders;
+module.exports.viewOrderCustomer = viewOrderCustomer;

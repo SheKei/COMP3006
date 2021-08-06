@@ -89,6 +89,11 @@ function checkoutBasket(request, response){
     basketController.checkout(request.session.user, response);
 }
 
+//View order as customer
+function viewCustomerOrder(request,response){
+    orderController.viewOrderCustomer(request.params.orderId, response);
+}
+
 //Update account
 function updateAccount(request,response){
     accountController.updateAccountDetails(request.session.user, request, response);
@@ -130,6 +135,7 @@ module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.checkoutBasket = checkoutBasket;
+module.exports.viewCustomerOrder = viewCustomerOrder;
 module.exports.updateAccount = updateAccount;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 module.exports.loadAccountPage = loadAccountPage;
