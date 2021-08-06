@@ -99,6 +99,11 @@ function updateAccount(request,response){
     accountController.updateAccountDetails(request.session.user, request, response);
 }
 
+//Update account password
+function updatePassword(request,response){
+    accountController.checkPassword(request.session.user,response);
+}
+
 //Display items in customer's basket
 function loadBasketPage(request,response){
     basketController.displayBasket(request.session.user, response);
@@ -137,5 +142,6 @@ module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.checkoutBasket = checkoutBasket;
 module.exports.viewCustomerOrder = viewCustomerOrder;
 module.exports.updateAccount = updateAccount;
+module.exports.updatePassword = updatePassword;
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 module.exports.loadAccountPage = loadAccountPage;

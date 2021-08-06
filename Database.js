@@ -123,8 +123,14 @@ function updateAccountDetails(userID, firstname, lastname,birthday, email, stree
     Account.collection.updateOne(
         {_id: mongoose.Types.ObjectId(userID)},
         {$set:{userID:userID, firstname:firstname, lastname:lastname,
-                birthday:birthday, email:email, streetName:streetName,postCode:postCode
-        }});
+                birthday:birthday, email:email, streetName:streetName,postCode:postCode}});
+}
+
+//Change password of account
+function updatePassword(userID, newPassword){
+    Account.collection.updateOne(
+        {_id: mongoose.Types.ObjectId(userID)},
+        {$set:{password:newPassword}});
 }
 
 //Check if there is already item is already in basket
@@ -293,6 +299,7 @@ module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 module.exports.getAccount = getAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
+module.exports.updatePassword = updatePassword;
 
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;

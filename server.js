@@ -112,6 +112,9 @@ app.post("/checkLogin", accountController.login);
 //FORM POST REQUEST to update account
 app.post("/updateAccount", routes.updateAccount);
 
+//FORM POST REQUEST to updatePassword
+app.post("/updatePassword", routes.updatePassword);
+
 //GET REQUESTS to view an order as customer
 app.get("/View_Order_Customer/:orderId", routes.viewCustomerOrder);
 
