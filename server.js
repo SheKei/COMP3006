@@ -84,6 +84,9 @@ app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 //GET REQUEST TO VIEW INVOICE ORDER
 app.get("/View_Order_Employee/:orderId", routes.loadViewInovoiceOrderPage);
 
+//GET REQUEST TO DELIVER CUSTOMER ORDER
+app.get("/Process_Order/:orderId", routes.deliverOrder);
+
 //FORM POST REQUEST TO ADD BOOK
 app.post("/addBook", upload.single("imgCover"), (request, response) => {
     if(request.file) {bookController.addBook(request,response,request.file.filename);}

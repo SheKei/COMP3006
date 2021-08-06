@@ -253,10 +253,7 @@ async function getSelectedOrder(orderID){
 //Return an array of order item objects
 async function returnOrderItemsObjects(items, quantities){
     let orderItemObjArray = [];
-    console.log(items);
-    console.log(quantities);
     for(let i=0;i<items.length;i++){
-        console.log("in here");
         //Get price and name using id
         let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
         console.log("in here: "+items[i]);
@@ -265,6 +262,14 @@ async function returnOrderItemsObjects(items, quantities){
         orderItemObjArray.push(orderItemObj);
     }
     return orderItemObjArray;
+}
+
+//Update order status from awaiting to delivered
+function updateOrderStatus(orderID){
+    Order.collection.updateOne(//Else update quantity
+        {_id: mongoose.Types.ObjectId(orderID)},
+        {$set:{orderStatus: "Delivered"}}
+    );
 }
 
 module.exports.insertBook = insertBook;
@@ -288,3 +293,4 @@ module.exports.retrieveChatHistory = retrieveChatHistory;
 
 module.exports.getOrders = getOrders;
 module.exports.getSelectedOrder = getSelectedOrder;
+module.exports.updateOrderStatus = updateOrderStatus;

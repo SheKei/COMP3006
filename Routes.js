@@ -44,7 +44,7 @@ function loadEmployeeChatRoom(request,response){
     chatController.displayChatHistoryForAdmin("610580434665755c249b5b9e", response);
 }
 
-//View all orders in summarized version
+//View all orders in summarized version as employee
 function loadViewOrdersPage(request,response){
     orderController.viewOrders(response);
 }
@@ -52,6 +52,11 @@ function loadViewOrdersPage(request,response){
 //View a specific order as employee
 function loadViewInvoiceOrderPage(request,response){
     orderController.viewOrderEmployee(request.params.orderId, response);
+}
+
+//Deliver an order and update status
+function deliverOrder(request,response){
+    orderController.deliverOrder(request.params.orderId, response);
 }
 
 function loadUserHomePage(request,response){
@@ -82,7 +87,6 @@ function removeItemFromBasket(request,response){
 function checkoutBasket(request, response){
     basketController.checkout(request.session.user, response);
 }
-
 
 //Update account
 function updateAccount(request,response){
@@ -116,6 +120,7 @@ module.exports.loadViewStockBookPage = loadViewStockBookPage;
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
 module.exports.loadViewOrdersPage = loadViewOrdersPage;
 module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
+module.exports.deliverOrder = deliverOrder;
 
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;

@@ -2,6 +2,7 @@ let db = require("../database");
 let session = require('express-session');
 let mongoose = require("mongoose");
 
+//View all orders as employees
 async function viewOrders(response){
     let orders = await db.getOrders();
     if(orders.length > 0){
@@ -9,6 +10,7 @@ async function viewOrders(response){
     }
 }
 
+//View an order as employee
 async function viewOrderEmployee(orderID, response){
     let order = await db.getSelectedOrder(orderID);
     if(order !== null){
@@ -21,5 +23,12 @@ async function viewOrderEmployee(orderID, response){
     }
 }
 
+//Mark an order as delivered
+function deliverOrder(orderID, response){
+    db.updateOrderStatus(orderID);
+    response.redirect("/View_Order_Employee/"+orderID);
+}
+
 module.exports.viewOrders = viewOrders;
 module.exports.viewOrderEmployee = viewOrderEmployee;
+module.exports.deliverOrder = deliverOrder;
