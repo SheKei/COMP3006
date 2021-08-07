@@ -240,16 +240,16 @@ async function retrieveChatHistory(userID){
     return msgArray;
 }
 
-//Get all orders
+//Get all orders as employee
 async function getOrders(){
     let order = await Order.find({}).sort({'dateOfOrder': -1});
-    return returnOrderObjects(order);
+    return await returnOrderObjects(order);
 }
 
 //Get all orders from one customer
 async function getCustomerOrders(userID){
     let order = await Order.find({userID: userID}).sort({'dateOfOrder': -1});
-    return returnOrderObjects(order);
+    return await returnOrderObjects(order);
 }
 
 //Get selected order's details
@@ -277,7 +277,9 @@ async function returnOrderObjects(order){
     if(order.length>0){
         for(let i=0;i<order.length;i++){
             //orderID, userID, userName, userEmail, street, postCode, orderStatus, orderDate, orderItems
-            let orderObj = new OrderClass(order[i]._id, order[i].userID,null,null,null,null,
+            let user = await getAccount(mongoose.Types.ObjectId(order[i].userID));
+            let fullname = user.getFirstName()+ " " + user.getSurname();
+            let orderObj = new OrderClass(order[i]._id, order[i].userID,fullname,null,null,null,
                 order[i].orderStatus,(moment(order[i].dateOfOrder).utc().format('DD-MM-YYYY hh:mm a')) , null);
             orderArray.push(orderObj);
         }
@@ -291,7 +293,6 @@ async function returnOrderItemsObjects(items, quantities){
     for(let i=0;i<items.length;i++){
         //Get price and name using id
         let item = await Book.find({_id:mongoose.Types.ObjectId(items[i])});
-        console.log("in here: "+items[i]);
         //itemID, itemName, orderQuantity, totalItemPrice
         let orderItemObj = new OrderItemClass(items[i],item[0].bookName, quantities[i],(quantities[i]*item[0].sellingPrice));
         orderItemObjArray.push(orderItemObj);
