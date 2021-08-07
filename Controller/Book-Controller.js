@@ -61,6 +61,8 @@ async function getAllStockBooks(request, response){
     let books = await db.getAllBooks();
     if(books.length > 0){
         response.render("View_All_Stock",{"books": books});
+    }else{
+        response.render("View_All_Stock",{"books": []});
     }
 }
 

@@ -35,14 +35,16 @@ async function viewOrderEmployee(orderID, response){
 }
 
 //View an order as customer
-async function viewOrderCustomer(orderID, response){
+async function viewOrderCustomer(userID,orderID, response){
     let order = await db.getSelectedOrder(orderID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
     if(order !== null){
         let orderItems = order.getOrderItems();
         response.render("View_Order_User",{
             "order":order,
             "orderItems": orderItems,
-            "orderPrice": calculateTotalOrder(orderItems)
+            "orderPrice": calculateTotalOrder(orderItems),
+            "basketNum": basketNum
         });
     }
 }

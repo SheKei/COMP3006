@@ -101,7 +101,7 @@ function checkoutBasket(request, response){
 
 //View order as customer
 function viewCustomerOrder(request,response){
-    orderController.viewOrderCustomer(request.params.orderId, response);
+    orderController.viewOrderCustomer(request.session.user,request.params.orderId, response);
 }
 
 //Update user account details

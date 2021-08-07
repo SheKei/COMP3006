@@ -15,6 +15,7 @@
 <body>
 <header><%- include("User_Navbar"); %></header>
 <div class="orderPage">
+    <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
     <div class="orderContainer">
         <% if(order !== null){ %>
             <h2>View Invoice</h2>
