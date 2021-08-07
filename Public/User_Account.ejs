@@ -18,6 +18,7 @@
     <div class="row">
         <div id="accountDiv" class="col-5">
             <div class="container">
+                <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
                 <% if(accountNotif === true){%>
                     <div class="alert alert-success" role="alert">Account Details Update Success
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -37,6 +37,7 @@ async function login(request, response){
 
 async function displayAccount(userID, response, passwordNotif, accountNotif){
     let accountObj = await db.getAccount(userID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
     if(accountObj !== null){
         response.render("User_Account",{
             "firstname": accountObj.getFirstName(),
@@ -46,7 +47,8 @@ async function displayAccount(userID, response, passwordNotif, accountNotif){
             "street": accountObj.getStreet(),
             "postCode": accountObj.getPostCode(),
             "passwordNotif": passwordNotif,
-            "accountNotif": accountNotif
+            "accountNotif": accountNotif,
+            "basketNum": basketNum
         });
     }
 }

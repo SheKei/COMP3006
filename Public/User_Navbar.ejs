@@ -11,6 +11,21 @@
     <script src="https://kit.fontawesome.com/20c7401107.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_navbar.css"/>
+    <script type="text/javascript" src="/jquery/user_navbar.js"></script>
+    <style>
+        .nav-item{
+            margin:20px;
+        }
+
+        .badge{
+            position: absolute;
+            top: 20px;
+            margin:5px;
+            font-size: 15px;
+        }
+
+        .hidden{display:none;}
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,7 +42,7 @@
                 <a class="nav-link" href="/View_All_Books">Books</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/View_Basket">Basket</a>
+                <a class="nav-link" href="/View_Basket">Basket<span id="basketNumber" class="badge badge-info">3</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/User_Account">Account</a>

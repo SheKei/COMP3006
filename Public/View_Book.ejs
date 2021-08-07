@@ -16,6 +16,7 @@
 <header><%- include("User_Navbar"); %></header>
     <div id="viewBookPage">
         <div id="bookContainer">
+            <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
             <div class="row">
                 <div class="col-6"><br><br><br>
                     <div><img src="/images/<%= book.getImage() %>" ></div><br>

@@ -15,6 +15,7 @@
 <body>
 <header><%- include("User_Navbar"); %></header>
     <div id="homePage">
+        <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
         <div class="homeContainer">
             <h1>View Orders</h1><br>
             <% if(orders.length>0){%>

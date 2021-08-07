@@ -7,13 +7,16 @@ function logMessage(sender,recipient,message,timestamp){
     db.logChat(sender,recipient,message,timestamp);
 }
 
+//Load any messages from customer and admin
 async function displayChatHistoryForCustomers(userID,response){
     let msg = await db.retrieveChatHistory(userID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
+
     if(msg.length>0){
-        response.render("User_Contact_Shop",{"userID":userID,"msg":msg});
+        response.render("User_Contact_Shop",{"userID":userID,"msg":msg, "basketNum":basketNum});
     }
     else{
-        response.render("User_Contact_Shop",{"userID":userID,"msg":[]});
+        response.render("User_Contact_Shop",{"userID":userID,"msg":[],"basketNum":basketNum});
     }
 }
 

@@ -16,6 +16,7 @@
 <header><%- include("User_Navbar"); %></header>
 <div id="viewBookPage">
     <div id="bookContainer">
+        <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
         <h1>View Books</h1><br><br>
         <div class="row">
             <% for (i=0; i<books.length; i++) { %>

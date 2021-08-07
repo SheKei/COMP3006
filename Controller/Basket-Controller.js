@@ -18,10 +18,12 @@ function removeItemFromBasket(userID, request,response){
 async function displayBasket(userID,response){
     let basket = await db.getAllItemsInBasket(userID);
     let account = await db.getAccount(userID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
+
     if(basket.length > 0){
-        response.render("Basket",{"basket": basket, "account":account, "price":calculateTotalPrice(basket)});
+        response.render("Basket",{"basket": basket, "account":account, "price":calculateTotalPrice(basket), "basketNum":basketNum});
     }else{
-        response.render("Basket",{"basket": [], "account":account, "price":0.00});
+        response.render("Basket",{"basket": [], "account":account, "price":0.00, "basketNum":basketNum});
     }
 }
 

@@ -185,6 +185,11 @@ async function getAllItemsInBasket(userID){
     return basketItems;
 }
 
+//Return the number of items in basket currently
+async function returnNumOfItemsInBasket(userID){
+    return await Basket.find({"userID":userID}).count();
+}
+
 //Add all basket items into an invoice order
 async function checkout(userID){
     let basket = await Basket.find({userID:userID});
@@ -325,6 +330,7 @@ module.exports.updatePassword = updatePassword;
 module.exports.checkBasket = checkBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.getAllItemsInBasket = getAllItemsInBasket;
+module.exports.returnNumOfItemsInBasket = returnNumOfItemsInBasket;
 module.exports.checkout = checkout;
 
 module.exports.getListOfCustomers = getListOfCustomers;

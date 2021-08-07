@@ -13,10 +13,11 @@ async function viewOrders(response){
 //View all orders made by the customer
 async function viewCustomerOrders(userID,response){
     let orders = await db.getCustomerOrders(userID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
     if(orders.length > 0){
-        response.render("User_Home", {"orders":orders});
+        response.render("User_Home", {"orders":orders,"basketNum":parseInt(basketNum)});
     }else{
-        response.render("User_Home", {"orders":""});
+        response.render("User_Home", {"orders":"","basketNum":basketNum});
     }
 }
 

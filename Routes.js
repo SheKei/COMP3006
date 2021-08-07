@@ -76,12 +76,12 @@ function loadUserHomePage(request,response){
 
 //View books as a customer
 function loadViewAllBookItemsPage(request,response){
-    bookController.getAllBookItems(request,response);
+    bookController.getAllBookItems(request.session.user,request,response);
 }
 
 //View a book as a customer
 function loadViewBookPage(request,response){
-    bookController.viewBookItem(response, request.params.bookId);
+    bookController.viewBookItem(request.session.user,response, request.params.bookId);
 }
 
 //Pass on session user to basket controller

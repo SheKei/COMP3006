@@ -17,6 +17,7 @@
 <header><%- include("User_Navbar"); %></header>
 <div id="basketPage">
     <div class="row">
+        <input type="number" class="basketNum hidden" value="<%= basketNum %>" readonly>
         <div class="col-6">
                 <h2 class="text-center">Basket</h2><br>
                 <% if( basket.length > 0){ %>

@@ -65,10 +65,11 @@ async function getAllStockBooks(request, response){
 }
 
 //View book items as a customer
-async function getAllBookItems(request,response){
+async function getAllBookItems(userID,request,response){
     let books = await db.getAllBooks();
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
     if(books.length > 0){
-        response.render("View_All_Books",{"books": books});
+        response.render("View_All_Books",{"books": books,"basketNum": basketNum});
     }
 }
 
@@ -87,14 +88,17 @@ async function viewStockBookItem(response, bookID){
     }
 }
 
-//Display current details of a selected stock item
-async function viewBookItem(response, bookID){
+//Display current details of a selected book as customer
+async function viewBookItem(userID,response, bookID){
     let book = await db.getOneBook(bookID);
+    let basketNum = await db.returnNumOfItemsInBasket(userID);
+
     if(book !== undefined){
         let genres = convertArrayToString(book.getGenres());
         response.render("View_Book",{
             "book": book,
-            "theGenres": genres
+            "theGenres": genres,
+            "basketNum": basketNum
         });
     }
 }
