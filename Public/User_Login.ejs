@@ -22,6 +22,15 @@
                 </button>
             </div>
         <% } %>
+
+        <% if(regSuccess === true){%>
+            <div class="alert alert-success" role="alert">Registration Complete! Begin Logging In!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <% } %>
+
         <h1>Sign In</h1><br>
         <span id="credentials">
             <form method="post" action="/checkLogin">

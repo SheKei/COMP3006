@@ -160,6 +160,9 @@ app.get("/Account_Details_Updated", routes.loadAccountUpdateNotification);
 //GET REQUEST to notify login error
 app.get("/Login_Error", routes.loadLoginErrorNotification);
 
+//GET REQUEST to notify registration success
+app.get("/Reg_Success", routes.loadRegSuccessNotification);
+
 //WEB SOCKET
 io.on("connection", function(socket){
 

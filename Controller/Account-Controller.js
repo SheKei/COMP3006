@@ -10,7 +10,7 @@ let saltRounds = 10;
 function createAccount(request, response){
     let password = bcrypt.hashSync(request.body.password1, saltRounds);
     db.insertAccount(request.body.forename, request.body.surname, request.body.dateOfBirth, request.body.email, request.body.streetName, request.body.postCode,password);
-    response.redirect("/User_Login");
+    response.redirect("/Reg_Success"); //Notify success and take to login screen
     response.end();
 }
 
@@ -31,7 +31,7 @@ async function login(request, response){
     if(access){
         response.redirect("/User_Home/"+credentials.getUserID());
     }else{
-        response.redirect("/Login_Error");
+        response.redirect("/Login_Error"); //Notify error and remain on login page
     }
 }
 
@@ -57,7 +57,7 @@ function updateAccountDetails(userID, request, response){
         userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
         request.body.email, request.body.street, request.body.postCode
     );
-    response.redirect("/Account_Details_Updated");
+    response.redirect("/Account_Details_Updated");//Notify change
 }
 
 //Check if user inputted correct current password before updating to new password
@@ -71,7 +71,7 @@ async function checkPassword(userID, request, response){
             db.updatePassword(userID,bcrypt.hashSync(request.body.newPassword, saltRounds));
         }
     }
-    response.redirect("/Password_Update/"+isValid); //Notify success or failure
+    response.redirect("/Password_Update/"+isValid);//Notify success or failure
 }
 
 //Delete chat history, basket items related to account and account itself

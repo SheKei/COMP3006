@@ -16,7 +16,7 @@ function loadLoginOrRegisterPage(request,response){
 
 //User login page
 function loadUserLoginPage(request,response){
-    response.render("User_Login", {"error":null});
+    response.render("User_Login", {"error":null, "regSuccess":null});
 }
 
 //Create user account page
@@ -146,7 +146,11 @@ function loadAccountUpdateNotification(request,response){
 
 //Notify user of login fail
 function loadLoginErrorNotification(request,response){
-    response.render("User_Login", {"error":true});
+    response.render("User_Login", {"error":true, "regSuccess":null});
+}
+
+function loadRegSuccessNotification(request,response){
+    response.render("User_Login", {"error":null, "regSuccess":true});
 }
 
 
@@ -155,6 +159,7 @@ module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
 module.exports.loadUserRegisterPage = loadUserRegisterPage;
 module.exports.loadLoginErrorNotification = loadLoginErrorNotification;
+module.exports.loadRegSuccessNotification = loadRegSuccessNotification;
 
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
