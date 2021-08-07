@@ -18,6 +18,13 @@
     <div class="row">
         <div id="accountDiv" class="col-5">
             <div class="container">
+                <% if(accountNotif === true){%>
+                    <div class="alert alert-success" role="alert">Account Details Update Success
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% } %>
                 <h2>Account Details</h2><br>
                 <form method="post" action="/updateAccount">
                     <div class="form-group row">

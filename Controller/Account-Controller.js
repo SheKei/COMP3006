@@ -35,7 +35,7 @@ async function login(request, response){
     }
 }
 
-async function displayAccount(userID, response, passwordNotif){
+async function displayAccount(userID, response, passwordNotif, accountNotif){
     let accountObj = await db.getAccount(userID);
     if(accountObj !== null){
         response.render("User_Account",{
@@ -45,7 +45,8 @@ async function displayAccount(userID, response, passwordNotif){
             "email": accountObj.getEmail(),
             "street": accountObj.getStreet(),
             "postCode": accountObj.getPostCode(),
-            "passwordNotif": passwordNotif
+            "passwordNotif": passwordNotif,
+            "accountNotif": accountNotif
         });
     }
 }
@@ -56,7 +57,7 @@ function updateAccountDetails(userID, request, response){
         userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
         request.body.email, request.body.street, request.body.postCode
     );
-    response.redirect("/User_Account");
+    response.redirect("/Account_Details_Updated");
 }
 
 //Check if user inputted correct current password before updating to new password

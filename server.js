@@ -154,6 +154,9 @@ app.post("/addToBasket", routes.addToBasket);
 //GET REQUEST to notify user password update successful or not
 app.get("/Password_Update/:success", routes.loadPasswordUpdateNotification);
 
+//GET REQUEST to notify account details updated
+app.get("/Account_Details_Updated", routes.loadAccountUpdateNotification);
+
 //WEB SOCKET
 io.on("connection", function(socket){
 

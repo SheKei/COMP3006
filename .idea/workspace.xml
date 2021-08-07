@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/Account-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Account-Controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/User_Account.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Account.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
@@ -22,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="154" column="34" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="34" />
+            <state relative-caret-position="292">
+              <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+            <state relative-caret-position="378">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="138" column="93" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
+            <state relative-caret-position="400">
+              <caret line="142" column="77" selection-start-line="142" selection-start-column="77" selection-end-line="142" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -49,9 +48,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+            <state relative-caret-position="413">
+              <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding>
+                <element signature="e#1216#1223#1#HTML" expanded="true" />
                 <element signature="e#4124#4131#1#HTML" expanded="true" />
                 <element signature="e#4265#4272#1#HTML" expanded="true" />
               </folding>
@@ -228,12 +228,12 @@
       <workItem from="1627743096889" duration="3709000" />
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
-      <workItem from="1628342899991" duration="6449000" />
+      <workItem from="1628342899991" duration="6973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140237000" />
+    <option name="totallyTimeSpent" value="140761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -595,32 +595,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="138" column="93" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
+        <state relative-caret-position="400">
+          <caret line="142" column="77" selection-start-line="142" selection-start-column="77" selection-end-line="142" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="154" column="34" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="34" />
+        <state relative-caret-position="378">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+        <state relative-caret-position="413">
+          <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
           <folding>
+            <element signature="e#1216#1223#1#HTML" expanded="true" />
             <element signature="e#4124#4131#1#HTML" expanded="true" />
             <element signature="e#4265#4272#1#HTML" expanded="true" />
           </folding>

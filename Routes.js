@@ -131,12 +131,16 @@ function loadCustomerSupportPage(request,response){
 
 //Display current details of user's account
 function loadAccountPage(request,response){
-    accountController.displayAccount(request.session.user, response, null);
+    accountController.displayAccount(request.session.user, response, null, null);
 }
 
 //Show notification of password update success/failure on user's account page
 function loadPasswordUpdateNotification(request,response){
-    accountController.displayAccount(request.session.user, response, request.params.success);
+    accountController.displayAccount(request.session.user, response, request.params.success, null);
+}
+
+function loadAccountUpdateNotification(request,response){
+    accountController.displayAccount(request.session.user, response,null, true);
 }
 
 
@@ -175,5 +179,6 @@ module.exports.updateAccount = updateAccount;
 module.exports.deleteAccount = deleteAccount;
 module.exports.updatePassword = updatePassword;
 module.exports.loadPasswordUpdateNotification = loadPasswordUpdateNotification;
+module.exports.loadAccountUpdateNotification = loadAccountUpdateNotification;
 
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
