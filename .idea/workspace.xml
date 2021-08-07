@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/user_contact_shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/user_contact_shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/jquery/employee_customer_support.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/employee_customer_support.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/jquery/user_contact_shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_contact_shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,20 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/jquery/employee_customer_support.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="548">
+              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/jquery/user_contact_shop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+            <state relative-caret-position="562">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -145,8 +141,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" />
         <option value="$PROJECT_DIR$/resources/css/user_contact_shop.css" />
-        <option value="$PROJECT_DIR$/resources/jquery/user_contact_shop.js" />
         <option value="$PROJECT_DIR$/resources/jquery/employee_customer_support.js" />
+        <option value="$PROJECT_DIR$/resources/jquery/user_contact_shop.js" />
       </list>
     </option>
   </component>
@@ -247,12 +243,12 @@
       <workItem from="1627743096889" duration="3709000" />
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
-      <workItem from="1628342899991" duration="10180000" />
+      <workItem from="1628342899991" duration="10382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143968000" />
+    <option name="totallyTimeSpent" value="144170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -586,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/jquery/user_contact_shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/User_Contact_Shop.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -623,8 +612,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/jquery/employee_customer_support.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="548">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/jquery/user_contact_shop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
         </state>
       </provider>
     </entry>

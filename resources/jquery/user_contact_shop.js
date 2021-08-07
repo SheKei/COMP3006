@@ -30,6 +30,8 @@ $(function(){
             socket.emit("send message", message.trim(), employee.trim(), user.trim(),new Date());
             $("#messages").prepend("<br><div class='customerDiv'><p>" + message + '<p><p class="font-weight-bold"> ' + timestamp + '</p></div><br>');
         }
+
+        $("#msg").val("");
     });
 
     //Receive messages from admin
