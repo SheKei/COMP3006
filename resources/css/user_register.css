@@ -27,9 +27,9 @@ h1{
    right:0;
    position:absolute;
    width: 90%;
-   min-height: 90%;
+   min-height: 650px;
    border-radius: 20px;
-   padding: 10px;
+   padding: 5px;
 }
 
 #formPage{
@@ -43,7 +43,7 @@ label{
    font-size: 20px;
 }
 
-#surnameLbl, #confirmPasswordLbl{
+#surnameLbl, #confirmPasswordLbl, #postCodeLbl{
    text-align: right;
 }
 

@@ -72,6 +72,9 @@ app.get("/Employee_Home", routes.loadViewOrdersPage);
 //GET REQUEST TO VIEW STOCK BOOK
 app.get("/View_Stock_Book/:bookId", routes.loadViewStockBookPage);
 
+//GET REQUEST TO DELETE STOCK BOOK
+app.get("/Delete_Book/:bookId", routes.deleteBook);
+
 //GET REQUEST TO VIEW INVOICE ORDER
 app.get("/View_Order_Employee/:orderId", routes.loadViewInovoiceOrderPage);
 

@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_register.css"/>
+    <script type="text/javascript" src="/jquery/user_register.js"></script>
 </head>
 <body>
 
@@ -18,23 +19,24 @@
     <div id="registerPage">
 
             <span id="formPage">
-                <h1>REGISTER ACCOUNT</h1><br><br>
+                <h2>REGISTER ACCOUNT</h2><br><br>
                 <form action="/registerAccount" method="post">
                     <div class="form-group row">
                     <div class="col-2">
                         <label for="forename">Forename:</label>
                     </div>
                     <div class="col-3">
-                        <input class="form-control" type="text" name="forename" id="forename" placeholder="First Name" required>
+                        <input class="form-control text" type="text" name="forename" id="forename" placeholder="First Name" required>
                     </div>
                     <div class="col-2" id="surnameLbl">
                         <label for="surname">Surname:</label>
                     </div>
                     <div class="col-3">
-                        <input class="form-control" type="text" name="surname" id="surname" placeholder="Last Name" required>
+                        <input class="form-control text" type="text" name="surname" id="surname" placeholder="Last Name" required>
                     </div>
                 </div>
                 <div class="form-group row">
+                    <p id="dateOfBirthMsg"></p>
                     <div class="col-2">
                         <label for="dateOfBirth">Date of Birth:</label>
                     </div>
@@ -43,6 +45,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <p id="emailMsg"></p>
                     <div class="col-2">
                         <label for="email">Email Address:</label>
                     </div>
@@ -55,13 +58,13 @@
                         <label for="streetName">Street Name:</label>
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Street Name" required>
+                        <input type="text" class="form-control text" id="streetName" name="streetName" placeholder="Street Name" required>
                     </div>
                     <div class="col-2">
-                        <label for="postCode">Post Code:</label>
+                        <label for="postCode" id="postCodeLbl">Post Code:</label>
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control" id="postCode" name="postCode" placeholder="Post Code" required>
+                        <input type="text" class="form-control text" id="postCode" name="postCode" placeholder="Post Code" required>
                     </div>
                 </div>
                 <div class="form-group row">

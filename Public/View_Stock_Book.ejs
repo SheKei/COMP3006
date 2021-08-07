@@ -152,6 +152,10 @@
                     </div><br><input type="text" name="imgCover" id="imgCover" value="<%= book.getImage() %>" readonly>
                     <button type="submit" class="btn btn-dark float-left" id="saveEditBtn">Save Changes</button>
                 </form>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger"><a href="/Delete_Book/<%= book.getId() %>">Delete Book</a></button>
+                    <button type="button" class="btn btn-secondary float-right"><a href="View_All_Stock">Go Back</a></button>
+                </div>
             </div>
             <div class="col-4"><br><br><br>
                 <div><img src="/images/<%= book.getImage() %>" ></div>
@@ -161,21 +165,17 @@
                             <input type="text" name="theBookID" id="theBookID" value="<%= book.getId() %>" readonly>
                             <div class="text-center">
                                 <input class="form-control-file text-center" type="file" accept="image/.jpg, image/.png" name="imgName" id="imgName" required>
-                            </div>
+                            </div><br>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-dark text-center">Update Book Image</button>
                             </div>
                         </div>
                     </form>
-                    <br><br><br><br><br><br><br>
-                    <button type="button" class="btn btn-secondary float-right"><a href="View_All_Stock">Go Back</a></button>
                 </div>
-
-
             </div>
         </div>
     </div>
     <p id="genres"><%= listGenres %></p>
-</div>
+</div><br>
 </body>
 </html>

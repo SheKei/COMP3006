@@ -32,6 +32,11 @@ function insertBook(authorForename, authorSurname, bookName, stockPrice, selling
     });
 }
 
+//Delete book using book ID
+function deleteBook(bookID){
+    Book.collection.deleteOne({_id:mongoose.Types.ObjectId(bookID)});
+}
+
 //Update details of a stock book
 function updateBook(bookID,authorForename, authorSurname, bookName, stockPrice, sellingPrice, stockAmount, synopsis, genres, image){
     Book.collection.updateOne(
@@ -299,6 +304,7 @@ module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
 module.exports.getAllBooks = getAllBooks;
 module.exports.getOneBook = getOneBook;
+module.exports.deleteBook = deleteBook;
 
 module.exports.insertAccount = insertAccount;
 module.exports.getLoginCredentials = getLoginCredentials;

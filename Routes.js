@@ -29,6 +29,11 @@ function loadAddBookPage(request, response){
     response.render("Add_Book");
 }
 
+//Delete a book using BOOK ID from GET REQUEST
+function deleteBook(request,response){
+    bookController.deleteBook(request.params.bookId, request,response);
+}
+
 //View all books as stock items
 function loadViewAllStockPage(request,response){
     bookController.getAllStockBooks(request, response);
@@ -138,6 +143,7 @@ module.exports.loadEmployeeChosenChatRoom = loadEmployeeChosenChatRoom;
 module.exports.loadViewOrdersPage = loadViewOrdersPage;
 module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
 module.exports.deliverOrder = deliverOrder;
+module.exports.deleteBook = deleteBook;
 
 module.exports.loadUserHomePage = loadUserHomePage;
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;

@@ -16,6 +16,12 @@ function addBook(request, response, imgFilename){
     response.redirect("/Add_Book");
 }
 
+//Delete book using book ID
+function deleteBook(bookID,request, response){
+    db.deleteBook(bookID);
+    response.redirect("/View_All_Stock");
+}
+
 //Gather inputs to update details for existing stock book
 function updateBook(request, response){
     let genres = addGenres(request);
@@ -105,13 +111,10 @@ function convertArrayToString(array){
 
 
 module.exports.addBook = addBook;
+module.exports.deleteBook = deleteBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
 module.exports.getAllStockBooks = getAllStockBooks;
 module.exports.viewStockBookItem = viewStockBookItem;
 module.exports.getAllBookItems = getAllBookItems;
 module.exports.viewBookItem = viewBookItem;
-
-//scifi, adventure, romance, historical, horror, fantasy, mystery, comic, shortStories
-//authorForename, authorSurname, bookName, stockPrice, sellingPrice,
-// stockAmount, synopsis, genres, image
