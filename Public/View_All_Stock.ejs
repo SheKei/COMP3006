@@ -23,7 +23,9 @@
                 <div class="col-3">
                     <div><img src="/images/<%= books[i].getImage() %>" ></div><br>
                     <div><h4 class="text-center"><a href="./View_Stock_Book/<%= books[i].getId() %>"><%= books[i].getBookName() %></a></h4></div>
+                    <div><h5 class="text-center">ID: <%= books[i].getId() %></h5></div>
                     <div><h5 class="text-center"><%= books[i].getAuthorForename()%>  <%= books[i].getAuthorSurname()%></h5></div>
+                    <div><h5 class="text-center">QTY:<strong><%= books[i].getStockAmount() %></strong></h5></div>
                     <br><br>
                 </div>
             <% }%>

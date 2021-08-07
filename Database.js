@@ -32,9 +32,10 @@ function insertBook(authorForename, authorSurname, bookName, stockPrice, selling
     });
 }
 
-//Delete book using book ID
+//Delete book using book ID and delete it in anyone's basket
 function deleteBook(bookID){
     Book.collection.deleteOne({_id:mongoose.Types.ObjectId(bookID)});
+    Basket.collection.deleteOne({itemID: bookID});
 }
 
 //Update details of a stock book

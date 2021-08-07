@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/Employee_Navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Employee_Navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User_Navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Navbar.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/View_All_Stock.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/View_All_Stock.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,7 +16,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/View_All_Stock.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Employee_Navbar.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Book.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Public/View_All_Stock.ejs" />
         <option value="$PROJECT_DIR$/resources/jquery/basket.js" />
         <option value="$PROJECT_DIR$/Model/Account.js" />
         <option value="$PROJECT_DIR$/Model/Chat.js" />
@@ -74,7 +109,6 @@
         <option value="$PROJECT_DIR$/resources/css/employee_home.css" />
         <option value="$PROJECT_DIR$/resources/jquery/employee_home.js" />
         <option value="$PROJECT_DIR$/Public/Employee_Home.ejs" />
-        <option value="$PROJECT_DIR$/Database.js" />
         <option value="$PROJECT_DIR$/resources/jquery/user_navbar.js" />
         <option value="$PROJECT_DIR$/Controller/Order-Controller.js" />
         <option value="$PROJECT_DIR$/Public/User_Home.ejs" />
@@ -88,8 +122,10 @@
         <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
         <option value="$PROJECT_DIR$/Public/Basket.ejs" />
         <option value="$PROJECT_DIR$/Controller/Basket-Controller.js" />
-        <option value="$PROJECT_DIR$/Public/Employee_Navbar.ejs" />
         <option value="$PROJECT_DIR$/Public/User_Navbar.ejs" />
+        <option value="$PROJECT_DIR$/Public/Employee_Navbar.ejs" />
+        <option value="$PROJECT_DIR$/Public/View_All_Stock.ejs" />
+        <option value="$PROJECT_DIR$/Database.js" />
       </list>
     </option>
   </component>
@@ -130,6 +166,12 @@
               <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP3006" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP3006" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,15 +225,16 @@
       <workItem from="1627743096889" duration="3709000" />
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
-      <workItem from="1628342899991" duration="16612000" />
+      <workItem from="1628342899991" duration="17077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150400000" />
+    <option name="totallyTimeSpent" value="150865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16060807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -216,27 +259,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Model/Order_Item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/View_Order_User.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/View_Order_Employee.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Schema/Order-Schema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -298,11 +320,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Book.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/view_stock_book.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -467,13 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="333" column="35" lean-forward="true" selection-start-line="333" selection-start-column="35" selection-end-line="333" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Order-Controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -558,10 +568,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/user_navbar.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Employee_Navbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="-225">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/View_All_Stock.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
         </state>
       </provider>
     </entry>
