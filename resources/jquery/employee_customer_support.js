@@ -5,6 +5,8 @@ $(function(){
     let customer = $('#userID').val();
     customer = customer.trim();
 
+    socket.emit("admin online");
+
     $("#msg").keypress(function(){
         let message = $("#msg").val();
         if(message === ""){

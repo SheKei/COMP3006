@@ -176,6 +176,11 @@ io.on("connection", function(socket){
             moment(timestamp).utc().format('DD-MM-YYYY  h:mm a'));
     });
 
+    socket.on("admin online", function(){
+        //Emit by server to find which chatroom message should be sent to
+        socket.broadcast.emit("update online status");
+    });
+
 });
 
 //RUN THE SERVER ON PORT 9000

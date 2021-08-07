@@ -10,6 +10,15 @@ body{
     display: none;
 }
 
+.inactive{
+    color: orangered;
+}
+
+.status{
+    font-size: 20px;
+    padding: 10px;
+}
+
 #contactSupportPage{
     margin-left: auto;
     margin-right: auto;

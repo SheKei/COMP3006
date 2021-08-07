@@ -32,6 +32,7 @@ $(function(){
         }
     });
 
+    //Receive messages from admin
     socket.on("received message", function(msg, recipient, sender, timestamp){
         if(sender.trim() === "admin" && recipient.trim() === user.trim()){
             $("#messages").prepend(
@@ -39,5 +40,11 @@ $(function(){
                 "<p class='font-weight-bold'>"+timestamp+"</p></div><br><br><br><br><br><br><br>");
         }
 
+    });
+
+    //Alert user admin is online on chatroom
+    socket.on("update online status", function(){
+        $("#status").html("ONLINE");
+        $("#icon").css('color', 'lawngreen');
     });
 });
