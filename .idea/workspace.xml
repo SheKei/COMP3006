@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Employee_Navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Employee_Navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/View_All_Stock.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/View_All_Stock.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="358">
+              <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -67,6 +65,10 @@
     <findStrings>
       <find>delete</find>
       <find>orders</find>
+      <find>update</find>
+      <find>updateStock</find>
+      <find>updateAccount</find>
+      <find>updateStockAmount</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,12 +227,12 @@
       <workItem from="1627743096889" duration="3709000" />
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
-      <workItem from="1628342899991" duration="17077000" />
+      <workItem from="1628342899991" duration="18515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150865000" />
+    <option name="totallyTimeSpent" value="152303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -597,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="358">
+          <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -200,7 +200,7 @@ async function checkout(userID){
         for(let i=0;i<basket.length;i++){
             items.push(basket[i].itemID);
             amount.push(basket[i].quantity);
-            updateStockAmount(basket[i].itemID, basket[i].quantity);
+            await updateStockAmount(basket[i].itemID, basket[i].quantity);
             removeItemFromBasket(userID, basket[i].itemID);
         }
 
@@ -213,10 +213,14 @@ async function checkout(userID){
     }
 }
 
-function updateStockAmount(itemID, substract){
+//Decrease stock amount
+async function updateStockAmount(itemID, substract){
+    let book = await Book.find({_id:mongoose.Types.ObjectId(itemID)});
+    let updateAmount = parseInt(book[0].stockAmount) - parseInt(substract);
+    console.log(updateAmount);
     Book.collection.updateOne(
         {_id: mongoose.Types.ObjectId(itemID)},
-        {$inc:{quantity:parseInt(parseInt(substract)*-1)}}
+        {$set:{stockAmount: parseInt(updateAmount)}}
     );
 }
 
