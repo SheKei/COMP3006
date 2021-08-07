@@ -32,6 +32,7 @@
                     <div><h3 class="text-center">Genres: <%= theGenres %></h3></div><br><br>
                     <div><section><p id="synopsis"><strong>Synopsis: </strong><%= book.getSynopsis() %></p></section></div><br>
                     <div><h3>£<%= book.getSellingPrice() %></h3></div>
+                    <% if(book.getStockAmount() > 0){ %>
                     <form method="post" action="addToBasket">
                     <div class="form-group row">
                         <input type="text" name="bookID" id="bookID" value="<%= book.getId() %>" readonly>
@@ -45,6 +46,9 @@
                             <button type="submit" class="btn btn-dark">Add to Basket</button>
                         </div>
                     </div>
+                    <% }else{ %>
+                            <h2 style="letter-spacing: 3px;" class="text-center">OUT OF STOCK</h2>
+                        <% } %>
                     </form>
 
                 </div>
