@@ -318,6 +318,23 @@ function updateOrderStatus(orderID){
     );
 }
 
+//Get all books and return as an array of book objects
+async function getFilteredBooks(genres){
+    let books = await Book.find({genres:{$all:genres}}).sort({'authorSurname': 1});
+    let bookObjArray = [];
+    if(books[0] !== undefined){
+        for(let i=0; i<books.length; i++){ //For each result
+            bookObj = new BookClass(        //Convert to a book obj
+                books[i]._id, books[i].authorForename, books[i].authorSurname,
+                books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
+                books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
+            );
+            bookObjArray.push(bookObj);    //Then add to array
+        }
+        return bookObjArray;
+    }else{return null;}                    //Return null if no results
+}
+
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
 module.exports.updateBookImage = updateBookImage;
@@ -346,3 +363,5 @@ module.exports.getOrders = getOrders;
 module.exports.getCustomerOrders = getCustomerOrders;
 module.exports.getSelectedOrder = getSelectedOrder;
 module.exports.updateOrderStatus = updateOrderStatus;
+
+module.exports.getFilteredBooks = getFilteredBooks;

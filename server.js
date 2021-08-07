@@ -112,6 +112,9 @@ app.get("/Checkout_Basket", routes.checkoutBasket);
 //FORM POST REQUEST register account
 app.post("/registerAccount", accountController.createAccount);
 
+//FORM POST REQUEST to view filtered books
+app.post("/filterBooks", routes.loadFilteredBooksPage);
+
 //FORM POST REQUEST to login
 app.post("/checkLogin", accountController.login);
 

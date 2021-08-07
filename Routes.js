@@ -79,6 +79,11 @@ function loadViewAllBookItemsPage(request,response){
     bookController.getAllBookItems(request.session.user,request,response);
 }
 
+//Display filtered books
+function loadFilteredBooksPage(request,response){
+    bookController.getFilteredBooks(request.session.user,request,response);
+}
+
 //View a book as a customer
 function loadViewBookPage(request,response){
     bookController.viewBookItem(request.session.user,response, request.params.bookId);
@@ -193,3 +198,5 @@ module.exports.loadPasswordUpdateNotification = loadPasswordUpdateNotification;
 module.exports.loadAccountUpdateNotification = loadAccountUpdateNotification;
 
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
+
+module.exports.loadFilteredBooksPage = loadFilteredBooksPage;

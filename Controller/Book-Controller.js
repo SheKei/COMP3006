@@ -75,6 +75,21 @@ async function getAllBookItems(userID,request,response){
     }
 }
 
+async function getFilteredBooks(userID,request,response){
+    let genres = addGenres(request);
+    if(genres.length>0){
+        let books = await db.getFilteredBooks(genres);
+        let basketNum = await db.returnNumOfItemsInBasket(userID);
+        if(books[0] !== undefined){
+            response.render("View_All_Books",{"books": books,"basketNum": basketNum});
+        }else{
+            response.redirect("/View_All_Books");
+        }
+    }else{
+        response.redirect("/View_All_Books");
+    }
+}
+
 //Display current details of a selected stock item
 async function viewStockBookItem(response, bookID){
     let book = await db.getOneBook(bookID);
@@ -124,3 +139,4 @@ module.exports.getAllStockBooks = getAllStockBooks;
 module.exports.viewStockBookItem = viewStockBookItem;
 module.exports.getAllBookItems = getAllBookItems;
 module.exports.viewBookItem = viewBookItem;
+module.exports.getFilteredBooks = getFilteredBooks;
