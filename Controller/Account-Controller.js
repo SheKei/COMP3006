@@ -70,7 +70,14 @@ async function checkPassword(userID, request, response){
     response.redirect("/User_Account");
 }
 
+//Delete chat history, basket items related to account and account itself
+function deleteAccount(userID,response){
+    db.deleteAccount(userID);
+    response.redirect("/Welcome");
+}
+
 module.exports.createAccount = createAccount;
+module.exports.deleteAccount = deleteAccount;
 module.exports.displayAccount = displayAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
 module.exports.login = login;

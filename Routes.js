@@ -104,12 +104,17 @@ function viewCustomerOrder(request,response){
     orderController.viewOrderCustomer(request.params.orderId, response);
 }
 
-//Update account
+//Update user account details
 function updateAccount(request,response){
     accountController.updateAccountDetails(request.session.user, request, response);
 }
 
-//Update account password
+//Delete user account and chat history
+function deleteAccount(request,response){
+    accountController.deleteAccount(request.session.user, response);
+}
+
+//Update user  account password
 function updatePassword(request,response){
     accountController.checkPassword(request.session.user,request,response);
 }
@@ -124,6 +129,7 @@ function loadCustomerSupportPage(request,response){
     chatController.displayChatHistoryForCustomers(request.session.user,response);
 }
 
+//Display current details of user's account
 function loadAccountPage(request,response){
     accountController.displayAccount(request.session.user, response);
 }
@@ -138,22 +144,30 @@ module.exports.loadUserRegisterPage = loadUserRegisterPage;
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
 module.exports.loadViewStockBookPage = loadViewStockBookPage;
+
 module.exports.loadEmployeeChatRoom = loadEmployeeChatRoom;
 module.exports.loadEmployeeChosenChatRoom = loadEmployeeChosenChatRoom;
+
 module.exports.loadViewOrdersPage = loadViewOrdersPage;
 module.exports.loadViewInovoiceOrderPage = loadViewInvoiceOrderPage;
 module.exports.deliverOrder = deliverOrder;
 module.exports.deleteBook = deleteBook;
 
 module.exports.loadUserHomePage = loadUserHomePage;
+
 module.exports.loadViewAllBookItemsPage = loadViewAllBookItemsPage;
 module.exports.loadViewBookPage = loadViewBookPage;
+
 module.exports.loadBasketPage = loadBasketPage;
 module.exports.addToBasket = addToBasket;
 module.exports.removeItemFromBasket = removeItemFromBasket;
 module.exports.checkoutBasket = checkoutBasket;
+
 module.exports.viewCustomerOrder = viewCustomerOrder;
-module.exports.updateAccount = updateAccount;
-module.exports.updatePassword = updatePassword;
-module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
+
 module.exports.loadAccountPage = loadAccountPage;
+module.exports.updateAccount = updateAccount;
+module.exports.deleteAccount = deleteAccount;
+module.exports.updatePassword = updatePassword;
+
+module.exports.loadCustomerSupportPage = loadCustomerSupportPage;

@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="./css/add_book.css"/>
 </head>
 <body>
+
+<header><%- include("Employee_Navbar"); %></header>
 <div id="stockFormPage">
-    <header><%- include("Employee_Navbar"); %></header>
     <div id="formContainer">
         <h1>Add Stock</h1><br>
         <form action="/addBook" method="post" enctype="multipart/form-data">
@@ -146,7 +147,7 @@
             <button class="btn btn-dark float-right" type="submit">Add Stock</button>
         </form>
     </div>
-</div>
+</div><br>
 
 </body>
 </html>

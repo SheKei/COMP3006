@@ -145,6 +145,9 @@ app.get("/removeBasket/:itemID",routes.removeItemFromBasket);
 //GET REQUEST TO VIEW BOOK as customer
 app.get("/View_Book/:bookId", routes.loadViewBookPage);
 
+//GET REQUEST TO DELETE USER ACCOUNT
+app.get("/Delete_Account", routes.deleteAccount);
+
 //FORM POST REQUEST to add item to basket
 app.post("/addToBasket", routes.addToBasket);
 

@@ -96,6 +96,14 @@ function insertAccount(firstname, lastname, birthday, email, streetName,postCode
     });
 }
 
+//Delete account, chat history and any basket items using Userid
+function deleteAccount(userID){
+    Chat.collection.deleteOne({sender: userID});
+    Chat.collection.deleteOne({recipient: userID});
+    Basket.collection.deleteOne({userID: userID});
+    Account.collection.deleteOne({_id:mongoose.Types.ObjectId(userID)});
+}
+
 //Get all account details for display
 async function getAccount(userID){
     let account = await Account.find({_id: mongoose.Types.ObjectId(userID)});
@@ -307,6 +315,7 @@ module.exports.getOneBook = getOneBook;
 module.exports.deleteBook = deleteBook;
 
 module.exports.insertAccount = insertAccount;
+module.exports.deleteAccount = deleteAccount;
 module.exports.getLoginCredentials = getLoginCredentials;
 module.exports.getAccount = getAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
