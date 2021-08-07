@@ -57,7 +57,7 @@ function updateBookImage(bookID, imageName){
 
 //Get all books and return as an array of book objects
 async function getAllBooks(){
-    let books = await Book.find({});
+    let books = await Book.find({}).sort({'authorSurname': 1});
     let bookObjArray = [];
     if(books[0] !== undefined){
         for(let i=0; i<books.length; i++){ //For each result
