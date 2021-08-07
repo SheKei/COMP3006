@@ -35,7 +35,7 @@ async function login(request, response){
     }
 }
 
-async function displayAccount(userID, response){
+async function displayAccount(userID, response, passwordNotif){
     let accountObj = await db.getAccount(userID);
     if(accountObj !== null){
         response.render("User_Account",{
@@ -44,7 +44,8 @@ async function displayAccount(userID, response){
             "dateOfBirth": moment(accountObj.getDateOfBirth()).utc().format('YYYY-MM-DD'),
             "email": accountObj.getEmail(),
             "street": accountObj.getStreet(),
-            "postCode": accountObj.getPostCode()
+            "postCode": accountObj.getPostCode(),
+            "passwordNotif": passwordNotif
         });
     }
 }
@@ -61,13 +62,15 @@ function updateAccountDetails(userID, request, response){
 //Check if user inputted correct current password before updating to new password
 async function checkPassword(userID, request, response){
     let account = await db.getAccount(userID);
-    if(account !== null){//If user entered the correct current password
-        if(bcrypt.compareSync(request.body.currentPassword, account.getPassword())){
+    let isValid = false;
+    if(account !== null){
+        isValid = bcrypt.compareSync(request.body.currentPassword, account.getPassword());
+        if(isValid){//If user entered the correct current password
             //then update to new password
             db.updatePassword(userID,bcrypt.hashSync(request.body.newPassword, saltRounds));
         }
     }
-    response.redirect("/User_Account");
+    response.redirect("/Password_Update/"+isValid); //Notify success or failure
 }
 
 //Delete chat history, basket items related to account and account itself

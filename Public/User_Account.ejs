@@ -75,6 +75,19 @@
         </div>
         <div id="passwordDiv" class="col-4">
             <div class="container" id="passwordContainer">
+                <% if(passwordNotif === 'true'){%>
+                    <div class="alert alert-success" role="alert">Password Update Success
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% }else if(passwordNotif === 'false'){ %>
+                    <div class="alert alert-danger" role="alert">Password Update Failed
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% } %>
                 <h2>Update Password</h2><br>
                 <form method="post" action="/updatePassword">
                     <div class="form-group row">

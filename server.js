@@ -151,6 +151,9 @@ app.get("/Delete_Account", routes.deleteAccount);
 //FORM POST REQUEST to add item to basket
 app.post("/addToBasket", routes.addToBasket);
 
+//GET REQUEST to notify user password update successful or not
+app.get("/Password_Update/:success", routes.loadPasswordUpdateNotification);
+
 //WEB SOCKET
 io.on("connection", function(socket){
 
