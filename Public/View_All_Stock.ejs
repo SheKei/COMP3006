@@ -25,7 +25,12 @@
                     <div><h4 class="text-center"><a href="./View_Stock_Book/<%= books[i].getId() %>"><%= books[i].getBookName() %></a></h4></div>
                     <div><h5 class="text-center">ID: <%= books[i].getId() %></h5></div>
                     <div><h5 class="text-center"><%= books[i].getAuthorForename()%>  <%= books[i].getAuthorSurname()%></h5></div>
-                    <div><h5 class="text-center">QTY:<strong><%= books[i].getStockAmount() %></strong></h5></div>
+                    <% if(books[i].getStockAmount() <= 10){ %>
+                        <div><h5  style="color: crimson" class="text-center">QTY: <strong><%= books[i].getStockAmount() %></strong></h5></div>
+                    <% }else{ %>
+                        <div><h5 class="text-center">QTY: <strong><%= books[i].getStockAmount() %></strong></h5></div>
+                    <% } %>
+
                     <br><br>
                 </div>
             <% }%>
