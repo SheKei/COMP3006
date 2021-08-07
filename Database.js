@@ -241,8 +241,8 @@ async function retrieveChatHistory(userID){
 }
 
 //Get all orders as employee
-async function getOrders(){
-    let order = await Order.find({}).sort({'dateOfOrder': -1});
+async function getOrders(status){
+    let order = await Order.find({"orderStatus":status}).sort({'dateOfOrder': -1});
     return await returnOrderObjects(order);
 }
 

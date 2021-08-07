@@ -4,10 +4,10 @@ let mongoose = require("mongoose");
 
 //View all orders as employees
 async function viewOrders(response){
-    let orders = await db.getOrders();
-    if(orders.length > 0){
-        response.render("Employee_Home", {"orders":orders});
-    }
+    let awaitingOrders = await db.getOrders("Awaiting");
+    let deliveredOrders = await db.getOrders("Delivered");
+    response.render("Employee_Home", {"awaitingOrders":awaitingOrders,"deliveredOrders":deliveredOrders});
+
 }
 
 //View all orders made by the customer

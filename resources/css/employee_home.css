@@ -21,9 +21,13 @@ a:hover{
     cursor: pointer;
 }
 
+.hidden{
+    display: none;
+}
+
 #homePage{
     background-color: #f5efe4;
-    width:90%;
+    width:95%;
     min-height:85%;
     border-radius: 15px;
     margin-left: auto;
