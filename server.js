@@ -157,6 +157,9 @@ app.get("/Password_Update/:success", routes.loadPasswordUpdateNotification);
 //GET REQUEST to notify account details updated
 app.get("/Account_Details_Updated", routes.loadAccountUpdateNotification);
 
+//GET REQUEST to notify login error
+app.get("/Login_Error", routes.loadLoginErrorNotification);
+
 //WEB SOCKET
 io.on("connection", function(socket){
 

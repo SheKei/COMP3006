@@ -15,6 +15,13 @@
 <body>
 <div id="bg">
     <div id="loginPage"><br>
+        <% if(error === true){%>
+            <div class="alert alert-danger" role="alert">Incorrect Login Credentials
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <% } %>
         <h1>Sign In</h1><br>
         <span id="credentials">
             <form method="post" action="/checkLogin">

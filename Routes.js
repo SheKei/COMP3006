@@ -16,7 +16,7 @@ function loadLoginOrRegisterPage(request,response){
 
 //User login page
 function loadUserLoginPage(request,response){
-    response.render("User_Login");
+    response.render("User_Login", {"error":null});
 }
 
 //Create user account page
@@ -139,16 +139,22 @@ function loadPasswordUpdateNotification(request,response){
     accountController.displayAccount(request.session.user, response, request.params.success, null);
 }
 
+//Notify user account has been updated
 function loadAccountUpdateNotification(request,response){
     accountController.displayAccount(request.session.user, response,null, true);
 }
 
+//Notify user of login fail
+function loadLoginErrorNotification(request,response){
+    response.render("User_Login", {"error":true});
+}
 
 
 module.exports.loadWelcomePage = loadWelcomePage;
 module.exports.loadLoginOrRegisterPage = loadLoginOrRegisterPage;
 module.exports.loadUserLoginPage = loadUserLoginPage;
 module.exports.loadUserRegisterPage = loadUserRegisterPage;
+module.exports.loadLoginErrorNotification = loadLoginErrorNotification;
 
 module.exports.loadAddBookPage = loadAddBookPage;
 module.exports.loadViewAllStockPage = loadViewAllStockPage;
