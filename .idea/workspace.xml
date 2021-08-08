@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Controller/Account-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Account-Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User_Register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/User_Account.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Account.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="171" column="12" lean-forward="true" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+            <state relative-caret-position="292">
+              <caret line="171" column="39" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -48,17 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="203" column="81" selection-start-line="203" selection-start-column="81" selection-end-line="203" selection-end-column="81" />
+            <state relative-caret-position="258">
+              <caret line="158" column="78" selection-start-line="158" selection-start-column="78" selection-end-line="158" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state relative-caret-position="351">
+              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="96" selection-end-column="26" />
+            <state relative-caret-position="305">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -140,7 +140,6 @@
         <option value="$PROJECT_DIR$/Public/User_Home.ejs" />
         <option value="$PROJECT_DIR$/Public/User_Contact_Shop.ejs" />
         <option value="$PROJECT_DIR$/Controller/Chat-Controller.js" />
-        <option value="$PROJECT_DIR$/Public/User_Account.ejs" />
         <option value="$PROJECT_DIR$/Public/Basket.ejs" />
         <option value="$PROJECT_DIR$/Controller/Basket-Controller.js" />
         <option value="$PROJECT_DIR$/Public/User_Navbar.ejs" />
@@ -160,10 +159,11 @@
         <option value="$PROJECT_DIR$/resources/jquery/user_account.js" />
         <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
-        <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
+        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Routes.js" />
+        <option value="$PROJECT_DIR$/Public/User_Account.ejs" />
+        <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
       </list>
     </option>
   </component>
@@ -367,7 +367,7 @@
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
       <workItem from="1628342899991" duration="23430000" />
-      <workItem from="1628403069740" duration="17837000" />
+      <workItem from="1628403069740" duration="19049000" />
     </task>
     <servers />
   </component>
@@ -404,7 +404,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175055000" />
+    <option name="totallyTimeSpent" value="176267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -729,20 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="96" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1100">
@@ -757,17 +743,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="203" column="81" selection-start-line="203" selection-start-column="81" selection-end-line="203" selection-end-column="81" />
+        <state relative-caret-position="292">
+          <caret line="171" column="39" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/Routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="171" column="12" lean-forward="true" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+        <state relative-caret-position="258">
+          <caret line="158" column="78" selection-start-line="158" selection-start-column="78" selection-end-line="158" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
         </state>
       </provider>
     </entry>

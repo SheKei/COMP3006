@@ -40,7 +40,7 @@ async function login(request, response){
     }
 }
 
-async function displayAccount(userID, response, passwordNotif, accountNotif){
+async function displayAccount(userID, response, passwordNotif, accountNotif,emailNotif){
     let accountObj = await db.getAccount(userID);
     let basketNum = await db.returnNumOfItemsInBasket(userID);
     if(accountObj !== null){
@@ -53,18 +53,29 @@ async function displayAccount(userID, response, passwordNotif, accountNotif){
             "postCode": accountObj.getPostCode(),
             "passwordNotif": passwordNotif,
             "accountNotif": accountNotif,
+            "emailNotif":emailNotif,
             "basketNum": basketNum
         });
     }
 }
 
 //Update account details
-function updateAccountDetails(userID, request, response){
-    db.updateAccountDetails(
-        userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
-        request.body.email, request.body.street, request.body.postCode
-    );
-    response.redirect("/Account_Details_Updated");//Notify change
+async function updateAccountDetails(userID, request, response){
+    let account = await db.getAccount(userID);
+    let invalidEmail = await checkUpdateEmail(request.body.email, account.getEmail());
+    console.log(account.getEmail());
+    console.log(request.body.email);
+    console.log(invalidEmail);
+
+    if(invalidEmail){
+        response.redirect("/Account_Details_Update_Failed");//Notify change
+    }else{
+        db.updateAccountDetails(
+            userID,request.body.firstname, request.body.lastname,request.body.dateOfBirth,
+            request.body.email, request.body.street, request.body.postCode
+        );
+        response.redirect("/Account_Details_Updated");//Notify change
+    }
 }
 
 //Check if user inputted correct current password before updating to new password
@@ -92,7 +103,9 @@ async function checkUpdateEmail(updateEmail, currentUserEmail){
     let users = await db.getListOfCustomers();
     if(users.length > 0){
         for(let i=0;i<users.length;i++){
-            if(users[i].email === updateEmail && users[i].email !== currentUserEmail){
+            if(updateEmail === currentUserEmail){
+                return false;
+            }else if(users[i].email === updateEmail && users[i].email !== currentUserEmail){
                 return true;//Email is being used by another and is not the current email
             }
         }

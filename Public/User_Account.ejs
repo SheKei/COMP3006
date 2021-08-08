@@ -26,6 +26,15 @@
                         </button>
                     </div>
                 <% } %>
+
+                <% if(emailNotif === true){%>
+                    <div class="alert alert-danger" role="alert">Account Could Not Be Updated Because The Updated Email Is Already Being Used By Another!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% } %>
+
                 <h2>Account Details</h2><br>
                 <form method="post" action="/updateAccount">
                     <div class="form-group row">

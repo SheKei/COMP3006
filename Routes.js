@@ -141,17 +141,22 @@ function loadCustomerSupportPage(request,response){
 
 //Display current details of user's account
 function loadAccountPage(request,response){
-    accountController.displayAccount(request.session.user, response, null, null);
+    accountController.displayAccount(request.session.user, response, null, null, null);
 }
 
 //Show notification of password update success/failure on user's account page
 function loadPasswordUpdateNotification(request,response){
-    accountController.displayAccount(request.session.user, response, request.params.success, null);
+    accountController.displayAccount(request.session.user, response, request.params.success, null, null);
 }
 
 //Notify user account has been updated
 function loadAccountUpdateNotification(request,response){
-    accountController.displayAccount(request.session.user, response,null, true);
+    accountController.displayAccount(request.session.user, response,null, true, null);
+}
+
+//Notify user account could not be updated due to email in use
+function loadAccountUpdateFailedNotification(request,response){
+    accountController.displayAccount(request.session.user, response,null, null, true);
 }
 
 //Notify user of login fail
@@ -202,6 +207,7 @@ module.exports.updatePassword = updatePassword;
 module.exports.loadPasswordUpdateNotification = loadPasswordUpdateNotification;
 module.exports.loadAccountUpdateNotification = loadAccountUpdateNotification;
 module.exports.loadEmailInvalidRegNotification = loadEmailInvalidRegNotification;
+module.exports.loadAccountUpdateFailedNotification = loadAccountUpdateFailedNotification;
 
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 
