@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/20c7401107.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_register.css"/>
     <script type="text/javascript" src="/jquery/user_register.js"></script>
@@ -69,26 +70,38 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-2">
+                    <div class="col-6">
+                        <div class="form-group row">
+                    <div class="col-4">
                         <label for="password1">Password:</label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6">
                         <input type="password" class="form-control password" name="password1" minlength="8" id="password1" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-2" id="confirmDiv">
+                    <div class="col-4" id="confirmDiv">
                         <label for="password2" id="confirmPasswordLbl">Confirm Password:</label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6">
                         <input type="password" class="form-control password" name="password2" id="password2" minlength="8" required>
                     </div>
-                </div><br><br>
+                </div>
+                    </div>
+                    <div class="col-6">
+                        <i id="length" class="fas fa-times fa-lg"></i> Password should be a minimum of 8 characters<br>
+                        <i id="special" class="fas fa-times fa-lg"></i> Contain at least one special character<br>
+                        <i id="upper" class="fas fa-times fa-lg"></i> Contain at least one upper character<br>
+                        <i id="lower" class="fas fa-times fa-lg"></i> Contain at least one lower character<br>
+                        <i id="digit" class="fas fa-times fa-lg"></i> Contain at least one digit<br>
+                    </div>
+                </div>
+                <br>
 
                 <div class="form-check text-center">
                     <input class="form-check-input" type="checkbox" value="agree" id="agree" name="agree" >
                     <label class="form-check-label" for="agree">
-                    I agree to the <strong><a href="#">Terms & Conditions</a></strong> upon registering this account.
+                    I agree to the <strong><a>Terms & Conditions</a></strong> upon registering this account.
                     </label>
                 </div><br>
                 <div class="text-center">

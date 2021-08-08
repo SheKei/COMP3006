@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/User_Register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/user_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/user_register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/jquery/user_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1558">
-              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="-1100">
+              <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -28,17 +29,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-333">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="558">
+              <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
+        <entry file="file://$PROJECT_DIR$/Public/User_Navbar.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+            <state relative-caret-position="250">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -122,10 +132,10 @@
         <option value="$PROJECT_DIR$/Controller/Book-Controller.js" />
         <option value="$PROJECT_DIR$/Database.js" />
         <option value="$PROJECT_DIR$/test/unit.js" />
-        <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/resources/jquery/user_account.js" />
-        <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
+        <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
+        <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
       </list>
     </option>
   </component>
@@ -324,7 +334,7 @@
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
       <workItem from="1628342899991" duration="23430000" />
-      <workItem from="1628403069740" duration="14092000" />
+      <workItem from="1628403069740" duration="16766000" />
     </task>
     <servers />
   </component>
@@ -361,7 +371,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171310000" />
+    <option name="totallyTimeSpent" value="173984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -410,16 +420,6 @@
           <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding>
             <element signature="e#1160#1167#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
-          <folding>
-            <element signature="e#1028#1035#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -501,13 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="88" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -710,24 +703,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
+    <entry file="file://$PROJECT_DIR$/Public/User_Login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="378">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
+    <entry file="file://$PROJECT_DIR$/Public/User_Navbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+        <state relative-caret-position="250">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1558">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="-1100">
+          <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
         </state>
       </provider>
     </entry>
