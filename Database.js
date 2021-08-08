@@ -60,16 +60,30 @@ async function getAllBooks(){
     let books = await Book.find({}).sort({'authorSurname': 1});
     let bookObjArray = [];
     if(books[0] !== undefined){
-        for(let i=0; i<books.length; i++){ //For each result
-           bookObj = new BookClass(        //Convert to a book obj
-                books[i]._id, books[i].authorForename, books[i].authorSurname,
-                books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
-                books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
-            );
-            bookObjArray.push(bookObj);    //Then add to array
-        }
-        return bookObjArray;
+        return returnBookObjectArray(books);
     }else{return null;}                    //Return null if no results
+}
+
+//Get books filtered by genre and return as an array of book objects
+async function getFilteredBooks(genres){
+    let books = await Book.find({genres:{$all:genres}}).sort({'authorSurname': 1});
+
+    if(books[0] !== undefined){
+        return returnBookObjectArray(books);
+    }else{return null;}                    //Return null if no results
+}
+
+function returnBookObjectArray(books){
+    let bookObjArray = [];
+    for(let i=0; i<books.length; i++){ //For each result
+        bookObj = new BookClass(        //Convert to a book obj
+            books[i]._id, books[i].authorForename, books[i].authorSurname,
+            books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
+            books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
+        );
+        bookObjArray.push(bookObj);    //Then add to array
+    }
+    return bookObjArray;
 }
 
 //Get one book using its id and return it as a book object
@@ -115,16 +129,6 @@ async function getAccount(userID){
         account[0].postCode, account[0].password);
     }
     return accountObj;
-}
-
-//Find an existing account using email address
-async function checkLoginCredentials(inputEmail){
-    let credentials = await Account.find({email: inputEmail});
-    let loginAccount = null;
-    if(credentials[0] !== undefined){
-        loginAccount = new Credentials(credentials[0].email, credentials[0].password);
-    }
-    return loginAccount;
 }
 
 //Get account credentials
@@ -188,7 +192,7 @@ async function getAllItemsInBasket(userID){
 
 //Return the number of items in basket currently
 async function returnNumOfItemsInBasket(userID){
-    return await Basket.find({"userID":userID}).count();
+    return await Basket.find({"userID":userID}).countDocuments();
 }
 
 //Add all basket items into an invoice order
@@ -217,7 +221,6 @@ async function checkout(userID){
 async function updateStockAmount(itemID, substract){
     let book = await Book.find({_id:mongoose.Types.ObjectId(itemID)});
     let updateAmount = parseInt(book[0].stockAmount) - parseInt(substract);
-    console.log(updateAmount);
     Book.collection.updateOne(
         {_id: mongoose.Types.ObjectId(itemID)},
         {$set:{stockAmount: parseInt(updateAmount)}}
@@ -266,8 +269,8 @@ async function getCustomerOrders(userID){
 async function getSelectedOrder(orderID){
     let order = await Order.find({_id:mongoose.Types.ObjectId(orderID)});
     let orderObj = null;
-
-    if(order[0]._id !== undefined){
+    console.log(order);
+    if(order){
         let user = await Account.find({_id:mongoose.Types.ObjectId(order[0].userID)});
         let orderItems = await returnOrderItemsObjects(order[0].itemID, order[0].orderQuantity);
         //console.log("get selected order"+orderItems[0]);
@@ -318,22 +321,10 @@ function updateOrderStatus(orderID){
     );
 }
 
-//Get all books and return as an array of book objects
-async function getFilteredBooks(genres){
-    let books = await Book.find({genres:{$all:genres}}).sort({'authorSurname': 1});
-    let bookObjArray = [];
-    if(books[0] !== undefined){
-        for(let i=0; i<books.length; i++){ //For each result
-            bookObj = new BookClass(        //Convert to a book obj
-                books[i]._id, books[i].authorForename, books[i].authorSurname,
-                books[i].bookName, books[i].stockPrice, books[i].sellingPrice,
-                books[i].stockAmount, books[i].synopsis, books[i].genres, books[i].image
-            );
-            bookObjArray.push(bookObj);    //Then add to array
-        }
-        return bookObjArray;
-    }else{return null;}                    //Return null if no results
+function deleteTestOrder(userID, bookID){
+    Order.collection.deleteOne({userID:userID, itemID:[bookID]});
 }
+
 
 module.exports.insertBook = insertBook;
 module.exports.updateBook = updateBook;
@@ -365,3 +356,4 @@ module.exports.getSelectedOrder = getSelectedOrder;
 module.exports.updateOrderStatus = updateOrderStatus;
 
 module.exports.getFilteredBooks = getFilteredBooks;
+module.exports.deleteTestOrder = deleteTestOrder;

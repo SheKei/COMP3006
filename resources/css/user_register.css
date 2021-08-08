@@ -21,13 +21,13 @@ h1{
 #registerPage{
    margin-right: auto;
    margin-left:auto;
-   top: 5%;
+   top: 2%;
    background-color: #e8dfcc;
    left:0;
    right:0;
    position:absolute;
    width: 90%;
-   min-height: 650px;
+   min-height: 700px;
    border-radius: 20px;
    padding: 5px;
 }
@@ -49,6 +49,10 @@ label{
 
 p{
    font-size: 20px;
+}
+
+#message{
+    color:crimson;
 }
 
 a:hover{

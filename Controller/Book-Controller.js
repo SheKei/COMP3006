@@ -80,7 +80,7 @@ async function getFilteredBooks(userID,request,response){
     if(genres.length>0){
         let books = await db.getFilteredBooks(genres);
         let basketNum = await db.returnNumOfItemsInBasket(userID);
-        if(books[0] !== undefined){
+        if(books !== null){
             response.render("View_All_Books",{"books": books,"basketNum": basketNum});
         }else{
             response.redirect("/View_All_Books");
