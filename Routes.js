@@ -21,7 +21,12 @@ function loadUserLoginPage(request,response){
 
 //Create user account page
 function loadUserRegisterPage(request, response){
-    response.render("User_Register");
+    response.render("User_Register",{"invalidEmail":true});
+}
+
+//Load account reg fail due to invalid email notification
+function loadEmailInvalidRegNotification(request,response){
+    response.render("User_Register", {"invalidEmail":true});
 }
 
 //Add a new book as stock item
@@ -196,7 +201,9 @@ module.exports.deleteAccount = deleteAccount;
 module.exports.updatePassword = updatePassword;
 module.exports.loadPasswordUpdateNotification = loadPasswordUpdateNotification;
 module.exports.loadAccountUpdateNotification = loadAccountUpdateNotification;
+module.exports.loadEmailInvalidRegNotification = loadEmailInvalidRegNotification;
 
 module.exports.loadCustomerSupportPage = loadCustomerSupportPage;
 
 module.exports.loadFilteredBooksPage = loadFilteredBooksPage;
+

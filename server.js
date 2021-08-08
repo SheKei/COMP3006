@@ -166,6 +166,9 @@ app.get("/Login_Error", routes.loadLoginErrorNotification);
 //GET REQUEST to notify registration success
 app.get("/Reg_Success", routes.loadRegSuccessNotification);
 
+//GET REQUEST to notify account reg failed due to email in use
+app.get("/Email_Invalid", routes.loadEmailInvalidRegNotification);
+
 //WEB SOCKET
 io.on("connection", function(socket){
 

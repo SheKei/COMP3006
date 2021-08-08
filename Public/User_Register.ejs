@@ -21,7 +21,13 @@
 
             <span id="formPage">
                 <span><h2>REGISTER ACCOUNT</h2><p class="text-center" id="message"></p></span><br>
-
+                <% if(invalidEmail === true){ %>
+                    <div class="alert alert-danger" role="alert">Email Already in Use!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% } %>
                 <form action="/registerAccount" method="post">
                     <div class="form-group row">
                     <div class="col-2">

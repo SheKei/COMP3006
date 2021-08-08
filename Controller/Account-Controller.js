@@ -9,9 +9,14 @@ let saltRounds = 10;
 //Gather inputs to create account
 function createAccount(request, response){
     let password = bcrypt.hashSync(request.body.password1, saltRounds);
-    db.insertAccount(request.body.forename, request.body.surname, request.body.dateOfBirth, request.body.email, request.body.streetName, request.body.postCode,password);
-    response.redirect("/Reg_Success"); //Notify success and take to login screen
-    response.end();
+    let emailInUse = checkEmailRegistration(request.body.email);
+
+    if(emailInUse){
+        response.redirect("/Email_Invalid");
+    }else{
+        db.insertAccount(request.body.forename, request.body.surname, request.body.dateOfBirth, request.body.email, request.body.streetName, request.body.postCode,password);
+        response.redirect("/Reg_Success"); //Notify success and take to login screen
+    }
 }
 
 //Gather inputs and check login credentials
@@ -82,10 +87,38 @@ function deleteAccount(userID,response){
     response.redirect("/Welcome");
 }
 
+//Check if the email updating to is another that is unused
+async function checkUpdateEmail(updateEmail, currentUserEmail){
+    let users = await db.getListOfCustomers();
+    if(users.length > 0){
+        for(let i=0;i<users.length;i++){
+            if(users[i].email === updateEmail && users[i].email !== currentUserEmail){
+                return true;//Email is being used by another and is not the current email
+            }
+        }
+    }
+    return false;
+}
+
+//Check if email input is being used by another during registration
+async function checkEmailRegistration(inputEmail){
+    let users = await db.getListOfCustomers();
+    if(users.length > 0){
+        for(let i=0;i<users.length;i++){
+            if(users[i].email === inputEmail){
+                return true;//Email is being used by another
+            }
+        }
+    }
+    return false; //Email isn't being used by another
+}
+
 module.exports.createAccount = createAccount;
 module.exports.deleteAccount = deleteAccount;
 module.exports.displayAccount = displayAccount;
 module.exports.updateAccountDetails = updateAccountDetails;
 module.exports.login = login;
 module.exports.checkPassword = checkPassword;
+module.exports.checkEmailRegistration = checkEmailRegistration;
+module.exports.checkUpdateEmail = checkUpdateEmail;
 
