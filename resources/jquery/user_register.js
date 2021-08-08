@@ -12,6 +12,17 @@ $(function(){
         disableButtonIfEmpty($("#"+ID).val().trim());
     });
 
+    $(".name").keydown(function(){
+        let ID = event.target.id;
+        alphabetCharsOnly($("#"+ID).val().trim());
+    });
+
+    //Check if field left empty
+    $(".name").keyup(function(){
+        let ID = event.target.id;
+        alphabetCharsOnly($("#"+ID).val().trim());
+    });
+
     //Check if user is of 13 years age or older
     $("#dateOfBirth").change(function(){
         let dobInput = $("#dateOfBirth").val();
@@ -54,10 +65,21 @@ $(function(){
     function comparePasswordInputs(){
         let input1 = $("#password1").val();
         let input2 = $("#password2").val();
-        console.log(input1);
-        console.log(input2);
         if(input1 !== input2){
             $("#message").html("Passwords do not match!");
+            $("#registerBtn").attr("disabled", true);
+        }else{
+            $("#message").html("");
+            $("#registerBtn").attr("disabled", false);
+        }
+    }
+
+    //Letters only for forename and surname
+    function alphabetCharsOnly(input){
+        let pattern = /[a-zA-z]/gi ;
+        let valid = input.match(pattern);
+        if(!valid){
+            $("#message").html("Forename and surname should only contain letters!");
             $("#registerBtn").attr("disabled", true);
         }else{
             $("#message").html("");
