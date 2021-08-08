@@ -7,9 +7,9 @@ let saltRounds = 10;
 
 
 //Gather inputs to create account
-function createAccount(request, response){
+async function createAccount(request, response){
     let password = bcrypt.hashSync(request.body.password1, saltRounds);
-    let emailInUse = checkEmailRegistration(request.body.email);
+    let emailInUse = await checkEmailRegistration(request.body.email);
 
     if(emailInUse){
         response.redirect("/Email_Invalid");
@@ -63,9 +63,6 @@ async function displayAccount(userID, response, passwordNotif, accountNotif,emai
 async function updateAccountDetails(userID, request, response){
     let account = await db.getAccount(userID);
     let invalidEmail = await checkUpdateEmail(request.body.email, account.getEmail());
-    console.log(account.getEmail());
-    console.log(request.body.email);
-    console.log(invalidEmail);
 
     if(invalidEmail){
         response.redirect("/Account_Details_Update_Failed");//Notify change

@@ -21,7 +21,7 @@ function loadUserLoginPage(request,response){
 
 //Create user account page
 function loadUserRegisterPage(request, response){
-    response.render("User_Register",{"invalidEmail":true});
+    response.render("User_Register",{"invalidEmail":null});
 }
 
 //Load account reg fail due to invalid email notification

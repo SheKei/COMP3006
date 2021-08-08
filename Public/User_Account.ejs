@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/user_account.css"/>
+    <script type="text/javascript" src="/jquery/user_account.js"></script>
 </head>
 <body>
 <header><%- include("User_Navbar"); %></header>
@@ -35,14 +36,14 @@
                     </div>
                 <% } %>
 
-                <h2>Account Details</h2><br>
+                <span><h2>Account Details</h2><p class="text-center" id="message"></p></span><br>
                 <form method="post" action="/updateAccount">
                     <div class="form-group row">
                         <div class="col-3">
                             <label>Forename:</label>
                         </div>
                         <div class="col-6">
-                            <input class="form-control" type="text" name="firstname" id="firstname" value="<%= firstname %>" required>
+                            <input class="form-control text name" type="text" name="firstname" id="firstname" value="<%= firstname %>" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -50,7 +51,7 @@
                             <label>Surname:</label>
                         </div>
                         <div class="col-6">
-                            <input class="form-control" type="text" name="lastname" id="lastname" value="<%= surname %>" required>
+                            <input class="form-control text name" type="text" name="lastname" id="lastname" value="<%= surname %>" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -75,7 +76,7 @@
                             <label>Street Name: </label>
                         </div>
                         <div class="col-6">
-                            <input class="form-control" type="text" name="street" id="street" value="<%= street %>" required>
+                            <input class="form-control text address" type="text" name="street" id="street" value="<%= street %>" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -83,10 +84,10 @@
                             <label>Post Code: </label>
                         </div>
                         <div class="col-6">
-                            <input class="form-control" type="text" name="postCode" id="postCode" value="<%= postCode %>" required>
+                            <input class="form-control text address" type="text" name="postCode" id="postCode" value="<%= postCode %>" required>
                         </div>
                     </div><br>
-                    <button type="submit" class="btn btn-dark">Update Account Details</button>
+                    <button type="submit" id="updateDetailsBtn" class="btn btn-dark">Update Account Details</button>
                 </form>
             </div>
         </div>
@@ -105,14 +106,14 @@
                         </button>
                     </div>
                 <% } %>
-                <h2>Update Password</h2><br>
+                <span><h2>Update Password</h2><p class="text-center" id="passwordMessage"></p><br></span>
                 <form method="post" action="/updatePassword">
                     <div class="form-group row">
                         <div class="col-3">
                             Current Password:
                         </div>
                         <div class="col-8">
-                            <input class="form-control" type="password" name="currentPassword" id="currentPassword" required>
+                            <input class="form-control password" type="password" name="currentPassword" id="currentPassword" minlength="8" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -120,7 +121,7 @@
                             New Password:
                         </div>
                         <div class="col-8">
-                            <input class="form-control" type="password" name="newPassword" id="newPassword" required>
+                            <input class="form-control password" type="password" name="newPassword" id="newPassword" minlength="8" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -128,11 +129,18 @@
                             Confirm New Password:
                         </div>
                         <div class="col-8">
-                            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" required>
+                            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" minlength="8" required>
                         </div>
                     </div><br>
+                    <div>
+                        <i id="length" class="fas fa-times fa-lg"></i> Password should be a minimum of 8 characters<br>
+                        <i id="special" class="fas fa-times fa-lg"></i> Contain at least one special character<br>
+                        <i id="upper" class="fas fa-times fa-lg"></i> Contain at least one upper character<br>
+                        <i id="lower" class="fas fa-times fa-lg"></i> Contain at least one lower character<br>
+                        <i id="digit" class="fas fa-times fa-lg"></i> Contain at least one digit<br>
+                    </div><br>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-dark">Update Password</button>
+                        <button type="submit" id="updatePasswordBtn" class="btn btn-dark">Update Password</button>
                     </div>
                 </form><br><br><br><br><br>
                 <div class="text-center">

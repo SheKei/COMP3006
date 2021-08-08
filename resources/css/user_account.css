@@ -22,6 +22,10 @@ a:hover{
 
 }
 
+#message,#passwordMessage{
+    color: orangered;
+}
+
 #accountDiv{
     width: 200px;
 }
