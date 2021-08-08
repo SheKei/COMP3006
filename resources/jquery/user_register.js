@@ -48,9 +48,17 @@ $(function(){
             $("#message").html("You must be 13 years or older to register an account with us!");
             $("#registerBtn").attr("disabled", true);
         }else{
-            $("#message").html("");
-            $("#registerBtn").attr("disabled", false);
+            getRidOfErrorMsg();
         }
+    });
+
+    $("#agree").change(function(){
+       if($("#agree").is(':checked') === false){
+           $("#message").html("Terms & Conditions must be Agreed Before Registration!");
+           $("#registerBtn").attr("disabled", true);
+       }else{
+           getRidOfErrorMsg();
+       }
     });
 
     //Check if field left empty
@@ -69,8 +77,7 @@ $(function(){
             $("#message").html("Please fill in all fields!");
             $("#registerBtn").attr("disabled", true);
         }else{
-            $("#message").html("");
-            $("#registerBtn").attr("disabled", false);
+            getRidOfErrorMsg();
         }
     }
 
@@ -81,8 +88,7 @@ $(function(){
             $("#message").html("Passwords do not match!");
             $("#registerBtn").attr("disabled", true);
         }else{
-            $("#message").html("");
-            $("#registerBtn").attr("disabled", false);
+            getRidOfErrorMsg();
         }
     }
 
@@ -95,8 +101,7 @@ $(function(){
             $("#message").html("Forename and surname should only contain letters!");
             $("#registerBtn").attr("disabled", true);
         }else{
-            $("#message").html("");
-            $("#registerBtn").attr("disabled", false);
+            getRidOfErrorMsg();
         }
     }
 
@@ -107,9 +112,14 @@ $(function(){
             $("#message").html("Address should only contain letters and numbers only!");
             $("#registerBtn").attr("disabled", true);
         }else{
-            $("#message").html("");
-            $("#registerBtn").attr("disabled", false);
+            getRidOfErrorMsg();
         }
+    }
+
+    //Erase error msg and enable button
+    function getRidOfErrorMsg(){
+        $("#message").html("");
+        $("#registerBtn").attr("disabled", false);
     }
 
 });
