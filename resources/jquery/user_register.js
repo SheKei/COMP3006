@@ -12,15 +12,27 @@ $(function(){
         disableButtonIfEmpty($("#"+ID).val().trim());
     });
 
+    //Check if name field only has letters
     $(".name").keydown(function(){
         let ID = event.target.id;
         alphabetCharsOnly($("#"+ID).val().trim());
     });
 
-    //Check if field left empty
+    //Check if name field only has letters
     $(".name").keyup(function(){
         let ID = event.target.id;
         alphabetCharsOnly($("#"+ID).val().trim());
+    });
+
+    $(".address").keydown(function(){
+        let ID = event.target.id;
+        alphaNumChars($("#"+ID).val().trim());
+    });
+
+    //Check if field left empty
+    $(".address").keyup(function(){
+        let ID = event.target.id;
+        alphaNumChars($("#"+ID).val().trim());
     });
 
     //Check if user is of 13 years age or older
@@ -76,8 +88,9 @@ $(function(){
 
     //Letters only for forename and surname
     function alphabetCharsOnly(input){
-        let pattern = /[a-zA-z]/gi ;
+        let pattern = /\s*[a-zA-z]/gi ;
         let valid = input.match(pattern);
+        console.log(valid);
         if(!valid){
             $("#message").html("Forename and surname should only contain letters!");
             $("#registerBtn").attr("disabled", true);
@@ -86,4 +99,17 @@ $(function(){
             $("#registerBtn").attr("disabled", false);
         }
     }
+
+    function alphaNumChars(input){
+        let pattern = /^[a-zA-Z0-9\s]+$/gi ;
+        let valid = input.match(pattern);
+        if(!valid){
+            $("#message").html("Address should only contain letters and numbers only!");
+            $("#registerBtn").attr("disabled", true);
+        }else{
+            $("#message").html("");
+            $("#registerBtn").attr("disabled", false);
+        }
+    }
+
 });
