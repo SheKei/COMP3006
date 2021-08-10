@@ -101,13 +101,13 @@ suite("Integration Test For Customer Pages", function() {
         });
     });
 
-    test("Test GET /LogOut", function(){
-        let app = server.app;
-        chai.request(app).get("/LogOut").end(function(error,response, request){
-            chai.assert.equal(response.status, 200, "Wrong status code");
-            chai.assert.isNull(request.session.user, "Should be null");
-        });
-    });
+    //test("Test GET /LogOut", function(){
+        //let app = server.app;
+        //chai.request(app).get("/LogOut").end(function(error,response, request){
+            //chai.assert.equal(response.status, 200, "Wrong status code");
+            //chai.assert.isNull(request.session.user, "Should be null");
+        //});
+    //});
 
 });
 
@@ -157,4 +157,79 @@ suite("Integration test for viewing orders as customer or admin", function() {
             chai.assert.equal(response.status, 200, "Wrong status code");
         });
     });
+});
+
+suite("Integration Test For Adding and Viewing Book", function() {
+
+    test("Test GET /View_All_Stock", function() {
+        let app = server.app;
+        chai.request(app).get("/View_All_Stock").end(function(error, response) {
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+
+    test("Test GET /View_Stock_Book/:bookId", function(){
+        let app = server.app;
+        let bookID = "6102c14551afa35e78772484";
+
+        chai.request(app).get("/View_Stock_Book/"+bookID).end(function(error,response, request){
+            chai.assert.equal(response.status, 200, "Wrong status code");
+            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
+        });
+    });
+
+    test("Test GET /View_Book/:bookId", function(){
+        let app = server.app;
+        let bookID = "6102c14551afa35e78772484";
+
+        chai.request(app).get("/View_Book/"+bookID).end(function(error,response, request){
+            chai.assert.equal(response.status, 200, "Wrong status code");
+            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
+        });
+    });
+
+    test("Test GET /View_All_Books", function() {
+        let app = server.app;
+        chai.request(app).get("/View_All_Books").end(function(error, response) {
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+});
+
+suite("Integration Test For Adding and Viewing Book", function() {
+
+    test("Test GET /View_All_Stock", function() {
+        let app = server.app;
+        chai.request(app).get("/View_All_Stock").end(function(error, response) {
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+
+    test("Test GET /View_Stock_Book/:bookId", function(){
+        let app = server.app;
+        let bookID = "6102c14551afa35e78772484";
+
+        chai.request(app).get("/View_Stock_Book/"+bookID).end(function(error,response, request){
+            chai.assert.equal(response.status, 200, "Wrong status code");
+            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
+        });
+    });
+
+    test("Test GET /View_Book/:bookId", function(){
+        let app = server.app;
+        let bookID = "6102c14551afa35e78772484";
+
+        chai.request(app).get("/View_Book/"+bookID).end(function(error,response, request){
+            chai.assert.equal(response.status, 200, "Wrong status code");
+            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
+        });
+    });
+
+    test("Test GET /View_All_Books", function() {
+        let app = server.app;
+        chai.request(app).get("/View_All_Books").end(function(error, response) {
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+
 });
