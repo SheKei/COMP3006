@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Controller/Account-Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Account-Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/User_Account.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/User_Account.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/user_account.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/user_account.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/jquery/add_book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/Add_Book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Add_Book.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/View_Stock_Book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/View_Stock_Book.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/add_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/add_book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/view_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/view_book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/view_stock_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/view_stock_book.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/jquery/user_account.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/jquery/user_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/jquery/view_stock_book.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/view_stock_book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,62 +29,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="171" column="39" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
+            <state relative-caret-position="-81">
+              <caret line="108" column="22" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
+        <entry file="file://$PROJECT_DIR$/test/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="102" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/user_account.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/jquery/user_account.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+            <state relative-caret-position="-1444">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+            <state relative-caret-position="162">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -114,21 +94,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Schema/Chat-Schema.js" />
-        <option value="$PROJECT_DIR$/Schema/Order-Schema.js" />
-        <option value="$PROJECT_DIR$/Public/Employee_Home.ejs.js" />
         <option value="$PROJECT_DIR$/Model/Order_Item.js" />
         <option value="$PROJECT_DIR$/Model/Order.js" />
         <option value="$PROJECT_DIR$/resources/css/view_order_employee.css" />
         <option value="$PROJECT_DIR$/Public/Welcome.ejs" />
-        <option value="$PROJECT_DIR$/resources/css/view_book.css" />
         <option value="$PROJECT_DIR$/resources/css/basket.css" />
         <option value="$PROJECT_DIR$/Public/Employee_Customer_Support.ejs" />
-        <option value="$PROJECT_DIR$/test/integration.js" />
-        <option value="$PROJECT_DIR$/resources/css/view_stock_book.css" />
-        <option value="$PROJECT_DIR$/Public/View_Stock_Book.ejs" />
-        <option value="$PROJECT_DIR$/resources/css/add_book.css" />
-        <option value="$PROJECT_DIR$/Public/Add_Book.ejs" />
         <option value="$PROJECT_DIR$/Public/Warning_Modal.ejs" />
         <option value="$PROJECT_DIR$/Public/User_Login.ejs" />
         <option value="$PROJECT_DIR$/resources/css/user_contact_shop.css" />
@@ -161,10 +132,19 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Routes.js" />
         <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
-        <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
         <option value="$PROJECT_DIR$/resources/css/user_account.css" />
-        <option value="$PROJECT_DIR$/resources/jquery/user_account.js" />
         <option value="$PROJECT_DIR$/Public/User_Account.ejs" />
+        <option value="$PROJECT_DIR$/resources/jquery/user_account.js" />
+        <option value="$PROJECT_DIR$/Public/Add_Book.ejs" />
+        <option value="$PROJECT_DIR$/resources/css/add_book.css" />
+        <option value="$PROJECT_DIR$/Public/View_Stock_Book.ejs" />
+        <option value="$PROJECT_DIR$/resources/css/view_book.css" />
+        <option value="$PROJECT_DIR$/resources/css/view_stock_book.css" />
+        <option value="$PROJECT_DIR$/resources/jquery/add_book.js" />
+        <option value="$PROJECT_DIR$/resources/jquery/view_stock_book.js" />
+        <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
+        <option value="$PROJECT_DIR$/test/integration.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -179,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,14 +208,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PRACTICALS/chat-express" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PRACTICALS/COMP3006-COURSEWORK" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -260,8 +240,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.Test Checkout Order Functionality.Test Retrieving Test Orders">
-    <configuration name="Test Basket Functionality.Test Adding a Book to Basket" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Mocha.Integration Test For Customer Pages.Test GET /User_Home">
+    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -270,14 +250,14 @@
       <ui>tdd</ui>
       <extra-mocha-options />
       <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.js</test-file>
+      <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Test Basket Functionality" />
-        <name value="Test Adding a Book to Basket" />
+        <name value="Integration Test For Adding and Viewing Book" />
+        <name value="Test GET /View_All_Stock" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Test Basket Functionality.Test Number of Item Types in Basket" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -286,14 +266,14 @@
       <ui>tdd</ui>
       <extra-mocha-options />
       <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.js</test-file>
+      <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Test Basket Functionality" />
-        <name value="Test Number of Item Types in Basket" />
+        <name value="Integration Test For Adding and Viewing Book" />
+        <name value="Test GET /View_Book/:bookId" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Test Basket Functionality.Test Removing Item from basket" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -302,14 +282,14 @@
       <ui>tdd</ui>
       <extra-mocha-options />
       <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.js</test-file>
+      <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Test Basket Functionality" />
-        <name value="Test Removing Item from basket" />
+        <name value="Integration Test For Adding and Viewing Book" />
+        <name value="Test GET /View_Stock_Book/:bookId" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Test Checkout Order Functionality.Test Adding a Book to Basket" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Customer Pages.Test GET /User_Home" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -318,14 +298,14 @@
       <ui>tdd</ui>
       <extra-mocha-options />
       <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.js</test-file>
+      <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Test Checkout Order Functionality" />
-        <name value="Test Adding a Book to Basket" />
+        <name value="Integration Test For Customer Pages" />
+        <name value="Test GET /User_Home" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Customer Pages.Test GET /User_Home/:userID" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -334,20 +314,20 @@
       <ui>tdd</ui>
       <extra-mocha-options />
       <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.js</test-file>
+      <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Test Checkout Order Functionality" />
-        <name value="Test Retrieving Test Orders" />
+        <name value="Integration Test For Customer Pages" />
+        <name value="Test GET /User_Home/:userID" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Mocha.Test Checkout Order Functionality.Test Retrieving Test Orders" />
-        <item itemvalue="Mocha.Test Checkout Order Functionality.Test Adding a Book to Basket" />
-        <item itemvalue="Mocha.Test Basket Functionality.Test Removing Item from basket" />
-        <item itemvalue="Mocha.Test Basket Functionality.Test Number of Item Types in Basket" />
-        <item itemvalue="Mocha.Test Basket Functionality.Test Adding a Book to Basket" />
+        <item itemvalue="Mocha.Integration Test For Customer Pages.Test GET /User_Home" />
+        <item itemvalue="Mocha.Integration Test For Customer Pages.Test GET /User_Home/:userID" />
+        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" />
+        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" />
+        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" />
       </list>
     </recent_temporary>
   </component>
@@ -368,44 +348,47 @@
       <workItem from="1628147184561" duration="28603000" />
       <workItem from="1628232047413" duration="23115000" />
       <workItem from="1628342899991" duration="23430000" />
-      <workItem from="1628403069740" duration="20202000" />
+      <workItem from="1628403069740" duration="24107000" />
+      <workItem from="1628508207844" duration="594000" />
+      <workItem from="1628544591416" duration="692000" />
+      <workItem from="1628597480644" duration="2691000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Adding_a_Book_to_Basket - 2021.08.08 at 10h 07m 10s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Adding a Book to Basket" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Register_Page_Test_GET__Email_Invalid_Notification - 2021.08.10 at 13h 51m 36s.xml">
+      <configuration name="Integration Test For Register Page.Test GET /Email_Invalid Notification" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 13m 53s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Register_&amp;_Login_Page_Test_GET__Reg_Success_Notification - 2021.08.10 at 13h 52m 29s.xml">
+      <configuration name="Integration Test For Register &amp; Login Page.Test GET /Reg_Success Notification" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 15m 06s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Register_&amp;_Login_Page - 2021.08.10 at 13h 55m 10s.xml">
+      <configuration name="Integration Test For Register &amp; Login Page" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 16m 41s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Logging_In_and_Out_Test_GET__User_Home__userID - 2021.08.10 at 13h 58m 45s.xml">
+      <configuration name="Integration Test For Logging In and Out.Test GET /User_Home/:userID" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 18m 01s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Logging_In_and_Out_Test_GET__LogOut - 2021.08.10 at 14h 00m 20s.xml">
+      <configuration name="Integration Test For Logging In and Out.Test GET /LogOut" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 18m 55s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_All_Stock - 2021.08.10 at 14h 04m 17s.xml">
+      <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 19m 08s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_Stock_Book__bookId - 2021.08.10 at 14h 04m 27s.xml">
+      <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 19m 42s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_Book__bookId - 2021.08.10 at 14h 05m 50s.xml">
+      <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 21m 17s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Customer_Pages_Test_GET__User_Home__userID - 2021.08.10 at 18h 15m 20s.xml">
+      <configuration name="Integration Test For Customer Pages.Test GET /User_Home/:userID" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Test_Checkout_Order_Functionality_Test_Retrieving_Test_Orders - 2021.08.08 at 10h 21m 33s.xml">
-      <configuration name="Test Checkout Order Functionality.Test Retrieving Test Orders" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Integration_Test_For_Customer_Pages_Test_GET__User_Home - 2021.08.10 at 18h 15m 27s.xml">
+      <configuration name="Integration Test For Customer Pages.Test GET /User_Home" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177420000" />
+    <option name="totallyTimeSpent" value="185302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -453,54 +436,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Welcome.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="50" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/add_book.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Warning_Modal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#1160#1167#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/jquery/employee_customer_support.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/user_contact_shop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Employee_Customer_Support.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Schema/Account-Schema.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/jquery/user_contact_shop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -526,13 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/jquery/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="8" lean-forward="true" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -642,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Add_Book.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3915">
-          <caret line="145" column="18" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="145" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Book-Controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -663,20 +584,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Book.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-680">
           <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Basket-Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -698,13 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
         </state>
       </provider>
     </entry>
@@ -732,27 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="171" column="39" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1701">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/user_register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -760,38 +643,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
+    <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="945">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/User_Register.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="102" selection-end-column="26" />
+        <state relative-caret-position="297">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/jquery/user_account.js">
+    <entry file="file://$PROJECT_DIR$/resources/jquery/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+        <state relative-caret-position="135">
+          <caret line="5" column="8" lean-forward="true" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/jquery/user_register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/user_account.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
+        <state relative-caret-position="648">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/User_Account.ejs">
+    <entry file="file://$PROJECT_DIR$/resources/css/add_book.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+        <state relative-caret-position="999">
+          <caret line="37" selection-start-line="37" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Account-Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Basket-Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/view_book.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" selection-start-line="18" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/view_stock_book.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Add_Book.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/jquery/add_book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/jquery/view_stock_book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2781">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/jquery/user_account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/View_Stock_Book.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1767">
+          <caret line="144" column="88" selection-start-line="144" selection-start-column="88" selection-end-line="144" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="108" column="22" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1444">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
         </state>
       </provider>
     </entry>

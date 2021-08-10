@@ -17,6 +17,7 @@
 <header><%- include("Employee_Navbar"); %></header>
 <div id="viewStockPage" class="col-12">
     <div id="stockContainer" class="col-12">
+        <p id="message" class="text-center"></p>
         <div class="row">
             <div class="col-8">
                 <form action="/updateBook" method="post">
@@ -34,13 +35,13 @@
                             <label for="authorForename">Author's Forename:</label>
                         </div>
                         <div class="col-4">
-                            <input value="<%= book.getAuthorForename() %>" type="text" class="form-control" id="authorForename" name="authorForename" required>
+                            <input value="<%= book.getAuthorForename() %>" type="text" class="form-control text authorName" id="authorForename" name="authorForename" required>
                         </div>
                         <div class="col-2">
                             <label for="authorSurname">Author's Surname:</label>
                         </div>
                         <div class="col-4">
-                            <input value="<%= book.getAuthorSurname() %>" type="text" class="form-control" id="authorSurname" name="authorSurname" required>
+                            <input value="<%= book.getAuthorSurname() %>" type="text" class="form-control text authorName" id="authorSurname" name="authorSurname" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -48,7 +49,7 @@
                             <label for="bookName">Book Name:</label>
                         </div>
                         <div class="col-10">
-                            <input value="<%= book.getBookName() %>" type="text" class="form-control" id="bookName" name="bookName" required>
+                            <input value="<%= book.getBookName() %>" type="text" class="form-control text" id="bookName" name="bookName" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -56,13 +57,13 @@
                             <label>Stock Price(£):</label>
                         </div>
                         <div class="col-2">
-                            <input value="<%= stockPound %>" type="number" min="1" class="form-control" name="stockPound" id="stockPound" required>
+                            <input value="<%= stockPound %>" type="number" min="1" class="form-control price" name="stockPound" id="stockPound" required>
                         </div>
                         <div class="col-1" class="decimal">
                             <p>.</p>
                         </div>
                         <div class="col-2" id="stockPennyCol">
-                            <input value="<%= stockPenny %>" type="number" min="1" max="99" class="form-control" name="stockPenny" id="stockPenny"required>
+                            <input value="<%= stockPenny %>" type="number" min="1" max="99" class="form-control price" name="stockPenny" id="stockPenny"required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -70,13 +71,13 @@
                             <label>Selling Price(£):</label>
                         </div>
                         <div class="col-2">
-                            <input value="<%= sellPound %>" type="number" min="1" class="form-control" name="sellPound" id="sellPound" required>
+                            <input value="<%= sellPound %>" type="number" min="1" class="form-control price" name="sellPound" id="sellPound" required>
                         </div>
                         <div class="col-1" class="decimal">
                             <p>.</p>
                         </div>
                         <div class="col-2" id="sellPennyCol">
-                            <input value="<%= sellPenny %>" type="number" min="1" max="99" class="form-control" name="sellPenny" id="sellPenny" required>
+                            <input value="<%= sellPenny %>" type="number" min="1" max="99" class="form-control price" name="sellPenny" id="sellPenny" required>
                         </div>
                     </div>
                     <div class="form-group row move">
@@ -92,7 +93,7 @@
                             <label>Synopsis:</label>
                         </div>
                         <div class="col-8">
-                            <textarea id="synopsis" name="synopsis" class="form-control" cols="10" rows="6" required><%= book.getSynopsis() %></textarea>
+                            <textarea id="synopsis" name="synopsis" class="form-control text" cols="10" rows="6" required><%= book.getSynopsis() %></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -104,15 +105,15 @@
                         <div class="col-4">
                             <div class="form-check">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="scifi" name="scifi">
+                                    <input type="checkbox" class="form-check-input genre" id="scifi" name="scifi">
                                     <label class="form-check-label" for="scifi">Science Fiction</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="adventure" name="adventure">
+                                    <input type="checkbox" class="form-check-input genre" id="adventure" name="adventure">
                                     <label class="form-check-label" for="adventure">Adventure</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="romance" name="romance">
+                                    <input type="checkbox" class="form-check-input genre" id="romance" name="romance">
                                     <label class="form-check-label" for="romance">Romance</label>
                                 </div>
                             </div>
@@ -120,15 +121,15 @@
                         <div class="col-4">
                             <div class="form-check">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="historical" name="historical">
+                                    <input type="checkbox" class="form-check-input genre" id="historical" name="historical">
                                     <label class="form-check-label" for="historical">Historical</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="horror" name="horror">
+                                    <input type="checkbox" class="form-check-input genre" id="horror" name="horror">
                                     <label class="form-check-label" for="horror">Horror</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="fantasy" name="fantasy">
+                                    <input type="checkbox" class="form-check-input genre" id="fantasy" name="fantasy">
                                     <label class="form-check-label" for="fantasy">Fantasy</label>
                                 </div>
                             </div>
@@ -136,15 +137,15 @@
                         <div class="col-4">
                             <div class="form-check">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="mystery" name="mystery">
+                                    <input type="checkbox" class="form-check-input genre" id="mystery" name="mystery">
                                     <label class="form-check-label" for="mystery">Mystery</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="comic" name="comic">
+                                    <input type="checkbox" class="form-check-input genre" id="comic" name="comic">
                                     <label class="form-check-label" for="comic">Comic</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="shortStories" name="shortStories">
+                                    <input type="checkbox" class="form-check-input genre" id="shortStories" name="shortStories">
                                     <label class="form-check-label" for="shortStories">Short Stories</label>
                                 </div>
                             </div>

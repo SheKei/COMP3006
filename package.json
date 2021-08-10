@@ -4,7 +4,7 @@
   "description": "Coursework Project for COMP3006, an online book store",
   "main": "Database.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 15000 -ui tdd test/",
     "start": "node server.js"
   },
   "repository": {

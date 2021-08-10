@@ -94,7 +94,7 @@ $(function(){
 
     //Letters only for forename and surname
     function alphabetCharsOnly(input){
-        let pattern = /\s*[a-zA-z]/gi ;
+        let pattern = /^[a-zA-Z0-9\s]+$/gi ;
         let valid = input.match(pattern);
         if(!valid){
             $("#message").html("Forename and surname should only contain letters!");

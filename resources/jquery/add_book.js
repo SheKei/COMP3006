@@ -1,15 +1,4 @@
 $(function(){
-    //Find out which genres viewed booked is classed as
-    let list = $("#genres").html();
-    let array = list.split(",");
-
-    for(let i=0; i<array.length; i++){
-        if(array[i] === "short stories"){
-            $('#shortStories').prop('checked', true);
-        }else{
-            $('#'+array[i]).prop('checked', true);
-        }
-    }
 
     //Check if field left empty
     $(".text").keydown(function(){
@@ -48,7 +37,7 @@ $(function(){
     function disableButtonIfEmpty(input){
         if(input === ""){
             $("#message").html("Please fill in all fields!");
-            $("#saveEditBtn").attr("disabled", true);
+            $("#addBtn").attr("disabled", true);
         }else{
             getRidOfErrorMsg();
         }
@@ -60,7 +49,7 @@ $(function(){
         let valid = input.match(pattern);
         if(!valid){
             $("#message").html("Forename and surname should only contain letters!");
-            $("#saveEditBtn").attr("disabled", true);
+            $("#addBtn").attr("disabled", true);
         }else{
             getRidOfErrorMsg();
         }
@@ -69,7 +58,7 @@ $(function(){
     //Erase error msg and enable button
     function getRidOfErrorMsg(){
         $("#message").html("");
-        $("#saveEditBtn").attr("disabled", false);
+        $("#addBtn").attr("disabled", false);
     }
 
     function checkIfMinOneGenreSelected(){
@@ -86,7 +75,7 @@ $(function(){
 
         if(!atLeastOneGenre){
             $("#message").html("Please Select at Least one Genre to Assign to the Stock!");
-            $("#saveEditBtn").attr("disabled", true);
+            $("#addBtn").attr("disabled", true);
         }else{
             getRidOfErrorMsg();
         }
@@ -103,7 +92,7 @@ $(function(){
 
             if(sellingPrice <= stockPrice){
                 $("#message").html("The Selling Price Cannot be Cheaper Than the Stock Price!");
-                $("#saveEditBtn").attr("disabled", true);
+                $("#addBtn").attr("disabled", true);
             }else{
                 getRidOfErrorMsg();
             }

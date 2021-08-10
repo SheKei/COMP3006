@@ -11,26 +11,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/add_book.css"/>
+    <script type="text/javascript" src="/jquery/add_book.js"></script>
 </head>
 <body>
 
 <header><%- include("Employee_Navbar"); %></header>
 <div id="stockFormPage">
     <div id="formContainer">
-        <h1>Add Stock</h1><br>
+        <span><h1>Add Stock</h1><p class="text-center" id="message"></p></span><br>
         <form action="/addBook" method="post" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-2">
                     <label for="authorForename">Author's Forename:</label>
                 </div>
                 <div class="col-4">
-                    <input type="text" class="form-control" id="authorForename" name="authorForename" placeholder="Forename" required>
+                    <input type="text" class="form-control text authorName" id="authorForename" name="authorForename" placeholder="Forename" required>
                 </div>
                 <div class="col-2">
                     <label for="authorSurname">Author's Surname:</label>
                 </div>
                 <div class="col-4">
-                    <input type="text" class="form-control" id="authorSurname" name="authorSurname" placeholder="Surname" required>
+                    <input type="text" class="form-control text authorName" id="authorSurname" name="authorSurname" placeholder="Surname" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -38,7 +39,7 @@
                     <label for="bookName">Book Name:</label>
                 </div>
                 <div class="col-10">
-                    <input type="text" class="form-control" id="bookName" name="bookName" placeholder="Book Name" required>
+                    <input type="text" class="form-control text" id="bookName" name="bookName" placeholder="Book Name" required>
                 </div>
             </div>
             <div class="form-group row move">
@@ -46,13 +47,13 @@
                     <label>Stock Price(£):</label>
                 </div>
                 <div class="col-2">
-                    <input type="number" min="1" class="form-control" name="stockPound" id="stockPound" placeholder="9" required>
+                    <input type="number" min="1" class="form-control price" name="stockPound" id="stockPound" placeholder="9" required>
                 </div>
                 <div class="col-1" class="decimal">
                     <p>.</p>
                 </div>
                 <div class="col-2" id="stockPennyCol">
-                    <input type="number" min="1" max="99" class="form-control" name="stockPenny" id="stockPenny" placeholder="99" required>
+                    <input type="number" min="1" max="99" class="form-control price" name="stockPenny" id="stockPenny" placeholder="99" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -60,13 +61,13 @@
                     <label>Selling Price(£):</label>
                 </div>
                 <div class="col-2">
-                    <input type="number" min="1" class="form-control" name="sellPound" id="sellPound" placeholder="9" required>
+                    <input type="number" min="1" class="form-control price" name="sellPound" id="sellPound" placeholder="9" required>
                 </div>
                 <div class="col-1" class="decimal">
                     <p>.</p>
                 </div>
                 <div class="col-2" id="sellPennyCol">
-                    <input type="number" min="1" max="99" class="form-control" name="sellPenny" id="sellPenny" placeholder="99" required>
+                    <input type="number" min="1" max="99" class="form-control price" name="sellPenny" id="sellPenny" placeholder="99" required>
                 </div>
             </div>
             <div class="form-group row move">
@@ -82,7 +83,7 @@
                     <label>Synopsis:</label>
                 </div>
                 <div class="col-6">
-                    <textarea id="synopsis" name="synopsis" class="form-control" cols="10" rows="6" placeholder="Lorem Ipsum Blah Blah Blah" required></textarea>
+                    <textarea id="synopsis" name="synopsis" class="form-control text" cols="10" rows="6" placeholder="Lorem Ipsum Blah Blah Blah" required></textarea>
                 </div>
             </div>
             <div class="form-group row">
@@ -98,15 +99,15 @@
                 <div class="col-4">
                     <div class="form-check">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="scifi" name="scifi">
+                            <input type="checkbox" class="form-check-input genre" id="scifi" name="scifi">
                             <label class="form-check-label" for="scifi">Science Fiction</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="adventure" name="adventure">
+                            <input type="checkbox" class="form-check-input genre" id="adventure" name="adventure">
                             <label class="form-check-label" for="adventure">Adventure</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="romance" name="romance">
+                            <input type="checkbox" class="form-check-input genre" id="romance" name="romance">
                             <label class="form-check-label" for="romance">Romance</label>
                         </div>
                     </div>
@@ -114,15 +115,15 @@
                 <div class="col-4">
                     <div class="form-check">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="historical" name="historical">
+                            <input type="checkbox" class="form-check-input genre" id="historical" name="historical">
                             <label class="form-check-label" for="historical">Historical</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="horror" name="horror">
+                            <input type="checkbox" class="form-check-input genre" id="horror" name="horror">
                             <label class="form-check-label" for="horror">Horror</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="fantasy" name="fantasy">
+                            <input type="checkbox" class="form-check-input genre" id="fantasy" name="fantasy">
                             <label class="form-check-label" for="fantasy">Fantasy</label>
                         </div>
                     </div>
@@ -130,21 +131,21 @@
                 <div class="col-4">
                     <div class="form-check">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="mystery" name="mystery">
+                            <input type="checkbox" class="form-check-input genre" id="mystery" name="mystery">
                             <label class="form-check-label" for="mystery">Mystery</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="comic" name="comic">
+                            <input type="checkbox" class="form-check-input genre" id="comic" name="comic">
                             <label class="form-check-label" for="comic">Comic</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="shortStories" name="shortStories">
+                            <input type="checkbox" class="form-check-input genre" id="shortStories" name="shortStories">
                             <label class="form-check-label" for="shortStories">Short Stories</label>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="btn btn-dark float-right" type="submit">Add Stock</button>
+            <button class="btn btn-dark float-right" id="addBtn" type="submit">Add Stock</button>
         </form>
     </div>
 </div><br>

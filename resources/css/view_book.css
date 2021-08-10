@@ -16,6 +16,11 @@ button.btn{
     padding:2%;
 }
 
+#message{
+    color: orangered;
+    font-size: 18px;
+}
+
 img{
     width:300px;
     height: 300px;
