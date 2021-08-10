@@ -1,4 +1,3 @@
-let db = require("./database");
 let session = require('express-session');
 let bookController = require('./Controller/Book-Controller');
 let basketController = require('./Controller/Basket-Controller');

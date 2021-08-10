@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/jquery/add_book.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/Add_Book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/Add_Book.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/View_Stock_Book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Public/View_Stock_Book.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/add_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/add_book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/view_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/view_book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/view_stock_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/view_stock_book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/jquery/user_account.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/jquery/user_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/user_register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/jquery/view_stock_book.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jquery/view_stock_book.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,13 +27,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1444">
+            <state relative-caret-position="2068">
               <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Routes.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -56,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="-3164">
               <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="48" />
             </state>
           </provider>
@@ -130,7 +129,6 @@
         <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/Routes.js" />
         <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
         <option value="$PROJECT_DIR$/resources/css/user_account.css" />
         <option value="$PROJECT_DIR$/Public/User_Account.ejs" />
@@ -145,6 +143,7 @@
         <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
         <option value="$PROJECT_DIR$/test/integration.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Routes.js" />
       </list>
     </option>
   </component>
@@ -351,7 +350,7 @@
       <workItem from="1628403069740" duration="24107000" />
       <workItem from="1628508207844" duration="594000" />
       <workItem from="1628544591416" duration="692000" />
-      <workItem from="1628597480644" duration="2691000" />
+      <workItem from="1628597480644" duration="2968000" />
     </task>
     <servers />
   </component>
@@ -388,7 +387,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185302000" />
+    <option name="totallyTimeSpent" value="185579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -436,20 +435,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/jquery/user_contact_shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="29" column="67" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/employee_home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Login_or_Register.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -748,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-81">
@@ -771,10 +742,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/integration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1444">
+        <state relative-caret-position="2068">
           <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -782,6 +756,24 @@
           <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3164">
+          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
