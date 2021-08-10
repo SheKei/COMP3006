@@ -172,7 +172,7 @@ suite("Test Chat Message Functionality", async function() {
         chai.assert.eqal(awaitingOrder.getOrderStatus(), "Awaiting", "Status should be awaiting (unless it has been processed)");
 
         chai.assert.equal(deliveredOrder.getOrderID(),"610ef13862268f40b47c1a7b", "Order id should be the same unless it has been deleted");
-        chai.assert.eqal(deliveredOrder.getOrderStatus(), "Delivered", "Status should be delivered");
+        chai.assert.equal(deliveredOrder.getOrderStatus(), "Delivered", "Status should be delivered");
     });
 
 });

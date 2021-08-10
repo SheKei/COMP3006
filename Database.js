@@ -4,7 +4,8 @@ moment().format();
 
 //CONNECT TO DATABASE
 let dbUrl = "mongodb://localhost:27017/bookstoredb";
-mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true,useCreateIndex: true});
+mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.set('bufferCommands', false);
 
 //IMPORT SCHEMAS
 let Account = require("./Schema/Account-Schema").Account;
