@@ -113,12 +113,7 @@ suite("Integration Test For Customer Pages", function() {
 
 suite("Integration Test For Adding and Viewing Book", function() {
 
-    test("Test GET /View_All_Stock", function() {
-        let app = server.app;
-        chai.request(app).get("/View_All_Stock").end(function(error, response) {
-            chai.assert.equal(response.status, 200, "Wrong status code");
-        });
-    });
+    
 
     test("Test GET /View_Stock_Book/:bookId", function(){
         let app = server.app;

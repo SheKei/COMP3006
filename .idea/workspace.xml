@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unit.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit.js" afterDir="false" />
-    </list>
+    <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4026">
-              <caret line="183" column="63" selection-start-line="183" selection-start-column="63" selection-end-line="183" selection-end-column="63" />
+            <state relative-caret-position="76">
+              <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -52,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -126,6 +123,8 @@
       <find>getLoginCredentials</find>
       <find>getItem</find>
       <find>check</find>
+      <find>View_All_Stock</find>
+      <find>session</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,7 +176,6 @@
         <option value="$PROJECT_DIR$/resources/jquery/user_register.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Routes.js" />
-        <option value="$PROJECT_DIR$/test/integration.js" />
         <option value="$PROJECT_DIR$/Controller/Order-Controller.js" />
         <option value="$PROJECT_DIR$/Controller/Chat-Controller.js" />
         <option value="$PROJECT_DIR$/Controller/Book-Controller.js" />
@@ -185,6 +183,7 @@
         <option value="$PROJECT_DIR$/Controller/Account-Controller.js" />
         <option value="$PROJECT_DIR$/test/unit.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/test/integration.js" />
       </list>
     </option>
   </component>
@@ -280,8 +279,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.Integration Test For Customer Pages.Test GET /User_Home">
-    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Mocha.Integration Test For Register &amp; Login Page">
+    <configuration name="Integration Test For Adding and Viewing Book" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -289,15 +288,14 @@
       <pass-parent-env>true</pass-parent-env>
       <ui>tdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST</test-kind>
+      <test-kind>SUITE</test-kind>
       <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
         <name value="Integration Test For Adding and Viewing Book" />
-        <name value="Test GET /View_All_Stock" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Admin Pages" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -305,15 +303,14 @@
       <pass-parent-env>true</pass-parent-env>
       <ui>tdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST</test-kind>
+      <test-kind>SUITE</test-kind>
       <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Integration Test For Adding and Viewing Book" />
-        <name value="Test GET /View_Book/:bookId" />
+        <name value="Integration Test For Admin Pages" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration Test For Register &amp; Login Page" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -321,15 +318,14 @@
       <pass-parent-env>true</pass-parent-env>
       <ui>tdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST</test-kind>
+      <test-kind>SUITE</test-kind>
       <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Integration Test For Adding and Viewing Book" />
-        <name value="Test GET /View_Stock_Book/:bookId" />
+        <name value="Integration Test For Register &amp; Login Page" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Integration Test For Customer Pages.Test GET /User_Home" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration test for viewing orders as customer or admin" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -337,15 +333,14 @@
       <pass-parent-env>true</pass-parent-env>
       <ui>tdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST</test-kind>
+      <test-kind>SUITE</test-kind>
       <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Integration Test For Customer Pages" />
-        <name value="Test GET /User_Home" />
+        <name value="Integration test for viewing orders as customer or admin" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Integration Test For Customer Pages.Test GET /User_Home/:userID" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="Integration test for welcome page" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -353,21 +348,20 @@
       <pass-parent-env>true</pass-parent-env>
       <ui>tdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST</test-kind>
+      <test-kind>SUITE</test-kind>
       <test-file>$PROJECT_DIR$/test/integration.js</test-file>
       <test-names>
-        <name value="Integration Test For Customer Pages" />
-        <name value="Test GET /User_Home/:userID" />
+        <name value="Integration test for welcome page" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Mocha.Integration Test For Customer Pages.Test GET /User_Home" />
-        <item itemvalue="Mocha.Integration Test For Customer Pages.Test GET /User_Home/:userID" />
-        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" />
-        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" />
-        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" />
+        <item itemvalue="Mocha.Integration Test For Register &amp; Login Page" />
+        <item itemvalue="Mocha.Integration test for welcome page" />
+        <item itemvalue="Mocha.Integration test for viewing orders as customer or admin" />
+        <item itemvalue="Mocha.Integration Test For Admin Pages" />
+        <item itemvalue="Mocha.Integration Test For Adding and Viewing Book" />
       </list>
     </recent_temporary>
   </component>
@@ -391,32 +385,11 @@
       <workItem from="1628403069740" duration="24107000" />
       <workItem from="1628508207844" duration="594000" />
       <workItem from="1628544591416" duration="692000" />
-      <workItem from="1628597480644" duration="3349000" />
+      <workItem from="1628597480644" duration="4434000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Integration_Test_For_Register_Page_Test_GET__Email_Invalid_Notification - 2021.08.10 at 13h 51m 36s.xml">
-      <configuration name="Integration Test For Register Page.Test GET /Email_Invalid Notification" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Register_&amp;_Login_Page_Test_GET__Reg_Success_Notification - 2021.08.10 at 13h 52m 29s.xml">
-      <configuration name="Integration Test For Register &amp; Login Page.Test GET /Reg_Success Notification" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Register_&amp;_Login_Page - 2021.08.10 at 13h 55m 10s.xml">
-      <configuration name="Integration Test For Register &amp; Login Page" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Logging_In_and_Out_Test_GET__User_Home__userID - 2021.08.10 at 13h 58m 45s.xml">
-      <configuration name="Integration Test For Logging In and Out.Test GET /User_Home/:userID" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Logging_In_and_Out_Test_GET__LogOut - 2021.08.10 at 14h 00m 20s.xml">
-      <configuration name="Integration Test For Logging In and Out.Test GET /LogOut" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_All_Stock - 2021.08.10 at 14h 04m 17s.xml">
-      <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_All_Stock" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_Stock_Book__bookId - 2021.08.10 at 14h 04m 27s.xml">
-      <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Stock_Book/:bookId" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="Integration_Test_For_Adding_and_Viewing_Book_Test_GET__View_Book__bookId - 2021.08.10 at 14h 05m 50s.xml">
       <configuration name="Integration Test For Adding and Viewing Book.Test GET /View_Book/:bookId" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -426,15 +399,36 @@
     <history-entry file="Integration_Test_For_Customer_Pages_Test_GET__User_Home - 2021.08.10 at 18h 15m 27s.xml">
       <configuration name="Integration Test For Customer Pages.Test GET /User_Home" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="Integration_Test_For_Customer_Pages - 2021.08.10 at 19h 40m 04s.xml">
+      <configuration name="Integration Test For Customer Pages" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_Test_For_Adding_and_Viewing_Book - 2021.08.10 at 19h 40m 29s.xml">
+      <configuration name="Integration Test For Adding and Viewing Book" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_Test_For_Admin_Pages - 2021.08.10 at 19h 40m 45s.xml">
+      <configuration name="Integration Test For Admin Pages" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_test_for_viewing_orders_as_customer_or_admin - 2021.08.10 at 19h 40m 54s.xml">
+      <configuration name="Integration test for viewing orders as customer or admin" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_test_for_welcome_page - 2021.08.10 at 19h 41m 09s.xml">
+      <configuration name="Integration test for welcome page" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_test_for_welcome_page - 2021.08.10 at 19h 41m 28s.xml">
+      <configuration name="Integration test for welcome page" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Integration_Test_For_Register_&amp;_Login_Page - 2021.08.10 at 19h 41m 33s.xml">
+      <configuration name="Integration Test For Register &amp; Login Page" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185960000" />
+    <option name="totallyTimeSpent" value="187045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16060807" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16060807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -797,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4026">
-          <caret line="183" column="63" selection-start-line="183" selection-start-column="63" selection-end-line="183" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -815,6 +802,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
         </state>
       </provider>
     </entry>
