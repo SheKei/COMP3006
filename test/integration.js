@@ -111,39 +111,6 @@ suite("Integration Test For Customer Pages", function() {
 
 });
 
-suite("Integration Test For Adding and Viewing Book", function() {
-
-    
-
-    test("Test GET /View_Stock_Book/:bookId", function(){
-        let app = server.app;
-        let bookID = "6102c14551afa35e78772484";
-
-        chai.request(app).get("/View_Stock_Book/"+bookID).end(function(error,response, request){
-            chai.assert.equal(response.status, 200, "Wrong status code");
-            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
-        });
-    });
-
-    test("Test GET /View_Book/:bookId", function(){
-        let app = server.app;
-        let bookID = "6102c14551afa35e78772484";
-
-        chai.request(app).get("/View_Book/"+bookID).end(function(error,response, request){
-            chai.assert.equal(response.status, 200, "Wrong status code");
-            chai.assert.equal(request.params.bookId,"6102c14551afa35e78772484", "Should be same ID");
-        });
-    });
-
-    test("Test GET /View_All_Books", function() {
-        let app = server.app;
-        chai.request(app).get("/View_All_Books").end(function(error, response) {
-            chai.assert.equal(response.status, 200, "Wrong status code");
-        });
-    });
-
-});
-
 suite("Integration Test For Admin Pages", function() {
     test("Test GET /Add_Book", function() {
         let app = server.app;
