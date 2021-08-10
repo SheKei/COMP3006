@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0ec25d-297b-4071-9fcd-5cea67037c4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/integration.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
+              <caret line="109" column="77" selection-start-line="109" selection-start-column="77" selection-end-line="109" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -60,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7317">
-              <caret line="271" column="21" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
+            <state relative-caret-position="162">
+              <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -161,7 +162,6 @@
         <option value="$PROJECT_DIR$/Public/Filter.ejs" />
         <option value="$PROJECT_DIR$/Public/View_All_Stock.ejs" />
         <option value="$PROJECT_DIR$/Public/View_All_Books.ejs" />
-        <option value="$PROJECT_DIR$/Database.js" />
         <option value="$PROJECT_DIR$/resources/css/user_register.css" />
         <option value="$PROJECT_DIR$/Public/User_Register.ejs" />
         <option value="$PROJECT_DIR$/server.js" />
@@ -186,6 +186,7 @@
         <option value="$PROJECT_DIR$/test/unit.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/test/integration.js" />
+        <option value="$PROJECT_DIR$/Database.js" />
       </list>
     </option>
   </component>
@@ -387,7 +388,7 @@
       <workItem from="1628403069740" duration="24107000" />
       <workItem from="1628508207844" duration="594000" />
       <workItem from="1628544591416" duration="692000" />
-      <workItem from="1628597480644" duration="4951000" />
+      <workItem from="1628597480644" duration="5565000" />
     </task>
     <servers />
   </component>
@@ -424,7 +425,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187562000" />
+    <option name="totallyTimeSpent" value="188176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -748,13 +749,6 @@
         <state relative-caret-position="-1053" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7317">
-          <caret line="271" column="21" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Schema/Chat-Schema.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -810,7 +804,14 @@
     <entry file="file://$PROJECT_DIR$/test/integration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
+          <caret line="109" column="77" selection-start-line="109" selection-start-column="77" selection-end-line="109" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
         </state>
       </provider>
     </entry>

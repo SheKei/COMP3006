@@ -107,7 +107,7 @@ suite("Integration Test For Customer Pages", function() {
             //chai.assert.equal(response.status, 200, "Wrong status code");
             //chai.assert.isNull(request.session.user, "Should be null");
         //});
-    //});
+    //}); Throws issues with session being null on travis cli for tests below
 
 });
 
