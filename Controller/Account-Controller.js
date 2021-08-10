@@ -1,4 +1,4 @@
-let db = require("../database");
+let db = require("../Database");
 let bcrypt = require ('bcrypt');
 let moment = require('moment');
 let session = require('express-session');

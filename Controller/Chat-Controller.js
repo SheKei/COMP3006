@@ -1,4 +1,4 @@
-let db = require("../database");
+let db = require("../Database");
 let session = require('express-session');
 let mongoose = require("mongoose");
 

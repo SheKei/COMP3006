@@ -180,3 +180,19 @@ suite("Integration Test For Admin Pages", function() {
         });
     });
 });
+
+suite("Integration test for viewing orders as customer or admin", function() {
+    test("Test GET /welcome", function() {
+        let app = server.app;
+        chai.request(app).get("/welcome").end(function(error, response) {
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+
+    test("Test GET /Login_or_Register", function(){
+        let app = server.app;
+        chai.request(app).get("/Login_or_Register").end(function(error,response){
+            chai.assert.equal(response.status, 200, "Wrong status code");
+        });
+    });
+});
