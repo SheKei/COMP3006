@@ -8,7 +8,7 @@ let accountSchema = new mongoose.Schema({
     streetName: String,
     postCode: String,
     password: String
-});
+}, { bufferCommands: false });
 //firstname, lastname, birthday, email, streetName,postCode,password
 let Account = mongoose.model("account", accountSchema);
 module.exports.Account = Account;
