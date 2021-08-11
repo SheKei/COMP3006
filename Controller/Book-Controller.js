@@ -59,7 +59,7 @@ function addGenres(request){
 //View books as stock items
 async function getAllStockBooks(request, response){
     let books = await db.getAllBooks();
-    if(books.length > 0){
+    if(books !== null){
         response.render("View_All_Stock",{"books": books});
     }else{
         response.render("View_All_Stock",{"books": []});
@@ -70,9 +70,12 @@ async function getAllStockBooks(request, response){
 async function getAllBookItems(userID,request,response){
     let books = await db.getAllBooks();
     let basketNum = await db.returnNumOfItemsInBasket(userID);
-    if(books.length > 0){
+    if(books !== null){
         response.render("View_All_Books",{"books": books,"basketNum": basketNum});
+    }else{
+        response.render("View_All_Books",{"books": [],"basketNum": basketNum});
     }
+
 }
 
 async function getFilteredBooks(userID,request,response){

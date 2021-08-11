@@ -20,6 +20,7 @@
         <h1>View Books</h1><br>
         <div id="filterDiv"><%- include("Filter"); %></div><br>
         <div class="row">
+        <% if(books.length>0){ %>
             <% for (i=0; i<books.length; i++) { %>
 
                 <div class="col-3">
@@ -34,6 +35,7 @@
                 </div>
             <% }%>
         </div>
+        <% }%>
     </div>
 </div>
 </body>

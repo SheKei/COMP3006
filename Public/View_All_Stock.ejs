@@ -18,6 +18,7 @@
     <div id="stockContainer">
         <h1>View All Current Stock</h1><br><br>
         <div class="row">
+            <% if(books.length>0){ %>
             <% for (i=0; i<books.length; i++) { %>
 
                 <div class="col-3">
@@ -30,11 +31,12 @@
                     <% }else{ %>
                         <div><h5 class="text-center">QTY: <strong><%= books[i].getStockAmount() %></strong></h5></div>
                     <% } %>
-
+            <% } %>
                     <br><br>
                 </div>
-            <% }%>
+
         </div>
+        <% }%>
     </div>
 </div>
 </body>
